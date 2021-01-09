@@ -29,7 +29,7 @@
 - Kluiwert Victor Tavares: desenvolvedor de hardware
 
 <p align="center">
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/robotic-arm.png" alt="logo" height="70" style="margin:10px">
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-ufam.png" alt="logo" height="70" style="margin:10px">
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-super.png" alt="logo" height="70" style="margin:10px">
+ <img src="https://github.com/carolsbraz/armblock/blob/main/images/robotic-arm.png" alt="logo" height="70" margin:10px>
+ <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-ufam.png" alt="logo" height="70" margin:10px>
+ <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-super.png" alt="logo" height="70" margin:10px>
 </p>
