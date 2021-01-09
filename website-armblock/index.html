@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArmBlock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="brand">
+            <img src="img/robotic-arm.png" alt="Braço robótico" class="logo">
+            <div class="title">ArmBlock</div>
+        </div>
+        <div class="options">
+            <a href="" class="back-menu">Voltar ao menu</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="options">
+            <div class="buttons">
+                <a href="" class="change-type">Mudar tipo</a>
+                <div class="actions">
+                    <a href="#" class="restart">Recomeçar</a>
+                    <a href="#" class="teste">Testar</a>
+                </div>
+            </div>
+
+            <div class="blocks" id="blocks">
+                <div class="block yellow" draggable="true">Aperte <input type="text" class="input-tecla" disabled> para</div>
+                <div class="block blue" draggable="true">Mover para
+                    <select name="select-direction" id="select-direction" class="select" disabled>
+                        <option value=""></option>
+                        <option value="direita">Direita</option>
+                        <option value="esquerda">Esquerda</option>
+                        <option value="cima">Cima</option>
+                        <option value="baixo">Baixo</option>
+                    </select>
+                </div>
+                <div class="block red" draggable="true">O motor
+                    <select name="select-motor" id="select-motor" class="select" disabled>
+                        <option value=""></option>
+                        <option value="m1">1</option>
+                        <option value="m2">2</option>
+                        <option value="m3">3</option>
+                        <option value="m4">4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="help">Ajuda?</div>
+        </div>
+
+        <div class="b">
+            <div class="boards" id="boards">
+                <div class="board" id="board"></div>
+            </div>
+
+            <div class="btn-add">
+                <a href="#" class="btn-add-board" id="btn-add-board"><img src="./img/plus.png" alt="" width="20px" height="20px"></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

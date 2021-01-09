@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+    --back-color: #f7f7f7;
+    --main-blue: #0077B6;
+    --secundary-blue: #85ABBE;
+    --yellow-block: #FFF694;
+    --blue-block: #85ABBE;
+    --red-block: #CEA086;
+    --gray: #bbbbbb;
+}
+
+* {
+    margin: 0px;
+    text-decoration: none;
+}
+
+html {
+    font-family: montserrat;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--back-color);
+    padding: 10px 100px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav .brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav .brand .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav .brand .title {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-blue);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 150px);
+}
+
+.content .options {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    margin: 10px 40px 0px 40px;
+}
+
+.content .options .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .options .buttons .change-type {
+    background-color: var(--secundary-blue);
+    color: white;
+    padding: 4% 0px 4% 0px;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.content .options .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.content .options .actions a {
+    width: calc(100% - 50px);
+    background-color: var(--main-blue);
+    color: white;
+    padding: 5% 0px 5% 0px;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.content .options .actions .teste {
+    margin-left: 10px;
+}
+
+.content .blocks {
+    background-color: white;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    max-height: 60%;
+    overflow-x: auto;
+}
+
+.content .blocks::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.content .blocks::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 0 10px 10px 0;
+}
+
+.content .blocks::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 0 10px 10px 0;
+}
+
+.content .blocks .block {
+    padding: 10px 20px 10px 20px;
+    margin: 20px 0px 20px 0px;
+    background-color: rgb(134, 134, 134);
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.b {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 200px);
+    align-items: center;
+}
+
+.boards {
+    width: 100%;
+    background-color: rgba(219, 219, 219, 0.678);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px 1px #dfdfdf;
+    overflow-y: auto;
+    display: flex;
+    height: 100%;
+}
+
+.boards::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.boards::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.boards::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.board {
+    min-width: 60%;
+    margin: 10px 20px 10px 0px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px 1px #dfdfdf;
+    overflow: auto;
+}
+
+.board::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.board::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 0 10px 10px 0;
+}
+
+.board::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 0 10px 10px 0;
+}
+
+.board .block {
+    padding: 10px 20px 10px 20px;
+    margin: 20px 0px 20px 0px;
+    background-color: rgb(134, 134, 134);
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.block .input-tecla {
+    border: none;
+    padding: 10px 15px 10px 15px;
+    width: 30px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 4px;
+}
+
+.block .input-tecla:focus {
+    outline: none;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.block .input-tecla:disabled {
+    background-color: rgba(250, 250, 250, 0.897);
+}
+
+.block .select {
+    border: none;
+    padding: 10px 15px 10px 15px;
+    width: 100px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 4px;
+}
+
+.block .select:focus {
+    outline: none;
+    box-shadow: 2px 2px 4px 1px rgb(148, 148, 148);
+}
+
+.content .btn-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.content .btn-add-board {
+    background-color: rgba(204, 204, 204, 0.719);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .help {
+    background-color: white;
+    padding: 7% 20px 7% 20px;
+    border-radius: 10px;
+}
+
+
+/* Utilidades */
+
+.yellow {
+    background-color: var(--yellow-block) !important;
+}
+
+.blue {
+    background-color: var(--blue-block) !important;
+    ;
+}
+
+.red {
+    background-color: var(--red-block) !important;
+}
+
+@media screen and (min-height: 650px) {
+    .content .options {
+        justify-content: center;
+    }
+}
