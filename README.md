@@ -13,10 +13,10 @@
 
 <blockquote>
   HTML - para estruturação do site;<br>
-  CSS - para estilização de seus elementos;
-  JavaScript - para dinânimica do site;
-  SortableJS - para trabalhar com o drag and drop da programação em blocos;
-  Johnny-Five - para enviar os comandos, via comunicação serial e usando protocolo Firmata, para o braço robótico;
+  CSS - para estilização de seus elementos;<br>
+  JavaScript - para dinânimica do site;<br>
+  SortableJS - para trabalhar com o drag and drop da programação em blocos;<br>
+  Johnny-Five - para enviar os comandos, via comunicação serial e usando protocolo Firmata, para o braço robótico;<br>
   NodeJS - para conexão com os servidores.
 </blockquote>
 
@@ -29,9 +29,7 @@
 - Kluiwert Victor Tavares: desenvolvedor de hardware
 
 <p align="center">
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/robotic-arm.png" alt="logo" height="70">
- <span>  </span>
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-ufam.png" alt="logo" height="70">
- <span>  </span>
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-super.png" alt="logo" height="70">
+ <img src="https://github.com/carolsbraz/armblock/blob/main/images/robotic-arm.png" alt="logo" height="70" style="margin:10px">
+ <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-ufam.png" alt="logo" height="70" style="margin:10px">
+ <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-super.png" alt="logo" height="70" style="margin:10px">
 </p>
