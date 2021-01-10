@@ -3,7 +3,7 @@
  <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo.png" alt="logo" width="200">
 </h1>
 
-<h3 align="center">ArmBlock</h3>
+<h3 align="center"> Educational ArmBlock </h3>
 <p align="center">Sua plataforma de aprendizado de robótica usando programação em blocos</p>
 
 ### Sobre o projeto
