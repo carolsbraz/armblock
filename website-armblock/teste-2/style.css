@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+    --back-color: #f7f7f7;
+    --main-blue: #0077B6;
+    --secundary-blue: #85ABBE;
+    --shadow-blue: #6F8F9E;
+    --yellow-block: #FFF694;
+    --blue-block: #85ABBE;
+    --red-block: #CEA086;
+    --green-block: #87CE86;
+    --gray: #bbbbbb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    font-family: montserrat;
+    font-size: 16px;
+}
+
+body {
+    padding: 50px 100px;
+    background-color: var(--back-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.header .brand {
+    display: flex;
+    align-items: center;
+}
+
+.header .brand .logo {
+    width: 70px;
+}
+
+.header .brand h3 {
+    font-size: 30px;
+    color: var(--main-blue);
+    margin-left: 20px
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: calc(100vh - 210px);
+}
+
+.container .robotic-arm {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    margin: 0px 10px 0px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .robotic-arm svg {
+    width: 400px;
+    height: 400px
+}
+
+.container .boards {
+    width: 30%;
+    position: relative;
+}
+
+.container .board {
+    width: calc(100% - 60px);
+    height: calc(100% - 40px);
+    background-color: white;
+    margin: 0px 10px 0px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    position: absolute;
+    visibility: hidden;
+    padding: 20px;
+}
+
+.container .board h3 {
+    text-align: center;
+}
+
+.container .options {
+    width: 30%;
+    height: 100%;
+    margin: 0px 10px 0px 10px;
+    border-radius: 10px;
+}
+
+.container .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .options .change-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .options .change-button .rotine {
+    background-color: var(--secundary-blue);
+    color: white;
+    padding: 20px 10px 20px 10px;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.container .options .change-button .algorithm {
+    background-color: var(--shadow-blue);
+    color: white;
+    padding: 20px 10px 20px 10px;
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.container .options .actions-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.container .options .actions-buttons .delete {
+    background-color: var(--secundary-blue);
+    color: white;
+    padding: 20px 10px 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    align-items: center;
+}
+
+.container .options .actions-buttons .test {
+    background-color: var(--main-blue);
+    color: white;
+    padding: 30px 10px 30px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    align-items: center;
+}
+
+.container .options .actions-buttons p {
+    margin-left: 20px;
+}
+
+.container .options .blocks {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.container .options .blocks::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.container .options .blocks::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 0 10px 10px 0;
+}
+
+.container .blocks::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 0 10px 10px 0;
+}
+
+.block {
+    padding: 25px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.container .options .inf .help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+.container .options p {
+    margin-left: 50px;
+    font-weight: bolder;
+}
+
+.selecionado {
+    animation: selecionado 0.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#motor-1,
+#motor-2,
+#motor-3,
+#motor-4,
+#motor-5,
+#motor-6 {
+    cursor: pointer;
+}
+
+
+/* Utilidades */
+
+.yellow {
+    background-color: var(--yellow-block) !important;
+}
+
+.blue {
+    background-color: var(--blue-block) !important;
+}
+
+.red {
+    background-color: var(--red-block) !important;
+}
+
+.green {
+    background-color: var(--green-block) !important;
+}
+
+@media screen and (max-height: 911px) {
+    .container .options .blocks {
+        max-height: 300px;
+        padding: 0px 20px 0px 20px
+    }
+    .container .options .actions-buttons .delete {
+        padding: 20px 10px 20px 10px;
+    }
+    .container .options .actions-buttons .test {
+        padding: 20px 10px 20px 10px;
+    }
+    .container .robotic-arm svg {
+        width: 400px;
+        height: 400px
+    }
+}
+
+@media screen and (max-height: 772px) {
+    .container .options .blocks {
+        max-height: 180px;
+        padding: 0px 20px 0px 20px
+    }
+    .container .options .actions-buttons .delete {
+        padding: 20px 10px 20px 10px;
+    }
+    .container .options .actions-buttons .test {
+        padding: 20px 10px 20px 10px;
+    }
+    .container .robotic-arm svg {
+        width: 300px;
+        height: 300px
+    }
+}
+
+@media screen and (max-height: 654px) {
+    .container .options .blocks {
+        max-height: 100px;
+        padding: 0px 20px 0px 20px
+    }
+    .container .options .actions-buttons .delete {
+        padding: 20px 10px 20px 10px;
+    }
+    .container .options .actions-buttons .test {
+        padding: 20px 10px 20px 10px;
+    }
+    .container .robotic-arm svg {
+        width: 600px;
+        height: 600px
+    }
+}
+
+@keyframes selecionado {
+    to {
+        transform: scale(1.1)
+    }
+}
