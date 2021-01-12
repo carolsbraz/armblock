@@ -1,6 +1,6 @@
 
 <h1 align="center">
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo.png" alt="logo" width="200">
+ <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo.png" alt="logo" width="400">
 </h1>
 
 <h3 align="center"> Educational ArmBlock </h3>
