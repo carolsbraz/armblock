@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    padding: 50px 100px;
+    padding: 50px 200px 0px 200px;
 }
 
 .initial .background {
@@ -102,17 +102,138 @@ body {
     width: 50%;
 }
 
-.content .apresentation-image {
-    width: 70%;
+.content .apresentation-image .index-image {
+    width: 100%;
+}
+
+.explication {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.explication .exp-trail {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    min-width: 40%;
+    min-height: 600px;
+    background-image: url(/img/back-trail.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 7px;
+}
+
+.explication .exp-trail .title {
+    color: var(--main-blue);
+    font-size: 32px;
+    text-align: center;
+}
+
+.explication .exp-trail .text {
+    font-size: 23px;
+    text-align: center;
+    padding: 0px 50px
+}
+
+.explication .exp-blocks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    min-width: 40%;
+    min-height: 600px;
+    background-image: url(/img/back-blocks.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 7px;
+}
+
+.explication .exp-blocks .title {
+    color: var(--main-blue);
+    font-size: 32px;
+    text-align: center;
+}
+
+.explication .exp-blocks .text {
+    font-size: 23px;
+    text-align: center;
+    padding: 0px 50px
+}
+
+.who-do {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.who-do .logos {
+    display: flex;
+}
+
+.who-do .logo-super {
+    margin-left: 50px;
+}
+
+.who-do .text {
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--main-blue);
+    padding: 10px 0px 10px 0px;
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/*Anime*/
+
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="up"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime="down"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 
 /*Utilidades*/
 
-@media screen and (max-width: 1258px) {
+@media screen and (max-width: 1312px) {
     .content {
         flex-direction: column;
         justify-content: center;
+        margin-top: 10px
     }
     .content .apresentation .texts {
         text-align: center;
@@ -121,5 +242,55 @@ body {
         margin-bottom: 40px;
         align-items: center;
         justify-content: center;
+    }
+    .explication {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .explication .exp-blocks {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .explication .exp-trail {
+        width: 100%;
+    }
+    .who-do {
+        flex-direction: column;
+        text-align: center;
+    }
+    .who-do .logos {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1828px) {
+    body {
+        padding: 50px 150px;
+    }
+    .content .apresentation {
+        width: 60%;
+    }
+    .content .apresentation .texts .apresentation-title {
+        font-size: 36px;
+    }
+    .content .apresentation .texts .apresentation-text {
+        font-size: 24px;
+    }
+    .content .apresentation .buttons {
+        margin-top: 40px
+    }
+    .content .apresentation-image {
+        width: 40%;
+    }
+    .explication {
+        margin-top: 20px;
+    }
+    .who-do {
+        margin-top: 30px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .who-do .text {
+        font-size: 23px;
     }
 }
