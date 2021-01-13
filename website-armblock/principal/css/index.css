@@ -8,7 +8,6 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
-    color: black
 }
 
 html {
@@ -45,6 +44,10 @@ body {
 .initial .navbar .brand .title {
     margin-left: 20px;
     color: var(--main-blue)
+}
+
+.initial .navbar a {
+    color: black
 }
 
 .content {
@@ -191,7 +194,7 @@ body {
     text-align: center;
     background-color: var(--main-blue);
     padding: 10px 0px 10px 0px;
-    color: white !important;
+    color: white;
     position: absolute;
     left: 0;
     bottom: 0;
