@@ -191,7 +191,7 @@ body {
     text-align: center;
     background-color: var(--main-blue);
     padding: 10px 0px 10px 0px;
-    color: white;
+    color: white !important;
     position: absolute;
     left: 0;
     bottom: 0;
