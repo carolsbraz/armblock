@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+    --main-blue: #0077B6;
+    --secundary-blue: #6DA5C2;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+html {
+    font-family: montserrat;
+    font-size: 16px;
+    position: relative;
+}
+
+body {
+    padding: 50px 100px;
+}
+
+.initial .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1000;
+}
+
+.initial .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px
+}
+
+.initial .navbar .brand {
+    display: flex;
+    align-items: center;
+}
+
+.initial .navbar .brand .title {
+    margin-left: 20px;
+    color: var(--main-blue)
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 130px);
+}
+
+.content .apresention {
+    width: 50%;
+    height: 100%;
+}
+
+.content .apresentation .texts .apresentation-title {
+    color: var(--main-blue);
+    font-size: 50px;
+}
+
+.content .apresentation .texts .apresentation-title span {
+    color: var(--secundary-blue)
+}
+
+.content .apresentation .texts .apresentation-text {
+    font-size: 25px;
+    margin-top: 15px
+}
+
+.content .apresentation .buttons {
+    margin-top: 60px;
+    display: flex;
+}
+
+.content .apresentation .buttons a {
+    padding: 20px;
+    background-color: var(--main-blue);
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 1px 1px 2px 1px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .apresentation .buttons img {
+    margin: 0px 10px 0px 0px;
+}
+
+.content .apresentation .buttons .button-blocks {
+    margin-left: 20px;
+    background-color: var(--secundary-blue);
+}
+
+.content .apresentation-image {
+    width: 50%;
+}
+
+.content .apresentation-image {
+    width: 70%;
+}
+
+
+/*Utilidades*/
+
+@media screen and (max-width: 1258px) {
+    .content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .apresentation .texts {
+        text-align: center;
+    }
+    .content .apresentation .buttons {
+        margin-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+}
