@@ -121,7 +121,7 @@ body {
     align-items: center;
     min-width: 40%;
     min-height: 600px;
-    background-image: url(/img/back-trail.png);
+    background-image: url(./img/back-trail.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -147,7 +147,7 @@ body {
     align-items: center;
     min-width: 40%;
     min-height: 600px;
-    background-image: url(/img/back-blocks.png);
+    background-image: url(./img/back-blocks.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
