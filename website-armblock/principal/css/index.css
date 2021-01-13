@@ -125,11 +125,20 @@ body {
     align-items: center;
     width: 100%;
     min-height: 600px;
-    background-image: url(/img/back-trail.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     margin-right: 7px;
+    border-radius: 400px;
+    position: relative;
+}
+
+.explication .exp-trail .content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.explication .exp-trail .content img {
+    margin: 50px 0;
 }
 
 .explication .exp-trail .title {
@@ -151,11 +160,19 @@ body {
     align-items: center;
     width: 100%;
     min-height: 600px;
-    background-image: url(/img/back-blocks.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     margin-left: 7px;
+    position: relative;
+}
+
+.explication .exp-blocks .content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.explication .exp-blocks .content img {
+    margin: 50px 0;
 }
 
 .explication .exp-blocks .title {
