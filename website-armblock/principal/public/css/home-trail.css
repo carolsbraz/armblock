@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+    --main-blue: #0077B6;
+    --button-yellow: #FDF172;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    font-family: montserrat;
+    font-size: 16px;
+}
+
+body {
+    padding: 50px 100px;
+}
+
+.LearningTrackHomeScreen .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LearningTrackHomeScreen .navbar .brand {
+    display: flex;
+    align-items: center;
+}
+
+.LearningTrackHomeScreen .navbar .brand .title {
+    margin-left: 20px;
+    color: var(--main-blue);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 180px);
+}
+
+.content .text {
+    width: 50%;
+}
+
+.content .text .title-text .trail-text {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.content .text .button {
+    margin-top: 40px;
+    display: flex;
+}
+
+.content .text .button a {
+    padding: 15px 55px;
+    background-color: var(--button-yellow);
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 1px 1px 2px 1px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .text .button img {
+    margin: 0px 25px 0px 0px;
+}
+
+.content .imgtrail {
+    width: 60%;
+    margin: calc(100vh - 300px) 0px 0px 0px;
+}

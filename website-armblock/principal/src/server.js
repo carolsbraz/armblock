@@ -15,8 +15,8 @@
      res.sendFile(__dirname + "/views/index.html")
  })
 
- server.get("/outrapagina", (req, res) => {
-     res.sendFile(__dirname + "/views/outrapagina.html")
+ server.get("/home-trail", (req, res) => {
+     res.sendFile(__dirname + "/views/home-trail.html")
  })
 
  //ligar o servidor
