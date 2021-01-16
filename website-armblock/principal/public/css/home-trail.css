@@ -14,24 +14,26 @@
 html {
     font-family: montserrat;
     font-size: 16px;
+    position: relative;
+    overflow: hidden;
 }
 
 body {
     padding: 50px 100px;
 }
 
-.LearningTrackHomeScreen .navbar {
+.home-trail .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.LearningTrackHomeScreen .navbar .brand {
+.home-trail .navbar .brand {
     display: flex;
     align-items: center;
 }
 
-.LearningTrackHomeScreen .navbar .brand .title {
+.home-trail .navbar .brand .title {
     margin-left: 20px;
     color: var(--main-blue);
 }
@@ -72,7 +74,17 @@ body {
     margin: 0px 25px 0px 0px;
 }
 
-.content .imgtrail {
+.content .imgtrail {}
+
+.content .imgtrail .trial-img {
     width: 60%;
     margin: calc(100vh - 300px) 0px 0px 0px;
+}
+
+.content .imgtrail .right-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -10000;
 }

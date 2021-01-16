@@ -1,7 +1,8 @@
+ const http = require("http")
  const express = require("express")
  const server = express()
 
- //configurar pasta pública
+ //configurar pastas públicas
  server.use(express.static("public"))
 
  // configurar camninhos da aplicação
@@ -19,5 +20,7 @@
      res.sendFile(__dirname + "/views/home-trail.html")
  })
 
+
+
  //ligar o servidor
- server.listen(3000)
+ http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));
