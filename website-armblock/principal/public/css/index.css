@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 :root {
     --main-blue: #0077B6;
+    --main-blue-hover: #005d8f;
     --secundary-blue: #6DA5C2;
+    --secundary-blue-hover: #578297;
 }
 
 * {
@@ -77,8 +79,13 @@ header .brand .title {
     color: var(--main-blue);
 }
 
-header .brand a {
-    color: black
+header .menu a.link {
+    color: black;
+    transition: 0.5s;
+}
+
+header .menu a.link:hover {
+    color: rgb(141, 140, 78)
 }
 
 section.initial .container {
@@ -122,6 +129,11 @@ section.initial .container .button-trail {
     justify-content: space-between;
     align-items: center;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
+    transition: 0.5s;
+}
+
+section.initial .container .button-trail:hover {
+    background-color: var(--main-blue-hover);
 }
 
 section.initial .container .button-blocks {
@@ -134,6 +146,11 @@ section.initial .container .button-blocks {
     align-items: center;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
     margin-left: 10px;
+    transition: 0.5s;
+}
+
+section.initial .container .button-blocks:hover {
+    background-color: var(--secundary-blue-hover);
 }
 
 section.initial .container .buttons img {
@@ -319,6 +336,19 @@ div.footer {
 @media (max-width: 320px) {
     section.initial .container .apresentation-image img {
         width: 250px;
+    }
+}
+
+@media (max-width: 731px) and (max-height: 411px) {
+    .init-back {
+        display: none;
+    }
+    section.initial .container {
+        height: auto;
+        margin-top: 50px;
+    }
+    section.initial .container .apresentation-image img {
+        width: 300px;
     }
 }
 
