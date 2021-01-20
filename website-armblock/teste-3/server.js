@@ -12,14 +12,34 @@ app.get('/', (req, res) => {
 board.on("ready", function() {
     app.get('/valores', (req, res) => {
 
-        let pino = req.query.pino;
-        let graus = req.query.graus;
+        let pino1 = req.query.pino1;
+        let graus1 = req.query.graus1;
+        let pino2 = req.query.pino2;
+        let graus2 = req.query.graus2;
+        let pino3 = req.query.pino3;
+        let graus3 = req.query.graus3;
+        let pino4 = req.query.pino4;
+        let graus4 = req.query.graus4;
 
-        console.log(pino, graus);
+        var servo1 = new five.Servo({
+            pin: pino1,
+        });
+        var servo2 = new five.Servo({
+            pin: pino2,
+        });
+        var servo3 = new five.Servo({
+            pin: pino3,
+        });
+        var servo4 = new five.Servo({
+            pin: pino4,
+        });
 
-        var servo = new five.Servo(pino);
+        servo1.to(graus1, 5000);
+        servo2.to(graus2, 5000);
+        servo3.to(graus3, 5000);
+        servo4.to(graus4, 5000);
 
-        servo.to(graus);
+        console.log(pino1, pino2, pino3, pino4, graus1, graus2, graus3, graus4)
 
         res.sendFile(__dirname + '/index.html')
     });
