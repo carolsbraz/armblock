@@ -2,8 +2,7 @@ const express = require('express')
 const app = express()
 
 var five = require("johnny-five");
-var board = new five.Board();
-
+var board = new five.Board({ port: "COM6" });
 
 
 app.get('/', (req, res) => {
@@ -16,9 +15,11 @@ board.on("ready", function() {
         let pino = req.query.pino;
         let graus = req.query.graus;
 
-        new five.Servo(pino);
+        console.log(pino, graus);
 
-        servo1.to(graus);
+        var servo = new five.Servo(pino);
+
+        servo.to(graus);
 
         res.sendFile(__dirname + '/index.html')
     });
