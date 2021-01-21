@@ -28,5 +28,9 @@
      res.sendFile(__dirname + "/views/trail-content.html")
  })
 
+ server.get("/manual-programming", (req, res) => {
+     res.sendFile(__dirname + "/views/manual-programming.html")
+ })
+
  //ligar o servidor
  http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));
