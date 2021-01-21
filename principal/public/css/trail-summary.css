@@ -34,6 +34,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+html::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 10px 10px 10px 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 10px 10px 10px 10px;
+}
+
 div.blue-background {
     height: 50vh;
     width: 100vw;
@@ -132,6 +147,7 @@ section.content {
 section.content h1 {
     display: flex;
     align-items: center;
+    font-size: 3rem;
 }
 
 section.content h1 img {

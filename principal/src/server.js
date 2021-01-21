@@ -20,8 +20,12 @@
      res.sendFile(__dirname + "/views/home-trail.html")
  })
 
- server.get("/trail-sumary", (req, res) => {
-     res.sendFile(__dirname + "/views/trail-sumary.html")
+ server.get("/trail-summary", (req, res) => {
+     res.sendFile(__dirname + "/views/trail-summary.html")
+ })
+
+ server.get("/trail-content", (req, res) => {
+     res.sendFile(__dirname + "/views/trail-content.html")
  })
 
  //ligar o servidor
