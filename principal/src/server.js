@@ -20,9 +20,7 @@
      res.sendFile(__dirname + "/views/home-trail.html")
  })
 
- server.get("/trail-sumary", (req, res) => {
-     res.sendFile(__dirname + "/views/trail-sumary.html")
- })
+
 
  //ligar o servidor
  http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));
