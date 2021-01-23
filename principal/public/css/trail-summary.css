@@ -94,7 +94,7 @@ section.controle {
     max-width: 1100px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 50px
 }
 
@@ -103,7 +103,7 @@ section.controle a {
     padding: 20px;
     color: white;
     border-radius: 8px;
-    box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
+    box-shadow: 1px 1px 4px 1px rgb(104, 104, 104);
     transition: 0.5s;
     display: flex;
     justify-content: space-around;
@@ -116,20 +116,6 @@ section.controle a img {
 
 section.controle .continue:hover {
     background-color: var(--main-blue-hover);
-}
-
-section.controle .back {
-    background-color: #3a596b;
-    cursor: default
-}
-
-section.controle .next {
-    background-color: #3a596b;
-    cursor: default;
-}
-
-section.controle .next img {
-    margin: 0 0 0 10px;
 }
 
 section.content {

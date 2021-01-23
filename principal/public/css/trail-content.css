@@ -222,6 +222,9 @@ section.content p {
     section.controle .back {
         margin: 10px 0 10px 0;
     }
+    section.content {
+        padding: 25px 25px;
+    }
     section.content h1 img {
         width: 40px;
     }
