@@ -1,12 +1,12 @@
 
 
 <h1 align="center">
- <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/logo.png" alt="logo" width="400">
+ <img src="https://github.com/carolsbraz/educational-armblock/blob/main/src/logo.png?raw=true" alt="logo" width="400">
 </h1>
 <h3 align="center"> Educational ArmBlock </h3>
 <p align="center">Sua plataforma de aprendizado de robótica usando programação em blocos</p>
 <p align="center">
-[Ver site](https://armblock.herokuapp.com/) • Último deploy: 22/01/2021 22:40
+<a href="https://armblock.herokuapp.com/">Ver site</a> • Último deploy: 22/01/2021 22:40
 </p>
 
 ### Sobre o projeto
@@ -21,7 +21,7 @@
  <b>JavaScript</b> - para dinânimica do site;<br>
  <b>SortableJS</b> - para trabalhar com o drag and drop da programação em blocos;<br>
  <b>Johnny-Five</b> - para enviar os comandos, via comunicação serial e usando protocolo Firmata, para o braço robótico;<br>
- <b>NodeJS</b> - para conexão com os servidores.
+ <b>NodeJS</b> - para criação do servidor.
 </blockquote>
 
 ### Integrantes da equipe
@@ -33,9 +33,9 @@
 - Kluiwert Victor Tavares: desenvolvedor de hardware
 
 <p align="center">
- <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/robotic-arm.png" alt="robotic-arm" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
- <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/logo-ufam.png" alt="logo-ufam" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
- <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/logo-super.png" alt="logo-super" height="70">
+ <img src="https://github.com/carolsbraz/educational-armblock/blob/main/src/robotic-arm.png?raw=true" alt="robotic-arm" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
+ <img src="https://github.com/carolsbraz/educational-armblock/blob/main/src/logo-ufam.png?raw=true" alt="logo-ufam" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
+ <img src="https://github.com/carolsbraz/educational-armblock/blob/main/src/logo-super.png?raw=true" alt="logo-super" height="70">
 </p>
 
 <p align="center">
