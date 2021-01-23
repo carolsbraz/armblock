@@ -19,6 +19,12 @@
     transform: translate3d(0, -50px, 0);
 }
 
+[data-anime="right-texture"] {
+    opacity: 1;
+    transition: 3s;
+    transform: translate3d(200px, 0, 0);
+}
+
 [data-anime].animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);

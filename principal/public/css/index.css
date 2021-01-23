@@ -339,7 +339,7 @@ div.footer {
     }
 }
 
-@media (max-width: 731px) and (max-height: 411px) {
+@media (max-height: 565px) {
     .init-back {
         display: none;
     }
