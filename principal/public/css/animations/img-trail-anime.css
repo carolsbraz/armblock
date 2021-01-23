@@ -1,29 +1,29 @@
-.image {
+.imgtrail {
     animation: all 1s ease-in-out infinite alternate;
 }
 
 
 /* elementos da imagem do index */
 
-.image #lines {
+.imgtrail #lines {
     animation: lines 2s ease-in-out infinite alternate;
     transform-origin: center;
     transform-box: fill-box;
 }
 
-.image #square-1 {
+.imgtrail #square-1 {
     animation: square-1 1s ease-in-out infinite alternate;
     transform-origin: center;
     transform-box: fill-box;
 }
 
-.image #square-2 {
+.imgtrail #square-2 {
     animation: square-2 1s ease-in-out infinite alternate;
     transform-origin: center;
     transform-box: fill-box;
 }
 
-.image #square-3 {
+.imgtrail #square-3 {
     animation: square-3 1s ease-in-out infinite alternate;
     transform-origin: center;
     transform-box: fill-box;
