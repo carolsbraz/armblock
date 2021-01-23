@@ -1,7 +1,8 @@
 {
     "name": "principal",
     "scripts": {
-        "start": "nodemon src/server.js"
+        "start": "node principal/src/server.js",
+        "startmon": "nodemon src/server.js"
     },
     "dependencies": {
         "express": "^4.17.1"
