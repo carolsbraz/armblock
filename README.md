@@ -1,10 +1,13 @@
 
-<h1 align="center">
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo.png" alt="logo" width="400">
-</h1>
 
+<h1 align="center">
+ <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/logo.png" alt="logo" width="400">
+</h1>
 <h3 align="center"> Educational ArmBlock </h3>
 <p align="center">Sua plataforma de aprendizado de robótica usando programação em blocos</p>
+<p align="center">
+[Ver site](https://armblock.herokuapp.com/) • Último deploy: 22/01/2021 22:40
+</p>
 
 ### Sobre o projeto
 
@@ -30,8 +33,11 @@
 - Kluiwert Victor Tavares: desenvolvedor de hardware
 
 <p align="center">
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/robotic-arm.png" alt="robotic-arm" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-ufam.png" alt="logo-ufam" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
- <img src="https://github.com/carolsbraz/armblock/blob/main/images/logo-super.png" alt="logo-super" height="70">
+ <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/robotic-arm.png" alt="robotic-arm" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
+ <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/logo-ufam.png" alt="logo-ufam" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
+ <img src="https://github.com/carolsbraz/educational-armblock/tree/main/src/logo-super.png" alt="logo-super" height="70">
 </p>
 
+<p align="center">
+<img src="https://forthebadge.com/images/badges/built-with-science.svg">
+</p>
