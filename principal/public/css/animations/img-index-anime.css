@@ -1,0 +1,203 @@
+.apresentation-image {
+    animation: all 1s ease-in-out infinite alternate;
+}
+
+
+/* elementos da imagem do index */
+
+.apresentation-image #vertice-1 {
+    animation: vertice-1 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.apresentation-image #vertice-2 {
+    animation: vertice-2 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.apresentation-image #vertice-3 {
+    animation: vertice-3 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.apresentation-image #elo-1 {
+    animation: elo-1 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: right;
+}
+
+.apresentation-image #elo-2 {
+    animation: elo-2 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: right;
+}
+
+.apresentation-image #claw {
+    animation: claw 1s ease-in-out infinite alternate;
+}
+
+.apresentation-image #boy-arm {
+    animation: arm-right-boy 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: right;
+}
+
+.apresentation-image #tool {
+    animation: ferramenta 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: right;
+}
+
+.apresentation-image #blocks-1 {
+    animation: blocks-1 0.8s ease-in-out infinite alternate;
+}
+
+.apresentation-image #blocks-2 {
+    animation: blocks-2 0.8s ease-in-out infinite alternate;
+}
+
+.apresentation-image #blocks-3 {
+    animation: blocks-3 0.8s ease-in-out infinite alternate;
+}
+
+.apresentation-image #blocks-4 {
+    animation: blocks-1 0.8s ease-in-out infinite alternate;
+}
+
+.apresentation-image #blocks-5 {
+    animation: blocks-2 0.8s ease-in-out infinite alternate;
+}
+
+.apresentation-image #blocks-6 {
+    animation: blocks-3 0.8s ease-in-out infinite alternate;
+}
+
+.apresentation-image #eletric-wire {
+    animation: eletric-wire 1s ease-in-out infinite alternate;
+}
+
+
+/* animação da imagem do index */
+
+@keyframes vertice-1 {
+    from {
+        transform: rotateZ(40deg);
+    }
+    to {
+        transform: rotateZ(-10deg);
+    }
+}
+
+@keyframes vertice-2 {
+    from {
+        transform: translateX(0%) translateY(0%) rotateZ(0deg);
+    }
+    to {
+        transform: translateX(-10%) translateY(10%) rotateZ(40deg);
+    }
+}
+
+@keyframes vertice-3 {
+    from {
+        transform: translateX(0%) translateY(0%) rotateZ(0deg);
+    }
+    to {
+        transform: translateX(-20%) translateY(-15%) rotateZ(-40deg);
+    }
+}
+
+@keyframes elo-1 {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-5deg);
+    }
+}
+
+@keyframes elo-2 {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(8deg);
+    }
+}
+
+@keyframes claw {
+    from {
+        transform: translateX(0%) translateY(0%);
+    }
+    to {
+        transform: translateX(-1%) translateY(-1%);
+    }
+}
+
+@keyframes arm-right-boy {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(5deg);
+    }
+}
+
+@keyframes ferramenta {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-5deg);
+    }
+}
+
+@keyframes blocks-1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blocks-2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blocks-3 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes eletric-wire {
+    from {
+        transform: rotateZ(-0.5deg);
+    }
+    to {
+        transform: rotateZ(0.5deg);
+    }
+}
+
+@keyframes all {
+    from {
+        transform: translateY(1%);
+    }
+    to {
+        transform: translateY(2%);
+    }
+}

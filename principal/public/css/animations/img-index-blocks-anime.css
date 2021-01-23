@@ -1,0 +1,118 @@
+.image {
+    animation: all 1s ease-in-out infinite alternate;
+}
+
+
+/* elementos da imagem do index */
+
+.image #move-block {
+    animation: move-block 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.image #arm-boy {
+    animation: arm-right-boy 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: right;
+}
+
+.image #block-1 {
+    animation: block-1 1s ease-in-out infinite;
+}
+
+.image #block-2 {
+    animation: block-2 1s ease-in-out infinite;
+}
+
+.image #block-3 {
+    animation: block-3 1s ease-in-out infinite;
+}
+
+.image #block-4 {
+    animation: block-4 1s ease-in-out infinite;
+}
+
+
+/* animação da imagem do index */
+
+@keyframes move-block {
+    from {
+        transform: translateX(0%) translateY(0%);
+    }
+    to {
+        transform: translateX(-95%) translateY(230%);
+    }
+}
+
+@keyframes arm-right-boy {
+    from {
+        transform: rotateZ(5deg) translateX(0%) translateY(0%);
+    }
+    to {
+        transform: rotateZ(-25deg) translateX(-20%) translateY(-20%);
+    }
+}
+
+@keyframes ferramenta {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-5deg);
+    }
+}
+
+@keyframes block-1 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes block-2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes block-3 {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes block-4 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes all {
+    from {
+        transform: translateY(1%);
+    }
+    to {
+        transform: translateY(3%);
+    }
+}

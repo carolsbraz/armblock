@@ -1,0 +1,150 @@
+.image {
+    animation: all 1s ease-in-out infinite alternate;
+}
+
+
+/* elementos da imagem do index */
+
+.image #eye {
+    animation: eye 2s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.image #arms {
+    animation: arms 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.image #card-1 {
+    animation: card-1 1s ease-in-out infinite alternate;
+}
+
+.image #card-2 {
+    animation: card-2 1s ease-in-out infinite alternate;
+}
+
+.image #card-3 {
+    animation: card-3 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.image #int-1 {
+    animation: int-1 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.image #int-2 {
+    animation: int-2 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+
+/* animação da imagem do index */
+
+@keyframes move-block {
+    from {
+        transform: translateX(0%) translateY(0%);
+    }
+    to {
+        transform: translateX(-95%) translateY(230%);
+    }
+}
+
+@keyframes arm-right-boy {
+    from {
+        transform: rotateZ(5deg) translateX(0%) translateY(0%);
+    }
+    to {
+        transform: rotateZ(-25deg) translateX(-20%) translateY(-20%);
+    }
+}
+
+@keyframes ferramenta {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-5deg);
+    }
+}
+
+@keyframes card-1 {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(20%);
+    }
+}
+
+@keyframes card-2 {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(5%);
+    }
+}
+
+@keyframes card-3 {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-5%);
+    }
+}
+
+@keyframes eye {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes arms {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(15deg);
+    }
+}
+
+@keyframes int-1 {
+    from {
+        transform: translateX(0%);
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: translateX(-2%);
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes int-2 {
+    from {
+        transform: translateX(2%);
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: translateX(-2%);
+        transform: rotateZ(-360deg);
+    }
+}
+
+@keyframes all {
+    from {
+        transform: translateY(1%);
+    }
+    to {
+        transform: translateY(3%);
+    }
+}

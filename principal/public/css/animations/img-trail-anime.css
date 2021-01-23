@@ -1,0 +1,84 @@
+.image {
+    animation: all 1s ease-in-out infinite alternate;
+}
+
+
+/* elementos da imagem do index */
+
+.image #lines {
+    animation: lines 2s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.image #square-1 {
+    animation: square-1 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.image #square-2 {
+    animation: square-2 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.image #square-3 {
+    animation: square-3 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+
+/* animação da imagem do index */
+
+@keyframes lines {
+    from {
+        -moz-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    to {
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+}
+
+@keyframes square-1 {
+    from {
+        transform: rotateZ(5deg) translateX(0%) translateY(0%);
+    }
+    to {
+        transform: rotateZ(-25deg) translateX(-20%) translateY(-20%);
+    }
+}
+
+@keyframes square-2 {
+    from {
+        transform: rotateZ(5deg) translateX(0%) translateY(0%);
+    }
+    to {
+        transform: rotateZ(-25deg) translateX(-20%) translateY(-20%);
+    }
+}
+
+@keyframes square-3 {
+    from {
+        transform: rotateZ(5deg) translateX(0%) translateY(0%);
+    }
+    to {
+        transform: rotateZ(-25deg) translateX(-20%) translateY(-20%);
+    }
+}
+
+@keyframes all {
+    from {
+        transform: translateY(1%);
+    }
+    to {
+        transform: translateY(3%);
+    }
+}
