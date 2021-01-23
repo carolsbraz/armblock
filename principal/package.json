@@ -1,7 +1,7 @@
 {
     "name": "principal",
     "scripts": {
-        "start": "node principal/src/server.js",
+        "start": "node src/server.js",
         "startmon": "nodemon src/server.js"
     },
     "dependencies": {
