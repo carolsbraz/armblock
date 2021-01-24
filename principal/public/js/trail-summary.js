@@ -1,5 +1,6 @@
-const titles = document.querySelectorAll('[data-summary]')
+// drop lists from summary
 
+const titles = document.querySelectorAll('[data-summary]')
 
 titles.forEach(title => {
     var selected = "";
@@ -11,8 +12,5 @@ titles.forEach(title => {
         } else {
             lista.classList.add('hide')
         }
-
     })
-
-
 })

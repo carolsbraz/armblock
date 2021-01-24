@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumário - Trila de Aprendizagem</title>
     <link rel="stylesheet" href="/css/trail-summary.css">
+    <link rel="stylesheet" href="/css/animations/load-animation.css">
 </head>
 
 <body>
@@ -29,9 +30,9 @@
             <a href="/trail-content" class="continue"><img src="/img/icon-trail.svg" alt="icone da trilha" width="30px">Continuar</a>
         </div>
 
-        <h1><img src="/img/processor.svg" alt="icone hardware" width="70px">Hardware</h1>
+        <h1 data-anime="up"><img src="/img/processor.svg" alt="icone hardware" width="70px">Hardware</h1>
         <br>
-        <ul>
+        <ul data-anime="up">
             <div class="summary-title" data-summary="1">1. O que é robótica?</div>
             <ul id="list-1" class="hide">
                 <li><a href="#">1.1. Naruto</a></li>
@@ -80,9 +81,9 @@
         </ul>
 
         <br><br>
-        <h1><img src="/img/coding.svg" alt="icone software" width="70px">Software</h1>
+        <h1 data-anime="up"><img src="/img/coding.svg" alt="icone software" width="70px">Software</h1>
         <br>
-        <ul>
+        <ul data-anime="up">
             <p class="summary-title" data-summary="8">1. Como pode ser programado um braço robótico?</p>
             <ul id="list-8" class="hide">
                 <li><a href="#">1.1. Clannad</a></li>
@@ -95,7 +96,7 @@
     </section>
 
     <script src="/js/trail-summary.js"></script>
-
+    <script src="/js/load-animation.js "></script>
 </body>
 
 </html>

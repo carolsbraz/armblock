@@ -21,6 +21,7 @@ html {
     position: relative;
     overflow-x: hidden;
     background-color: #F7F7F7;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,7 +44,6 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-track {
     background: rgb(240, 240, 240);
-    border-radius: 10px 10px 10px 10px;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -52,7 +52,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 div.blue-background {
-    height: 50vh;
+    height: 400px;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -91,16 +91,16 @@ header .menu a.link:hover {
     color: aliceblue
 }
 
-section.controle {
+.content .controle {
     width: 90%;
     max-width: 1100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px
+    margin-bottom: 50px;
 }
 
-section.controle a {
+.content .controle a {
     background-color: var(--main-blue);
     padding: 20px;
     color: white;
@@ -112,31 +112,23 @@ section.controle a {
     align-items: center;
 }
 
-section.controle a img {
+.content .controle a img {
     margin-right: 10px;
 }
 
-section.controle .summary:hover {
+.content .controle a:hover {
     background-color: var(--main-blue-hover);
 }
 
-section.controle .back {
+.content .controle .summary {
     background-color: var(--secundary-blue);
 }
 
-section.controle .back:hover {
+.content .controle .summary:hover {
     background-color: var(--secundary-blue-hover);
 }
 
-section.controle .next {
-    background-color: var(--secundary-blue);
-}
-
-section.controle .next:hover {
-    background-color: var(--secundary-blue-hover);
-}
-
-section.controle .next img {
+.content .controle .next img {
     margin: 0 0 0 10px;
 }
 
@@ -168,6 +160,16 @@ section.content h1 {
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
+    line-height: 40px;
+}
+
+.content .go-top {
+    display: flex;
+    justify-content: center;
+}
+
+.content .go-top img {
+    cursor: pointer
 }
 
 
@@ -202,6 +204,29 @@ section.content p {
     }
 }
 
+@media (max-width: 661px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 20px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+
 @media (max-width: 425px) {
     html {
         font-size: 45%;
@@ -209,27 +234,7 @@ section.content p {
     div.blue-background {
         height: 70vh;
     }
-    section.controle {
-        flex-direction: column;
-        margin-top: 15px;
-    }
-    section.controle .summary {
-        order: -1;
-    }
-    section.controle a {
-        justify-content: center;
-    }
-    section.controle .back {
-        margin: 10px 0 10px 0;
-    }
     section.content {
         padding: 25px 25px;
-    }
-    section.content h1 img {
-        width: 40px;
-    }
-    section.content ul {
-        margin-left: 0px;
-        text-align: center;
     }
 }

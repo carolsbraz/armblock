@@ -41,7 +41,6 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-track {
     background: rgb(240, 240, 240);
-    border-radius: 10px 10px 10px 10px;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -238,7 +237,7 @@ section.content li a {
         margin: 10px 0 10px 0;
     }
     section.content h1 img {
-        width: 40px;
+        width: 55px;
     }
     section.content {
         padding: 25px 25px;

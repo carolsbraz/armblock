@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumário - Trila de Aprendizagem</title>
     <link rel="stylesheet" href="/css/trail-content.css">
+    <link rel="stylesheet" href="/css/animations/load-animation.css">
 </head>
 
 <body>
 
-    <div class="blue-background"></div>
+    <div class="blue-background" id="top"></div>
 
     <header>
         <div class="brand">
@@ -22,16 +23,18 @@
         </div>
     </header>
 
-    <section class="controle">
-        <a href="#" class="back"><img src="/img/seta-back.svg" alt="icone da trilha" width="30px">Voltar</a>
-        <a href="/trail-summary" class="summary"><img src="/img/icon-summary.svg" alt="icone da trilha" width="30px">Sumário</a>
-        <a href="#" class="next">Próximo<img src="/img/seta-next.svg" alt="icone da trilha" width="30px"></a>
-    </section>
+
     <section class="content">
 
-        <h1>Laços de repetição</h1>
+        <div class="controle">
+            <a href="#" class="back"><img src="/img/seta-back.svg" alt="icone da trilha" width="30px">Voltar</a>
+            <a href="/trail-summary" class="summary"><img src="/img/icon-summary.svg" alt="icone da trilha" width="30px">Sumário</a>
+            <a href="#" class="next">Próximo<img src="/img/seta-next.svg" alt="icone da trilha" width="30px"></a>
+        </div>
+
+        <h1 data-anime="up">Laços de repetição</h1>
         <br>
-        <div class="texts">
+        <div class="texts" data-anime="up">
             <p>Os Laços de Repetição que iremos tratar aqui são o enquanto, faça e o para. Descrevendo-os resumidamente, temos o seguinte:<br> <b>Enquanto</b>: testa a condição antes de executar o bloco de código.<br> <b>Faça</b>: executa o bloco de código
                 e depois verifica a condição.
                 <br><b>Para</b>: executa um bloco de código um determinado número de vezes.<br> Vamos começar, então, falando do enquanto. O enquanto possui um funcionamento bem simples, porém é de grande utilidade. Ele compara uma sentença e executa
@@ -42,17 +45,20 @@
                 <br><b>Para</b>: executa um bloco de código um determinado número de vezes.<br> Vamos começar, então, falando do enquanto. O enquanto possui um funcionamento bem simples, porém é de grande utilidade. Ele compara uma sentença e executa
                 o bloco de código se a condição for verdadeira. Da mesma forma que, por exemplo, no Se, você pode colocar diversas condições, com o uso dos operadores lógicos e e ou, além do não.</p>
             <br>
-            <p>Os Laços de Repetição que iremos tratar aqui são o enquanto, faça e o para. Descrevendo-os resumidamente, temos o seguinte:<br> <b>Enquanto</b>: testa a condição antes de executar o bloco de código.<br> <b>Faça</b>: executa o bloco de código
-                e depois verifica a condição.
-                <br><b>Para</b>: executa um bloco de código um determinado número de vezes.<br> Vamos começar, então, falando do enquanto. O enquanto possui um funcionamento bem simples, porém é de grande utilidade. Ele compara uma sentença e executa
-                o bloco de código se a condição for verdadeira. Da mesma forma que, por exemplo, no Se, você pode colocar diversas condições, com o uso dos operadores lógicos e e ou, além do não.</p>
+            <br>
+            <div class="go-top">
+                <a href="#top"><img src="/img/up-arrow.svg" alt="icone da trilha" width="40px" id="up"></a>
+
+            </div>
+
         </div>
 
     </section>
 
 
 
-    <script src="/js/trail-sumary.js"></script>
+    <script src="/js/trail-content.js"></script>
+    <script src="/js/load-animation.js "></script>
 
 </body>
 
