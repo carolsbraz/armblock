@@ -12,7 +12,7 @@
 }
 
 .image #arm-boy {
-    animation: arm-right-boy 1s ease-in-out infinite alternate;
+    animation: arm-boy 1s ease-in-out infinite alternate;
     transform-box: fill-box;
     transform-origin: right;
 }
@@ -45,7 +45,7 @@
     }
 }
 
-@keyframes arm-right-boy {
+@keyframes arm-boy {
     from {
         transform: rotateZ(5deg) translateX(0%) translateY(0%);
     }

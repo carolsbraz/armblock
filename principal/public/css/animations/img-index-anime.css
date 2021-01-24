@@ -40,7 +40,7 @@
 }
 
 .apresentation-image #boy-arm {
-    animation: arm-right-boy 1s ease-in-out infinite alternate;
+    animation: arm-index-boy 1s ease-in-out infinite alternate;
     transform-box: fill-box;
     transform-origin: right;
 }
@@ -136,7 +136,7 @@
     }
 }
 
-@keyframes arm-right-boy {
+@keyframes arm-index-boy {
     from {
         transform: rotateZ(0deg);
     }

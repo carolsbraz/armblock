@@ -50,7 +50,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 div.blue-background {
-    height: 50vh;
+    height: 400px;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -89,16 +89,22 @@ header .menu a.link:hover {
     color: aliceblue
 }
 
-section.controle {
+section.content {
     width: 90%;
     max-width: 1100px;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 50px
 }
 
-section.controle a {
+section.content .controle {
+    display: flex;
+    justify-content: center;
+}
+
+section.content .controle a {
     background-color: var(--main-blue);
     padding: 20px;
     color: white;
@@ -108,13 +114,15 @@ section.controle a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 200px;
+    margin-bottom: 40px;
 }
 
-section.controle a img {
+section.content .controle a img {
     margin-right: 10px;
 }
 
-section.controle .continue:hover {
+section.content .controle .continue:hover {
     background-color: var(--main-blue-hover);
 }
 
@@ -142,14 +150,31 @@ section.content h1 img {
 
 section.content ul {
     font-size: 2.0rem;
-    text-decoration: none;
     margin-left: 90px;
     color: black;
     list-style: none;
+    line-height: 40px;
+}
+
+.hide {
+    display: none;
 }
 
 section.content ul a:hover {
-    color: rgb(155, 155, 155)
+    color: rgb(173, 173, 173);
+}
+
+section.content .summary-title {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+section.content .summary-title:hover {
+    color: rgb(173, 173, 173);
+}
+
+section.content li a {
+    color: rgb(66, 66, 66)
 }
 
 
@@ -182,6 +207,17 @@ section.content ul a:hover {
         text-align: center;
         margin: 20px 0 0 0;
     }
+    section.content h1 {
+        display: flex;
+        justify-content: center;
+    }
+    section.content ul {
+        margin-left: 0px;
+        text-align: center;
+    }
+    section.content .summary-title:hover {
+        color: black;
+    }
 }
 
 @media (max-width: 425px) {
@@ -191,28 +227,20 @@ section.content ul a:hover {
     div.blue-background {
         height: 70vh;
     }
-    section.controle {
+    section.content {
         flex-direction: column;
         margin-top: 15px;
     }
-    section.controle .continue {
-        order: -1;
-    }
-    section.controle a {
+    section.content .controle a {
         justify-content: center;
     }
-    section.controle .back {
+    section.content .back {
         margin: 10px 0 10px 0;
-    }
-    section.content h1 {
-        display: flex;
-        justify-content: center;
     }
     section.content h1 img {
         width: 40px;
     }
-    section.content ul {
-        margin-left: 0px;
-        text-align: center;
+    section.content {
+        padding: 25px 25px;
     }
 }
