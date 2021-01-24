@@ -6,7 +6,7 @@
 <h3 align="center"> Educational ArmBlock </h3>
 <p align="center">Sua plataforma de aprendizado de robótica usando programação em blocos</p>
 <p align="center">
-<a href="https://armblock.herokuapp.com/">Ver site</a> • Último deploy: 22/01/2021 22:40
+<a href="https://armblock.herokuapp.com/">Ver site</a> • Último deploy: 23/01/2021 22:40
 </p>
 
 ### Sobre o projeto
