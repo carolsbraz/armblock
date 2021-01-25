@@ -3,149 +3,232 @@
     --back-color: #f7f7f7;
     --main-blue: #0077B6;
     --secundary-blue: #85ABBE;
-    --shadow-blue: #6F8F9E;
+    --shadow-blue: #678D98;
     --yellow-block: #FFF694;
     --blue-block: #85ABBE;
-    --red-block: #CEA086;
+    --red-block: #E26464;
     --green-block: #87CE86;
+    --brown-block: #CEA086;
+    --dark-blue-block: #678D98;
     --gray: #bbbbbb;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: 0;
     text-decoration: none;
 }
 
 html {
-    font-family: montserrat;
-    font-size: 16px;
+    font-size: 65.5%;
+    overflow-x: hidden;
+    background-color: #F7F7F7;
 }
 
 body {
-    padding: 50px 100px;
-    background-color: var(--back-color);
+    font-size: 1.6rem;
+    width: 95%;
+    margin: auto;
 }
 
-.header {
+html,
+body {
+    font-family: "Montserrat";
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 10px 10px 10px 10px;
+}
+
+header {
+    width: 90%;
+    max-width: 2200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    color: black;
-    text-decoration: none;
+    margin-top: 30px;
 }
 
-.header .brand {
+header .brand {
     display: flex;
     align-items: center;
 }
 
-.header .brand .logo {
-    width: 70px;
-}
-
-.header .brand h3 {
-    font-size: 30px;
+header .brand .title {
+    margin-left: 20px;
     color: var(--main-blue);
-    margin-left: 20px
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    height: calc(100vh - 210px);
-}
-
-.container .robotic-arm {
-    width: 40%;
-    height: 100%;
-    background-color: white;
-    margin: 0px 10px 0px 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px 1px var(--gray);
+header .menu {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.container .robotic-arm svg {
-    width: 400px;
-    height: 400px;
+header .menu a.link {
+    color: black;
+    transition: 0.5s;
+    margin-right: 20px;
 }
 
-.container .boards {
-    width: 30%;
-    position: relative;
+header .menu a.link:hover {
+    color: rgb(141, 140, 78)
 }
 
-.container .board {
-    width: calc(100% - 60px);
-    height: calc(100% - 40px);
-    background-color: white;
-    margin: 0px 10px 0px 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px 1px var(--gray);
-    position: absolute;
-    visibility: hidden;
-    padding: 20px;
-}
-
-.container .board h3 {
-    text-align: center;
-}
-
-.container .options {
-    width: 30%;
-    height: 100%;
-    margin: 0px 10px 0px 10px;
-    border-radius: 10px;
-}
-
-.container .options {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.container .options .change-button {
+header .menu .change-button {
     display: flex;
     justify-content: space-between;
 }
 
-.container .options .change-button .rotine {
+header .menu .change-button .rotine {
     background-color: var(--secundary-blue);
     color: white;
-    padding: 20px 10px 20px 10px;
-    width: 100%;
+    padding: 15px 10px 15px 10px;
+    width: 200px;
     border-radius: 10px 0px 0px 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-shadow: 2px 2px 4px 1px var(--gray);
+    font-weight: 600;
 }
 
-.container .options .change-button .algorithm {
+header .menu .change-button .operation {
     background-color: var(--shadow-blue);
     color: white;
-    padding: 20px 10px 20px 10px;
-    width: 100%;
+    padding: 15px 10px 15px 10px;
+    width: 200px;
     border-radius: 0px 10px 10px 0px;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-shadow: 2px 2px 4px 1px var(--gray);
+    font-weight: 600;
 }
 
-.container .options .actions-buttons {
+header .menu .actions-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.container .options .actions-buttons .delete {
+section.container {
+    width: 90%;
+    max-width: 3000px;
+    margin: auto;
+    margin-top: 30px;
+    height: calc(100vh - 160px);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem
+}
+
+section.container .configuration {
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    width: 30%;
+}
+
+section.container .configuration {
+    overflow-x: auto;
+}
+
+section.container .configuration::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+section.container .configuration::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 0 8px 8px 0;
+}
+
+section.container .configuration::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 0 8px 8px 0;
+}
+
+section.container .configuration .block {
+    padding: 7px 20px 7px 20px;
+    color: white;
+    border-radius: 8px;
+    margin: 10px 0 10px 0;
+}
+
+section.container .configuration .block input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 70px;
+}
+
+section.container .configuration .block select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 120px;
+}
+
+section.container .configuration .title-block {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+section.container .robotic-arm {
+    background-color: white;
+    margin: 0 20px 0 20px;
+    padding: 50px;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+}
+
+section.container .robotic-arm .message-arm {
+    text-align: center;
+    font-weight: 600;
+}
+
+section.container .robotic-arm .arm {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    max-height: 400px
+}
+
+section.container .robotic-arm .actions-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+
+section.container .robotic-arm .actions-buttons .delete {
     background-color: var(--secundary-blue);
     color: white;
-    padding: 20px 10px 20px 10px;
+    padding: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -155,10 +238,10 @@ body {
     align-items: center;
 }
 
-.container .options .actions-buttons .test {
-    background-color: var(--main-blue);
+section.container .robotic-arm .actions-buttons .test {
+    background-color: var(--shadow-blue);
     color: white;
-    padding: 30px 10px 30px 10px;
+    padding: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -167,56 +250,61 @@ body {
     align-items: center;
 }
 
-.container .options .actions-buttons p {
+section.container .robotic-arm .board .actions-buttons p {
     margin-left: 20px;
 }
 
-.container .options .blocks {
+section.container .boards {
+    width: 30%;
+    position: relative;
+    height: 100%;
+}
+
+section.container .boards .board {
     background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    border-radius: 10px;
-    overflow-x: auto;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
     box-shadow: 2px 2px 4px 1px var(--gray);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
 }
 
-.container .options .blocks::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-.container .options .blocks::-webkit-scrollbar-track {
-    background: rgb(240, 240, 240);
-    border-radius: 0 10px 10px 0;
-}
-
-.container .blocks::-webkit-scrollbar-thumb {
-    background: #c2c2c2;
-    border-radius: 0 10px 10px 0;
-}
-
-.block {
-    padding: 25px;
-    margin: 20px 0px 20px 0px;
-    border-radius: 10px;
+section.container .boards .board .block {
+    padding: 7px 20px 7px 20px;
+    color: black;
     font-weight: 600;
-    box-shadow: 2px 2px 4px 1px var(--gray);
+    border-radius: 8px;
+    margin: 10px 0 10px 0;
 }
 
-.container .options .inf .help {
+section.container .boards .board .block input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 70px;
+}
+
+section.container .boards .board .block select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 120px;
+}
+
+section.container .boards .board .selected-block {
+    padding: 7px 20px 7px 20px;
+    color: white;
+    border-radius: 8px;
+    margin: 10px 0 10px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px 1px var(--gray);
-}
-
-.container .options p {
-    margin-left: 50px;
-    font-weight: bolder;
+    font-weight: 600;
 }
 
 .selecionado {
@@ -253,54 +341,134 @@ body {
     background-color: var(--green-block) !important;
 }
 
-@media screen and (max-height: 911px) {
-    .container .options .blocks {
-        max-height: 300px;
-        padding: 0px 20px 0px 20px
+.brown {
+    background-color: var(--brown-block) !important;
+}
+
+.dark-blue {
+    background-color: var(--dark-blue-block) !important;
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 55%;
     }
-    .container .options .actions-buttons .delete {
-        padding: 20px 10px 20px 10px;
-    }
-    .container .options .actions-buttons .test {
-        padding: 20px 10px 20px 10px;
-    }
-    .container .robotic-arm svg {
-        width: 400px;
-        height: 400px
+    section.container .configuration .block {
+        text-align: center;
     }
 }
 
-@media screen and (max-height: 772px) {
-    .container .options .blocks {
-        max-height: 180px;
-        padding: 0px 20px 0px 20px
+@media (max-width: 1024px) {
+    html {
+        font-size: 50%
     }
-    .container .options .actions-buttons .delete {
-        padding: 20px 10px 20px 10px;
+    section.container .configuration {
+        padding: 20px !important;
     }
-    .container .options .actions-buttons .test {
-        padding: 20px 10px 20px 10px;
+    section.container .configuration .block {
+        text-align: center;
     }
-    .container .robotic-arm svg {
-        width: 300px;
-        height: 300px
+    section.container .boards .board .block {
+        text-align: center;
+    }
+    section.container .robotic-arm svg {
+        width: 90%;
+    }
+    section.container .robotic-arm .message-arm {
+        text-align: center;
     }
 }
 
-@media screen and (max-height: 654px) {
-    .container .options .blocks {
-        max-height: 100px;
-        padding: 0px 20px 0px 20px
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
     }
-    .container .options .actions-buttons .delete {
-        padding: 20px 10px 20px 10px;
+    html {
+        font-size: 50%;
     }
-    .container .options .actions-buttons .test {
-        padding: 20px 10px 20px 10px;
+    header .brand img {
+        width: 50px;
     }
-    .container .robotic-arm svg {
-        width: 600px;
-        height: 600px
+    header {
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+    header .brand {
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px
+    }
+    header .brand .title {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+    header .menu {
+        flex-direction: column;
+    }
+    header .menu .link-menu {
+        margin: 20px 0 20px 0;
+    }
+    section.container {
+        flex-direction: column;
+        height: 100%;
+    }
+    section.container .robotic-arm {
+        margin: 20px 0 20px 0;
+        padding: 50px !important;
+        width: 100%;
+    }
+    section.container .robotic-arm .arm {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 20px 0;
+    }
+    section.container .configuration {
+        padding: 50px !important;
+        width: 100%
+    }
+    section.container .boards {
+        width: 100%;
+    }
+    section.container .board {
+        padding: 50px !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 509px) {
+    section.container .robotic-arm .actions-buttons {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section.container .robotic-arm .actions-buttons .delete {
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 45%;
+    }
+    header .brand {
+        flex-direction: column;
+    }
+    header .menu .change-button .rotine {
+        width: 100px;
+    }
+    header .menu .change-button .operation {
+        width: 100px;
+    }
+    section.container .robotic-arm {
+        padding: 25px !important;
+    }
+    section.container .configuration {
+        padding: 25px !important;
+    }
+    section.container .boards .board {
+        padding: 25px !important;
     }
 }
 
