@@ -35,9 +35,9 @@
                     <div class="green title-block block">Configurações</div>
                     <div class="brown serial-block block">Selecione a porta serial:
                         <select name="serial-port" id="serial-port">
-                    <option value="COM1">COM1</option>
-                    <option value="COM2">COM2</option>
-                    <option value="COM2">COM2</option>
+                            <% for (porta of portas){%>
+                                <option value="<%= porta %>"><%= porta %></option>
+                              <% } %>
                 </select>
                     </div>
                     <div class="dark-blue pin-block block">Pino do motor 1: <input type="number" placeholder="pino" name="pino1"></div>
@@ -243,41 +243,16 @@
                 </div>
             </div>
 
-            <p>Minha data: <strong><span></span><strong></p>
-
         </section>
 
     </form>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js "></script>
     <script src="/js/manual-programming.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script>
-        async function getContent() {
-            try {
-                const response = await fetch('http://localhost:4567/')
-                    //console.log(response)
-                const data
-                show(data)
-            } catch (error) {
-                console.error(error)
-            }
-        }
 
-        getContent()
-
-        function show(users) {
-            let output = ''
-
-            for (let user of users) {
-                output += `<li>${user.name}</li>`
-            }
-
-            document.querySelector('span').innerHTML = output
-        }
-    </script>
 </body>
 
 </html>

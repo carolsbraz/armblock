@@ -126,6 +126,10 @@ header .menu .actions-buttons {
     margin-top: 20px;
 }
 
+form {
+    width: 100%;
+}
+
 section.container {
     width: 90%;
     max-width: 3000px;
@@ -248,6 +252,7 @@ section.container .robotic-arm .actions-buttons .test {
     border-radius: 10px;
     box-shadow: 2px 2px 4px 1px var(--gray);
     align-items: center;
+    border: 0;
 }
 
 section.container .robotic-arm .board .actions-buttons p {
@@ -434,7 +439,6 @@ section.container .boards .board .selected-block {
     }
     section.container .board {
         padding: 50px !important;
-        width: 100%;
     }
 }
 
