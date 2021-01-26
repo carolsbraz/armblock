@@ -49,20 +49,20 @@
  const five = require("johnny-five");
  const iohook = require("iohook");
 
+ server.get("/enviar-dados", (req, res) => {
+     const pino1 = req.query.pino1;
 
- const board = new five.Board();
+     const key11 = req.query.keymotor11.charCodeAt(0);
+     const direction11 = req.query.keymotor11.charCodeAt(0);
 
- board.on("ready", () => {
+     const key12 = req.query.keymotor12.charCodeAt(0);
+     const direction12 = req.query.keymotor12.charCodeAt(0);
 
+     const serialport = req.query.serialport;
 
-     server.get("/enviar-dados", (req, res) => {
-         const pino1 = req.query.pino1;
+     const board = new five.Board({ port: serialport });
 
-         const key11 = req.query.keymotor11.charCodeAt(0);
-         const direction11 = req.query.keymotor11.charCodeAt(0);
-
-         const key12 = req.query.keymotor12.charCodeAt(0);
-         const direction12 = req.query.keymotor12.charCodeAt(0);
+     board.on("ready", () => {
 
          var led = new five.Led(pino1);
 
@@ -82,11 +82,14 @@
 
          });
          iohook.start();
+
+
+
      })
 
 
-
  })
+
 
  //ligar o servidor
  http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));
