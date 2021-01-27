@@ -2,21 +2,18 @@
  const express = require("express")
  const server = express()
 
+
+ //definindo a template engine ejs
  server.set('view engine', 'ejs')
 
  //configurar pastas públicas
  server.use(express.static("public"))
 
 
- // configurar camninhos da aplicação
-
- //página inicial
-
- // req : requisição (pedido)
- //res: resposta
+ // configurar caminhos da aplicação
 
  server.get("/", (req, res) => {
-     res.sendFile(__dirname + "/views/index.html")
+     return res.render(__dirname + "/views/index")
  })
 
  server.get("/home-trail", (req, res) => {
@@ -27,8 +24,12 @@
      res.sendFile(__dirname + "/views/trail-summary.html")
  })
 
- server.get("/trail-content", (req, res) => {
-     res.sendFile(__dirname + "/views/trail-content.html")
+ server.get("/trail-content-1", (req, res) => {
+     res.sendFile(__dirname + "/views/trail-content-1.html")
+ })
+
+ server.get("/trail-content-2", (req, res) => {
+     res.sendFile(__dirname + "/views/trail-content-2.html")
  })
 
  server.get("/manual-programming", (req, res) => {
@@ -53,10 +54,8 @@
      const pino1 = req.query.pino1;
 
      const key11 = req.query.keymotor11.charCodeAt(0);
-     const direction11 = req.query.keymotor11.charCodeAt(0);
 
      const key12 = req.query.keymotor12.charCodeAt(0);
-     const direction12 = req.query.keymotor12.charCodeAt(0);
 
      const serialport = req.query.serialport;
 
@@ -82,12 +81,7 @@
 
          });
          iohook.start();
-
-
-
      })
-
-
  })
 
 
