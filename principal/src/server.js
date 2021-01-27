@@ -36,7 +36,6 @@
      var avaiableSerialPorts = []
 
      const SerialPort = require('serialport');
-     // Promise approach
      SerialPort.list().then(ports => {
          ports.forEach(function(port) {
              avaiableSerialPorts.push(port.path);
@@ -44,18 +43,17 @@
          });
      });
 
-
  })
 
  const five = require("johnny-five");
  const iohook = require("iohook");
 
  server.get("/enviar-dados", (req, res) => {
-     const pino1 = req.query.pino1;
+     const pino6 = req.query.pino6;
 
-     const key11 = req.query.keymotor11.charCodeAt(0);
+     const key61 = req.query.keymotor61.charCodeAt(0);
 
-     const key12 = req.query.keymotor12.charCodeAt(0);
+     const key62 = req.query.keymotor62.charCodeAt(0);
 
      const serialport = req.query.serialport;
 
@@ -63,18 +61,21 @@
 
      board.on("ready", () => {
 
-         var led = new five.Led(pino1);
+         var servo6 = new five.Servo({
+             pin: pino6,
+             range: [50, 110],
+             startAt: 110
+         });
 
          iohook.on("keypress", event => {
 
-             if (event.keychar == key11) {
-                 led.on();
+             if (event.keychar == key61) {
+                 servo.min()
              }
              if (event.keychar == key12) {
-                 led.off();
+                 servo.max();
              }
              if (event.keychar == 32) {
-
                  res.sendFile(__dirname + "/views/manual-programming.html")
                  iohook.stop();
              }
