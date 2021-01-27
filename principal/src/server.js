@@ -70,10 +70,10 @@
          iohook.on("keypress", event => {
 
              if (event.keychar == key61) {
-                 servo.min()
+                 servo6.min()
              }
-             if (event.keychar == key12) {
-                 servo.max();
+             if (event.keychar == key62) {
+                 servo6.max();
              }
              if (event.keychar == 32) {
                  res.sendFile(__dirname + "/views/manual-programming.html")
