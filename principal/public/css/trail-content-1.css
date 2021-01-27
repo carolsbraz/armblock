@@ -6,6 +6,8 @@
     --background-blue: #6DA5C2;
     --secundary-blue: #6F8F9E;
     --secundary-blue-hover: #54666e;
+    --blue-bot: #6da6c254;
+    --yellow-curiosity: #f4f88483;
 }
 
 * {
@@ -157,10 +159,61 @@ section.content h1 {
     font-size: 3rem;
 }
 
+section.content .texts .bot {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-bot);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+section.content .texts .bot svg {
+    width: 250px;
+}
+
+section.content .texts .bot svg #ball-1 {
+    animation: ball-1 2s ease-in-out infinite;
+}
+
+section.content .texts .bot svg #ball-2 {
+    animation: ball-2 2s ease-in-out infinite;
+}
+
+section.content .texts .bot svg #ball-3 {
+    animation: ball-3 2s ease-in-out infinite;
+}
+
+section.content .texts .bot p {
+    margin-left: 20px;
+}
+
+section.content .texts .curiosity {
+    display: flex;
+    align-items: center;
+    background-color: var(--yellow-curiosity);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+section.content .texts .curiosity svg {
+    width: 400px;
+}
+
+section.content .texts .curiosity svg #int {
+    animation: int 2s ease-in-out infinite alternate;
+    transform-origin: center center;
+    transform-box: fill;
+}
+
+section.content .texts .curiosity .text {
+    margin-left: 20px;
+}
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
     line-height: 40px;
+    margin: 20px 0 20px 0;
 }
 
 .content .go-top {
@@ -222,6 +275,28 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
+    section.content .texts .bot {
+        flex-direction: column;
+    }
+    section.content .texts .bot svg {
+        width: 220px;
+    }
+    section.content .texts .bot p {
+        margin: 0;
+    }
+    section.content .texts .curiosity {
+        flex-direction: column;
+    }
+    section.content .texts .curiosity svg {
+        width: 220px;
+    }
+    section.content .texts .curiosity .text {
+        margin: 0;
+    }
+    section.content .texts .curiosity .text h2 {
+        text-align: center;
+        margin-top: 20px
+    }
     .content .go-top img {
         width: 30px;
     }
@@ -236,5 +311,53 @@ section.content p {
     }
     section.content {
         padding: 25px 25px;
+    }
+}
+
+
+/* animations */
+
+@keyframes ball-1 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ball-2 {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ball-3 {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes int {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
     }
 }
