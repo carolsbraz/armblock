@@ -66,7 +66,6 @@
              range: [50, 110],
              startAt: 110
          });
-
          iohook.on("keypress", event => {
 
              if (event.keychar == key61) {
