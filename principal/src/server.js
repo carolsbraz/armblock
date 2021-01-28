@@ -39,14 +39,14 @@
      SerialPort.list().then(ports => {
          ports.forEach(function(port) {
              avaiableSerialPorts.push(port.path);
-             return res.render(__dirname + "/views/manual-programming", { portas: avaiableSerialPorts })
+
          });
+         return res.render(__dirname + "/views/manual-programming", { portas: avaiableSerialPorts })
      });
 
  })
 
  const five = require("johnny-five");
- const iohook = require("iohook");
 
  server.get("/enviar-dados", (req, res) => {
      const pino6 = req.query.pino6;
@@ -66,6 +66,8 @@
              range: [50, 110],
              startAt: 110
          });
+         const iohook = require("iohook");
+
          iohook.on("keypress", event => {
 
              if (event.keychar == key61) {
