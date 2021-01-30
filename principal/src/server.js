@@ -49,39 +49,63 @@
  const five = require("johnny-five");
 
  server.get("/enviar-dados", (req, res) => {
+     const pino1 = req.query.pino1;
+     const pino2 = req.query.pino2;
+     const key11 = req.query.keymotor11.charCodeAt(0);
+     const key12 = req.query.keymotor12.charCodeAt(0);
+
      const pino6 = req.query.pino6;
-
      const key61 = req.query.keymotor61.charCodeAt(0);
-
      const key62 = req.query.keymotor62.charCodeAt(0);
+
+     console.log(pino1, pino2)
+     console.log(key11, key12)
 
      const serialport = req.query.serialport;
 
      const board = new five.Board({ port: serialport });
 
      board.on("ready", () => {
+         var led1 = new five.Led(pino1)
+         var led2 = new five.Led(pino2)
 
          var servo6 = new five.Servo({
              pin: pino6,
              range: [50, 110],
              startAt: 110
          });
+
          const iohook = require("iohook");
+
+         var keycodeLed = 0
 
          iohook.on("keypress", event => {
 
-             if (event.keychar == key61) {
-                 servo6.min()
+             console.log(event)
+
+             keycodeLed = event.rawcode
+
+             if (event.keychar == key11) {
+                 led2.on();
              }
-             if (event.keychar == key62) {
-                 servo6.max();
-             }
-             if (event.keychar == 32) {
-                 res.sendFile(__dirname + "/views/manual-programming.html")
-                 iohook.stop();
+             if (event.keychar == key12) {
+                 led1.on()
              }
 
          });
+         iohook.on("keyup", event => {
+             console.log(keycodeLed)
+
+             if (event.rawcode == keycodeLed) {
+                 console.log('oi')
+                 led2.off();
+             }
+             if (event.rawcode == keycodeLed) {
+                 led1.off()
+             }
+
+         });
+
          iohook.start();
      })
  })
