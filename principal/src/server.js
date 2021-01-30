@@ -50,27 +50,27 @@ const five = require("johnny-five");
 
 server.get("/enviar-dados", (req, res) => {
 
-    const pino5 = req.query.pino5;
-    const key51 = req.query.keymotor51.charCodeAt(0);
-    const key52 = req.query.keymotor52.charCodeAt(0);
-
     const pino6 = req.query.pino6;
     const key61 = req.query.keymotor61.charCodeAt(0);
     const key62 = req.query.keymotor62.charCodeAt(0);
+
+    const pino7 = req.query.pino7;
+    const key71 = req.query.keymotor71.charCodeAt(0);
+    const key72 = req.query.keymotor72.charCodeAt(0);
 
     const serialport = req.query.serialport;
 
     const board = new five.Board({ port: serialport });
 
     board.on("ready", () => {
-        console.log(pino5)
-        var servo5 = new five.Servo({
-            pin: pino5,
+        console.log(pino6)
+        var servo6 = new five.Servo({
+            pin: pino6,
             startAt: 11
         });
 
-        var servo6 = new five.Servo({
-            pin: pino6,
+        var servo7 = new five.Servo({
+            pin: pino7,
             range: [50, 110],
             startAt: 110
         });
@@ -79,24 +79,24 @@ server.get("/enviar-dados", (req, res) => {
 
         iohook.on("keypress", event => {
 
-            if (event.keychar == key51) {
-                console.log('punhoTransversal-011')
-                servo5.to(11)
-            }
-            if (event.keychar == key52) {
-                console.log('punhoTransversal-107')
-                servo5.to(107);
-            }
             if (event.keychar == key61) {
-                console.log('garra aberta-50')
-                servo6.min()
+                console.log('punhoTransversal-011')
+                servo6.to(11)
             }
             if (event.keychar == key62) {
+                console.log('punhoTransversal-107')
+                servo6.to(107);
+            }
+            if (event.keychar == key71) {
+                console.log('garra aberta-50')
+                servo7.min()
+            }
+            if (event.keychar == key72) {
                 console.log('garra fechada-110')
-                servo6.max();
+                servo7.max();
             }
             if (event.keychar == 32) {
-                servo5.stop();
+                servo7.stop();
             }
 
         });
