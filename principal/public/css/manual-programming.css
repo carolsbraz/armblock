@@ -319,11 +319,11 @@ section.container .boards .board .selected-block {
 }
 
 #motor-1,
-#motor-2,
-#motor-3,
+#motor-2-3,
 #motor-4,
 #motor-5,
-#motor-6 {
+#motor-6,
+#motor-7 {
     cursor: pointer;
 }
 
