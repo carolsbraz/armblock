@@ -94,8 +94,7 @@ header .menu a.link:hover {
 }
 
 .content .controle {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -141,7 +140,7 @@ section.content {
     background-color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 50px 50px;
+    padding: 50px 150px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
@@ -200,9 +199,9 @@ section.content .texts .curiosity svg {
 }
 
 section.content .texts .curiosity svg #int {
-    animation: int 2s ease-in-out infinite alternate;
-    transform-origin: center center;
-    transform-box: fill;
+    animation: int 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
 }
 
 section.content .texts .curiosity .text {
@@ -231,6 +230,12 @@ section.content p {
 @media (max-width: 1024px) {
     html {
         font-size: 55%;
+    }
+}
+
+@media (max-width: 1000px) {
+    section.content {
+        padding: 50px 50px
     }
 }
 
@@ -279,7 +284,7 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .bot svg {
-        width: 220px;
+        width: 150px;
     }
     section.content .texts .bot p {
         margin: 0;
@@ -288,7 +293,7 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .curiosity svg {
-        width: 220px;
+        width: 100px;
     }
     section.content .texts .curiosity .text {
         margin: 0;
@@ -354,10 +359,10 @@ section.content p {
 }
 
 @keyframes int {
-    from {
-        transform: scale(0.8)
+    0% {
+        transform: scale(0.7);
     }
-    to {
-        transform: scale(1)
+    100% {
+        transform: scale(0.9);
     }
 }
