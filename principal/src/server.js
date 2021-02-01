@@ -28,14 +28,15 @@ server.get("/trail-content-1", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-1.html")
 })
 
- server.get("/trail-content-2", (req, res) => {
-     res.sendFile(__dirname + "/views/trail-content-2.html")
- })
- server.get("/trail-content-3", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-3.html")
+server.get("/trail-content-2", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-2.html")
 })
- server.get("/manual-programming", (req, res) => {
-     var avaiableSerialPorts = []
+server.get("/trail-content-3", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-4.html")
+})
+
+server.get("/manual-programming", (req, res) => {
+    var avaiableSerialPorts = []
 
     const SerialPort = require('serialport');
     SerialPort.list().then(ports => {
