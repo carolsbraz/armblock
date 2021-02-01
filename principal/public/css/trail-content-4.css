@@ -141,7 +141,7 @@ section.content {
     background-color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 50px 50px;
+    padding: 50px 150px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
@@ -173,11 +173,9 @@ section.content .texts .bot {
     border-radius: 8px;
 }
 
-
 section.content .texts .bot svg {
-    width: 100px;
+    width: 150px;
 }
-
 
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
@@ -203,7 +201,6 @@ section.content .texts .sensors {
 
 section.content .texts .sensors svg {
     width: 700px;
-
 }
 
 section.content .texts p {
@@ -259,6 +256,12 @@ section.content p {
 @media (max-width: 1024px) {
     html {
         font-size: 55%;
+    }
+}
+
+@media (max-width: 1000px) {
+    section.content {
+        padding: 50px 50px
     }
 }
 
@@ -327,14 +330,13 @@ section.content p {
     section.content .texts .bot2 svg {
         width: 400px;
     }
-    section.content .texts .bot2 .text .links{
+    section.content .texts .bot2 .text .links {
         font-size: 15px;
     }
     .content .go-top img {
         width: 30px;
     }
 }
-
 
 @media (max-width: 450px) {
     .content .controle {
@@ -388,6 +390,7 @@ section.content p {
         width: 30px;
     }
 }
+
 @media (max-width: 375px) {
     .content .controle {
         flex-direction: column;
@@ -409,7 +412,6 @@ section.content p {
     section.content .texts .bot {
         flex-direction: column;
         align-items: center;
-
     }
     section.content .texts .bot svg {
         width: 150px;
@@ -443,6 +445,7 @@ section.content p {
         width: 30px;
     }
 }
+
 @media (max-width: 425px) {
     html {
         font-size: 45%;

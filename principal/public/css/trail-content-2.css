@@ -141,7 +141,7 @@ section.content {
     background-color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 50px 50px;
+    padding: 50px 150px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
@@ -195,12 +195,11 @@ section.content .texts .bot p {
 
 section.content .robot {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
 section.content .robot svg {
     width: 700px;
-
 }
 
 section.content .explication p {
@@ -252,6 +251,12 @@ section.content p {
     header .brand .title {
         text-align: center;
         margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    section.content {
+        padding: 50px 50px
     }
 }
 
