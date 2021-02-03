@@ -69,6 +69,9 @@ server.get("/block-programming", (req, res) => {
 const five = require("johnny-five");
 
 server.get("/enviar-dados", (req, res) => {
+    const pino1 = req.query.pino1;
+    const key11 = req.query.keymotor11.charCodeAt(0);
+    const key12 = req.query.keymotor12.charCodeAt(0);
 
     const pino6 = req.query.pino6;
     const key61 = req.query.keymotor61.charCodeAt(0);
@@ -83,7 +86,16 @@ server.get("/enviar-dados", (req, res) => {
     const board = new five.Board({ port: serialport });
 
     board.on("ready", () => {
+
+        console.log(pino1)
         console.log(pino6)
+        console.log(pino7)
+
+        var servo1 = new five.Servo({
+            pin: pino1,
+            startAt: 90
+        });
+
         var servo6 = new five.Servo({
             pin: pino6,
             startAt: 11
@@ -99,6 +111,14 @@ server.get("/enviar-dados", (req, res) => {
 
         iohook.on("keypress", event => {
 
+            if (event.keychar == key11) {
+                console.log('base horário')
+                servo1.to(70)
+            }
+            if (event.keychar == key12) {
+                console.log('base anti-horário')
+                servo1.to(100);
+            }
             if (event.keychar == key61) {
                 console.log('punhoTransversal-011')
                 servo6.to(11)
@@ -116,7 +136,7 @@ server.get("/enviar-dados", (req, res) => {
                 servo7.max();
             }
             if (event.keychar == 32) {
-                servo7.stop();
+                servo1.to(90);
             }
 
         });
