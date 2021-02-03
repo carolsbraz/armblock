@@ -9,7 +9,6 @@ server.set('view engine', 'ejs')
 //configurar pastas públicas
 server.use(express.static("public"))
 
-
 // configurar caminhos da aplicação
 
 server.get("/", (req, res) => {
@@ -32,10 +31,14 @@ server.get("/trail-content-2", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-2.html")
 })
 server.get("/trail-content-3", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-3.html")
+})
+
+server.get("/trail-content-4", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-4.html")
 })
 
-server.get("/manual-programming", (req, res) => {
+server.get("/operational-programming", (req, res) => {
     var avaiableSerialPorts = []
 
     const SerialPort = require('serialport');
@@ -44,7 +47,21 @@ server.get("/manual-programming", (req, res) => {
             avaiableSerialPorts.push(port.path);
 
         });
-        return res.render(__dirname + "/views/manual-programming", { portas: avaiableSerialPorts })
+        return res.render(__dirname + "/views/operational-programming", { portas: avaiableSerialPorts })
+    });
+
+})
+
+server.get("/block-programming", (req, res) => {
+    var avaiableSerialPorts = []
+
+    const SerialPort = require('serialport');
+    SerialPort.list().then(ports => {
+        ports.forEach(function(port) {
+            avaiableSerialPorts.push(port.path);
+
+        });
+        return res.render(__dirname + "/views/block-programming", { portas: avaiableSerialPorts })
     });
 
 })
