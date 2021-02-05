@@ -141,7 +141,7 @@ section.content {
     background-color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 50px 150px;
+    padding: 50px 50px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
@@ -158,39 +158,25 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts .manipulator{
-    display: flex;
-    text-align: justify;
-}
-section.content .texts .manipulator p {
-    line-height: 30px;
-    margin-right: 60px;
-    margin-left: 60px;
-    
-    
-}
-section.content .texts .manipulator svg{
-    width: 130px;
-    height: 160px;
-}
+
 section.content .texts .bot {
     display: flex;
     align-items: center;
-    text-align: justify;
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
-    margin: 50px;
 }
+
 section.content .texts .bot svg {
-    width: 120px;
-    margin-right: 20px;
+    width: 200px;
 }
+
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
 }
@@ -203,6 +189,23 @@ section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
 
+section.content .texts .bot p {
+    margin-left: 20px;
+}
+
+section.content .robot {
+    display: flex;
+    align-items:center;
+}
+
+section.content .robot svg {
+    width: 700px;
+
+}
+
+section.content .explication p {
+    margin-right: 90px;
+}
 
 section.content p {
     font-size: 2.0rem;
@@ -225,12 +228,6 @@ section.content p {
 @media (max-width: 1024px) {
     html {
         font-size: 55%;
-    }
-}
-
-@media (max-width: 1000px) {
-    section.content {
-        padding: 50px 50px
     }
 }
 
@@ -257,7 +254,7 @@ section.content p {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 661px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -275,185 +272,27 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .manipulator{
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    section.content .texts .manipulator p {
-        line-height: 40px;
-        margin: 0;
-    }
-    section.content .texts .manipulator svg{
-        width: 250px;
-    }
     section.content .texts .bot {
         flex-direction: column;
-        margin: 0;
     }
     section.content .texts .bot svg {
         width: 220px;
     }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-@media (max-width: 768px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .manipulator{
-        flex-direction: column-reverse;
-        align-items: center;
+    section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .manipulator p {
-        line-height: 40px;
-    }
-    section.content .texts .manipulator svg{
-        width: 100px;
-    }
-    section.content .texts .bot {
+    section.content .texts .curiosity {
         flex-direction: column;
-        margin: 0;
     }
-    section.content .texts .bot svg {
+    section.content .texts .curiosity svg {
         width: 220px;
     }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 450px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .manipulator{
-        flex-direction: column-reverse;
-        align-items: center;
+    section.content .texts .curiosity .text {
         margin: 0;
     }
-    section.content .texts .manipulator p {
-        line-height: 40px;
-    }
-    section.content .texts .manipulator svg{
-        width: 120px;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-        margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 175px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 375px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .manipulator{
-        flex-direction: column-reverse;
-        align-items: center;
-        margin: 0;
-    }
-    section.content .texts .manipulator p {
-        line-height: 40px;
-    }
-    section.content .texts .manipulator svg{
-        width: 120px;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-        margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 175px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-@media (max-width: 320px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .manipulator{
-        flex-direction: column-reverse;
-        align-items: center;
-        margin: 0;
-    }
-    section.content .texts .manipulator p {
-        line-height: 40px;
-    }
-    section.content .texts .manipulator svg{
-        width: 120px;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-        margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 135px;
+    section.content .texts .curiosity .text h2 {
+        text-align: center;
+        margin-top: 20px
     }
     .content .go-top img {
         width: 30px;
