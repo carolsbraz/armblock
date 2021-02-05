@@ -40,7 +40,7 @@
                             <% for (porta of portas){%>
                                 <option value="<%= porta %>"><%= porta %></option>
                               <% } %>
-                </select>
+                            </select>
                         </div>
                         <div class="dark-blue pin-block block">Pino do motor 1: <input type="number" placeholder="pino" name="pino1"></div>
                         <div class="dark-blue pin-block block">Pino do motor 2: <input type="number" placeholder="pino"></div>
@@ -55,7 +55,7 @@
                 <div class="robotic-arm">
 
                     <div class="arm">
-                        <svg width="100%" viewBox="0 0 584 553" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 584 553" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="blocks-arm" clip-path="url(#clip0)">
                         <g id="id-motor-1">
                         <path id="Vector" d="M304 489C321.673 489 336 475.345 336 458.5C336 441.655 321.673 428 304 428C286.327 428 272 441.655 272 458.5C272 475.345 286.327 489 304 489Z" fill="#A2E62E"/>
@@ -128,27 +128,47 @@
                         </clipPath>
                         </defs>
                         </svg>
-
                     </div>
-
                 </div>
-
             </div>
 
             <div class="board" id="board">
-
+                <div class="programming-blocks" id="programming-blocks"></div>
+                <div class="actions-buttons">
+                    <a href="" class="delete">
+                        <img src="/img/icone-lixeira.svg" alt="" width="30px">
+                        <p>Recomeçar</p>
+                    </a>
+                    <a href="" class="test">
+                        <img src="/img/icone-bandeira.svg" alt="" width="30px">
+                        <p>Testar</p>
+                    </a>
+                </div>
             </div>
 
             <div class="drag-board" id="drag-board">
-                <div class="block yellow">Mover o motor <input type="number" placeholder="motor" disabled>
-                    <div class="drag">
-
+                <div class="here-blocks" id="here-blocks">
+                    <p class="undrag"><b>Ações</b></p>
+                    <br>
+                    <div class="block green">Atraso de <input type="number" placeholder="tempo" id="delay">segundos</div>
+                    <div class="block green" id="open">Abrir garra</div>
+                    <div class="block green" id="close">Fechar garra</div>
+                    <br>
+                    <p class="undrag"><b>Pontos</b></p>
+                    <br>
+                    <div class="block yellow"><span>(Ponto 1) </span>Mover o motor <input type="number" placeholder="motor">
+                        <div class="drag">
+                            <div class="block blue" id="degres">Para <input type="number" placeholder="graus">°</div>
+                            <div class="block brown">Na velocidade: <input type="number" placeholder="velo..."> graus/seg</div>
+                        </div>
                     </div>
                 </div>
-                <div class="block blue">Para <input type="number" placeholder="graus" disabled>°</div>
-                <div class="block brown">Na velocidade: <input type="number" placeholder="velo..." disabled> graus/seg</div>
-                <div class="block green">Atraso de <input type="number" placeholder="tempo" disabled>segundos</div>
-                <a href="#" id="hi">hi</a>
+                <div class="add-point">
+                    <div class="button" id="add-button"><img src="/img/plus.svg" alt="" width="15px">
+                        <p>Novo ponto</p>
+                    </div>
+
+                </div>
             </div>
 
         </section>
