@@ -133,7 +133,6 @@ header .menu a.link:hover {
 .content .controle .next img {
     margin: 0 0 0 10px;
 }
-
 section.content {
     max-width: 1100px;
     width: 90%;
@@ -145,16 +144,13 @@ section.content {
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
-
 section.content h1 {
     text-align: center;
     width: 100%;
 }
-
 section.content h1 img {
     margin-right: 30px;
 }
-
 section.content h1 {
     font-size: 3rem;
 }
@@ -162,60 +158,6 @@ section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
-}
-section.content .texts .software {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-}
-section.content .texts .software p {
-    line-height: 30px;
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .software svg {
-    width: 1400px;
-    height: 400px;
-}
-section.content .texts .icons{
-    display: flex;
-    margin-left: 60px;
-    margin-right: 60px;
-}
-section.content .texts .icons .java{
-    margin-right: 150px;
-}
-section.content .texts .icons .csharp{
-    margin-right: 150px;
-}
-section.content .texts .icons .cmais{
-    margin-right: 150px;
-}
-section.content .texts .icons .c{
-    margin-right: 150px;
-}
-section.content .texts .icons svg{
-    width: 55px;
-}
-section.content .texts .icons2{
-    display: flex;
-    margin-left: 60px;
-    margin-right: 60px;
-}
-section.content .texts .icons2 .javascript{
-    margin-right: 150px;
-}
-section.content .texts .icons2 .python{
-    margin-right: 150px;
-}
-section.content .texts .icons2 .r{
-    margin-right: 150px;
-}
-section.content .texts .icons .matlab{
-    margin-right: 150px;
-}
-section.content .texts .icons2 svg{
-    width: 55px;
 }
 section.content .texts .bot {
     display: flex;
@@ -227,12 +169,10 @@ section.content .texts .bot {
     margin-right: 60px;
     margin-left: 60px;
 }
-
 section.content .texts .bot svg {
-    width: 120px;
+    width: 220px;
     margin-right: 20px;
 }
-
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
 }
@@ -244,8 +184,46 @@ section.content .texts .bot svg #ball-2 {
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-
-
+section.content .texts .articulated .legend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+section.content .texts .articulated p{
+    margin-right: 60px;
+    margin-left: 60px;
+}
+section.content .texts .articulated .legend p{
+    font-size: 15px;
+}
+section.content .texts .articulated .legend img{
+    width: 500px;
+}
+section.content .texts .articulated .legend2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+section.content .texts .scara p{
+    margin-right: 60px;
+    margin-left: 60px;
+}
+section.content .texts .articulated .legend2 p{
+    font-size: 15px;
+}
+section.content .texts .articulated .legend2 img{
+    width: 500px;
+}
+section.content p {
+    font-size: 2.0rem;
+    text-align: justify;
+    line-height: 40px;
+    margin: 20px 0 20px 0;
+}
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -302,73 +280,61 @@ section.content p {
 
 @media (max-width: 1024px) {
     .content .controle {
+        flex-direction: column;
         margin-top: 15px;
         margin-bottom: 25px;
     }
     .content .controle .summary {
+        order: -1;
     }
     .content .controle a {
         justify-content: center;
     }
-    section.content .texts .software {
+    .content .controle .back {
+        margin: 20px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .bot {
         flex-direction: row;
         margin: 0;
     }
-    section.content .texts .software p {
-        line-height: 25px;
-        margin-right: 50px;
-    }
-    section.content .texts .software svg {
-        width: 1400px
-    }
-    section.content .texts .icons{
-        display: flex;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    section.content .texts .icons .java{
-        margin-right: 100px;
-    }
-    section.content .texts .icons .csharp{
-        margin-right: 100px;
-    }
-    section.content .texts .icons .cmais{
-        margin-right: 100px;
-    }
-    section.content .texts .icons .c{
-        margin-right: 100px;
-    }
-    section.content .texts .icons svg{
-        width: 40px;
-    }
-    section.content .texts .icons2{
-        display: flex;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    section.content .texts .icons2 .javascript{
-        margin-right: 100px;
-    }
-    section.content .texts .icons2 .python{
-        margin-right: 100px;
-    }
-    section.content .texts .icons2 .r{
-        margin-right: 100px;
-    }
-    section.content .texts .icons .matlab{
-        margin-right: 100px;
-    }
-    section.content .texts .icons2 svg{
-        width: 40px;
-    }
-    section.content .texts .bot {
-        flex-direction:column;
-    }
     section.content .texts .bot svg {
-        width: 190px;
+        width: 220px;
+        margin-right: 20px;
     }
-    section.content .texts .bot p {
-        margin: 20px;
+    section.content .texts .articulated .legend{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+    section.content .texts .articulated p{
+        margin: 0;
+    }
+    section.content .texts .articulated .legend p{
+        font-size: 15px;
+    }
+    section.content .texts .articulated .legend img{
+        width: 350px;
+    }
+    section.content .texts .articulated .legend2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    section.content .texts .scara p{
+        margin: 0;
+    }
+    section.content .texts .articulated .legend2 p{
+        font-size: 15px;
+    }
+    section.content .texts .articulated .legend2 img{
+        width: 350px;
     }
     .content .go-top img {
         width: 30px;
@@ -393,69 +359,50 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .software {
-        flex-direction: column;
-    }
-    section.content .texts .software p {
-        line-height: 25px;
-        margin-right: 50px;
-    }
-    section.content .texts .software svg {
-        width: 220px
-    }
-    section.content .texts .icons{
-        display: flex;
-        margin-left: 0;
-        margin-right: 12px;
-    }
-    section.content .texts .icons .java{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .csharp{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .cmais{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .c{
-        margin-right: 40px;
-    }
-    section.content .texts .icons svg{
-        width: 40px;
-    }
-    section.content .texts .icons2{
-        display: flex;
-        margin-left: 0;
-        margin-right: 12px;
-    }
-    section.content .texts .icons2 .javascript{
-        margin-right: 40px;
-    }
-    section.content .texts .icons2 .python{
-        margin-right: 40px;
-    }
-    section.content .texts .icons2 .r{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .matlab{
-        margin-right: 40px;
-    }
-    section.content .texts .icons2 svg{
-        width: 40px;
-    }
     section.content .texts .bot {
-        flex-direction:column;
+        flex-direction: column;
+        margin: 0;
     }
     section.content .texts .bot svg {
-        width: 120px;
+        width: 175px;
     }
-    section.content .texts .bot p {
+    section.content .texts .articulated .legend{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+    section.content .texts .articulated p{
         margin: 0;
+    }
+    section.content .texts .articulated .legend p{
+        font-size: 10px;
+    }
+    section.content .texts .articulated .legend img{
+        width: 200px;
+    }
+    section.content .texts .articulated .legend2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    section.content .texts .scara p{
+        margin: 0;
+    }
+    section.content .texts .articulated .legend2 p{
+        font-size: 10px;
+    }
+    section.content .texts .articulated .legend2 img{
+        width: 200px;
     }
     .content .go-top img {
         width: 30px;
     }
 }
+
 @media (max-width: 375px) {
     .content .controle {
         flex-direction: column;
@@ -474,69 +421,115 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .software {
+    section.content .texts .bot {
         flex-direction: column;
         margin: 0;
     }
-    section.content .texts .software p {
-        margin: o;
-    }
-    section.content .texts .software svg {
-        width: 220px;
-    }
-    section.content .texts .icons{
-        display: flex;
-        margin-left: 0;
-        margin-right: 12px;
-    }
-    section.content .texts .icons .java{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .csharp{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .cmais{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .c{
-        margin-right: 40px;
-    }
-    section.content .texts .icons svg{
-        width: 30px;
-    }
-    section.content .texts .icons2{
-        display: flex;
-        margin-left: 0;
-        margin-right: 12px;
-    }
-    section.content .texts .icons2 .javascript{
-        margin-right: 40px;
-    }
-    section.content .texts .icons2 .python{
-        margin-right: 40px;
-    }
-    section.content .texts .icons2 .r{
-        margin-right: 40px;
-    }
-    section.content .texts .icons .matlab{
-        margin-right: 40px;
-    }
-    section.content .texts .icons2 svg{
-        width: 30px;
-    }
-    section.content .texts .bot {
-        flex-direction:column;
-    }
     section.content .texts .bot svg {
-        width: 120px;
+        width: 175px;
     }
-    section.content .texts .bot p {
+    section.content .texts .articulated .legend{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+    section.content .texts .articulated p{
         margin: 0;
+    }
+    section.content .texts .articulated .legend p{
+        font-size: 10px;
+    }
+    section.content .texts .articulated .legend img{
+        width: 150px;
+    }
+    section.content .texts .articulated .legend2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    section.content .texts .scara p{
+        margin: 0;
+    }
+    section.content .texts .articulated .legend2 p{
+        font-size: 10px;
+    }
+    section.content .texts .articulated .legend2 img{
+        width: 150px;
     }
     .content .go-top img {
         width: 30px;
     }
 }
+@media (max-width: 320px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 20px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .bot {
+        flex-direction: column;
+        margin: 0;
+    }
+    section.content .texts .bot .text p{
+        margin: 0;
+    }
+    section.content .texts .bot svg {
+        width: 150px;
+        align-items: center;
+    }
+    section.content .texts .articulated .legend{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        margin: 0;
+    }
+    section.content .texts .articulated p{
+        margin: 0;
+    }
+    section.content .texts .articulated .legend p{
+        font-size: 10px;
+    }
+    section.content .texts .articulated .legend img{
+        width: 150px;
+    }
+    section.content .texts .articulated .legend2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        margin: 0;
+    }
+    section.content .texts .scara p{
+        margin: 0;
+    }
+    section.content .texts .articulated .legend2 p{
+        font-size: 10px;
+    }
+    section.content .texts .articulated .legend2 img{
+        width: 170px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+
 @media (max-width: 425px) {
     html {
         font-size: 45%;
@@ -548,6 +541,7 @@ section.content p {
         padding: 25px 25px;
     }
 }
+
 
 /* animations */
 

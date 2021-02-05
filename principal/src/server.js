@@ -44,6 +44,12 @@ server.get("/trail-content-5", (req, res) => {
 server.get("/trail-content-6", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-6.html")
 })
+server.get("/trail-content-7", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-7.html")
+})
+server.get("/trail-content-8", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-8.html")
+})
 server.get("/trail-content-10", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-10.html")
 })
