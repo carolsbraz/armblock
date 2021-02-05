@@ -171,12 +171,14 @@ section.content .texts .bot {
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
+    margin: 50px;
 }
-
+section.content .texts .bot p {
+    margin-left: 20px;
+}
 section.content .texts .bot svg {
     width: 150px;
 }
-
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
 }
@@ -188,15 +190,11 @@ section.content .texts .bot svg #ball-2 {
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-
-section.content .texts .bot p {
-    margin-left: 20px;
-}
-
 section.content .texts .sensors {
     display: flex;
     align-items: center;
     text-align: justify;
+    margin: 50px;
 }
 
 section.content .texts .sensors svg {
@@ -212,16 +210,18 @@ section.content .texts .bot2 {
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
+    margin: 50px;
+    align-items: center;
 }
-
+section.content .texts .bot2 p {
+    margin-left: 20px;
+}
 section.content .texts .bot2 svg {
-    width: 300px;
+    width: 350px;
 }
-
 section.content .texts .bot2 svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
 }
-
 section.content .texts .bot2 svg #ball-2 {
     animation: ball-2 2s ease-in-out infinite;
 }
@@ -229,11 +229,6 @@ section.content .texts .bot2 svg #ball-2 {
 section.content .texts .bot2 svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-
-section.content .texts .bot2 p {
-    margin-left: 20px;
-}
-
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
