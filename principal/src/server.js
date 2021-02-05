@@ -38,6 +38,15 @@ server.get("/trail-content-4", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-4.html")
 })
 
+server.get("/trail-content-5", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-5.html")
+})
+server.get("/trail-content-6", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-6.html")
+})
+server.get("/trail-content-7", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-7.html")
+})
 server.get("/operational-programming", (req, res) => {
     var avaiableSerialPorts = []
 
