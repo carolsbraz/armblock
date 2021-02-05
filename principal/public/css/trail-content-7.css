@@ -171,6 +171,11 @@ section.content .texts .bot {
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
+    
+}
+
+section.content .texts .bot p {
+    margin-left: 20px;
 }
 
 section.content .texts .bot svg {
@@ -189,9 +194,7 @@ section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
 
-section.content .texts .bot p {
-    margin-left: 20px;
-}
+
 
 section.content .robot {
     display: flex;
