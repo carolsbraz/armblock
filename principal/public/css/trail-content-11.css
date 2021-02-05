@@ -159,64 +159,37 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts .bot {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    background-color: var(--blue-bot);
-    padding: 30px;
-    border-radius: 8px;
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .bot svg {
-    width: 220px;
-    margin-right: 20px;
-}
-section.content .texts .bot svg #ball-1 {
-    animation: ball-1 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-2 {
-    animation: ball-2 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-section.content .texts .articulated .legend{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .articulated p{
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .articulated .legend p{
-    font-size: 15px;
-}
-section.content .texts .articulated .legend img{
-    width: 500px;
-}
-section.content .texts .articulated .legend2{
+section.content .texts .cilindric .legend{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
 }
-section.content .texts .scara p{
+section.content .texts .cilindric p{
     margin-right: 60px;
     margin-left: 60px;
 }
-section.content .texts .articulated .legend2 p{
+section.content .texts .cilindric .legend p{
     font-size: 15px;
 }
-section.content .texts .articulated .legend2 img{
-    width: 500px;
+section.content .texts .cilindric .legend img{
+    width: 350px;
+}
+section.content .texts .cilindric .cartesian .legend2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+section.content .texts .cilindric .cartesian p{
+    margin-right: 60px;
+    margin-left: 60px;
+}
+section.content .texts .cilindric .cartesian .legend2 p{
+    font-size: 15px;
+}
+section.content .texts .cilindric .cartesian .legend2 img{
+    width: 350px;
 }
 section.content p {
     font-size: 2.0rem;
@@ -280,26 +253,22 @@ section.content p {
 
 @media (max-width: 1024px) {
     .content .controle {
-        flex-direction: column;
+        align-items: center;
         margin-top: 15px;
         margin-bottom: 25px;
     }
     .content .controle .summary {
-        order: -1;
     }
     .content .controle a {
         justify-content: center;
     }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
     section.content .texts .bot {
         flex-direction: row;
+    }
+    section.content .texts .bot p{
         margin: 0;
     }
+
     section.content .texts .bot svg {
         width: 220px;
         margin-right: 20px;
