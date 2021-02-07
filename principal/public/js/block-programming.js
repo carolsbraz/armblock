@@ -30,11 +30,14 @@ btnAdd.addEventListener('click', () => {
     // yellow content
     pontos++;
     const idt = document.createElement('span')
-    var idttxt = document.createTextNode(`(Ponto ${pontos} ) Mover o motor`);
+    var idttxt = document.createTextNode(`(Movimento individual ${pontos} )`);
+    var idtblock = document.createTextNode(`Mover o motor`);
     idt.appendChild(idttxt)
     const motorInput = document.createElement('input')
     motorInput.setAttribute('type', 'number')
     motorInput.setAttribute('placeholder', 'motor')
+
+    const br = document.createElement('br')
 
     // internal yellow
 
@@ -78,9 +81,19 @@ btnAdd.addEventListener('click', () => {
     drag.appendChild(redBlock)
 
     newBoard.appendChild(idt)
+    newBoard.appendChild(br)
+    newBoard.appendChild(idtblock)
     newBoard.appendChild(motorInput)
     newBoard.appendChild(drag)
     hereBlocks.appendChild(newBoard)
+})
+
+const btndelete = document.getElementById('delete')
+
+btndelete.addEventListener('click', () => {
+    const div = document.getElementById("programming-blocks");
+
+    div.innerText = ''
 })
 
 const enviar = document.getElementById('enviar')
