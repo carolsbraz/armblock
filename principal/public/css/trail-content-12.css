@@ -94,7 +94,7 @@ header .menu a.link:hover {
 }
 
 .content .controle {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -159,36 +159,16 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts .polar .legend{
+section.content .texts .legend{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
 }
-section.content .texts .polar p{
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .polar .legend p{
+.texts .polar .legend p{
     font-size: 15px;
 }
-section.content .texts .polar .legend img{
-    width: 350px;
-}
-section.content .texts .polar .delta .legend2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-}
-section.content .texts .polar .delta p{
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .polar .delta .legend2 p{
-    font-size: 15px;
-}
-section.content .texts .polar .delta .legend2 img{
+section.content .texts .legend img{
     width: 350px;
 }
 section.content .texts .bot {
@@ -197,25 +177,19 @@ section.content .texts .bot {
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
-    margin: 60px;
 }
-
 section.content .texts .bot svg {
     width: 160px;
 }
-
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
 }
-
 section.content .texts .bot svg #ball-2 {
     animation: ball-2 2s ease-in-out infinite;
 }
-
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-
 section.content .texts .bot p {
     margin-left: 20px;
 }
@@ -278,28 +252,23 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
-
 @media (max-width: 1024px) {
     .content .controle {
-        align-items: center;
+        flex-direction: row;
         margin-top: 15px;
         margin-bottom: 25px;
-    }
-    .content .controle .summary {
     }
     .content .controle a {
         justify-content: center;
     }
-    section.content .texts .bot {
-        flex-direction: column;
+    .content .controle .back {
+        margin: 10px 0 10px 0;
     }
-    section.content .texts .bot p{
-        margin: 0;
-    }
-
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    } 
     section.content .texts .bot svg {
-        width: 200px;
-        margin-right: 20px;
+        width: 100px
     }
     .content .go-top img {
         width: 30px;
@@ -313,179 +282,30 @@ section.content p {
         margin-bottom: 25px;
     }
     .content .controle .summary {
-        order: 0;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    
-    section.content .texts .polar .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        
-    }
-    section.content .texts .polar p{
-       margin: 0;
-    }
-    section.content .texts .polar .legend p{
-        font-size: 10px;
-    }
-    section.content .texts .polar .legend img{
-        width: 250px;
-    }
-    section.content .texts .polar .delta .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    section.content .texts .polar .delta p{
-        margin: 0;
-    }
-    section.content .texts .polar .delta .legend2 p{
-        font-size: 10px;
-    }
-    section.content .texts .polar .delta .legend2 img{
-        width: 250px;
-    }
-    section.content .texts .bot {
-        display: flex;
-        align-items: center;
-        background-color: var(--blue-bot);
-        padding: 30px;
-        border-radius: 8px;
-        margin: 0;
-    }
-    
-    section.content .texts .bot svg {
-        width: 170px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 375px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
         order: -1;
     }
     .content .controle a {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 20px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .polar .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        
-    }
-    section.content .texts .polar p{
-       margin: 0;
-    }
-    section.content .texts .polar .legend p{
-        font-size: 10px;
-    }
-    section.content .texts .polar .legend img{
-        width: 250px;
-    }
-    section.content .texts .polar .delta .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    section.content .texts .polar .delta p{
-        margin: 0;
-    }
-    section.content .texts .polar .delta .legend2 p{
-        font-size: 10px;
-    }
-    section.content .texts .polar .delta .legend2 img{
-        width: 250px;
-    }
-    section.content .texts .bot {
+    section.content .texts .legend{
         flex-direction: column;
         margin: 0;
     }
-    section.content .texts .bot svg {
-        width: 170px;
+    section.content .texts .legend img{
+        width: 200px;
     }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-@media (max-width: 320px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .polar .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        
-    }
-    section.content .texts .polar p{
-       margin: 0;
-    }
-    section.content .texts .polar .legend p{
-        font-size: 10px;
-    }
-    section.content .texts .polar .legend img{
-        width: 150px;
-    }
-    section.content .texts .polar .delta .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    section.content .texts .polar .delta p{
+    section.content .texts .bot{
         margin: 0;
-    }
-    section.content .texts .polar .delta .legend2 p{
-        font-size: 10px;
-    }
-    section.content .texts .polar .delta .legend2 img{
-        width: 150px;
-    }
-    section.content .texts .bot {
         flex-direction: column;
-        margin: 0;
     }
-    section.content .texts .bot .text p{
-        margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 150px;
-        align-items: center;
+    section.content .texts .bot svg{
+        width: 120px;
     }
     .content .go-top img {
         width: 30px;

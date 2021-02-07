@@ -268,18 +268,6 @@ section.content p {
         margin-top: 15px;
         margin-bottom: 25px;
     }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
     section.content .texts .bot {
         flex-direction: column;
     }
