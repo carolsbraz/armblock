@@ -94,8 +94,7 @@ header .menu a.link:hover {
 }
 
 .content .controle {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -141,7 +140,7 @@ section.content {
     background-color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 50px 50px;
+    padding: 50px 150px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
@@ -165,6 +164,11 @@ section.content p.sub {
     text-align: center;
 }
 
+section.content .texts svg{
+    align-items: center;
+    padding: 30px;
+}
+
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -175,6 +179,7 @@ section.content .texts .bot {
 
 section.content .texts .bot svg {
     width: 200px;
+    margin-right: 20px;
 }
 
 section.content .texts .bot svg #ball-1 {
@@ -204,7 +209,7 @@ section.content .robot svg {
 }
 
 section.content .explication p {
-    margin-right: 90px;
+    padding: 20px;
 }
 
 section.content p {

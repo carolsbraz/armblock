@@ -168,9 +168,11 @@ section.content p.sub {
 section.content .texts .bot {
     display: flex;
     align-items: center;
+    text-align: justify;
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
+    margin: 50px;
 }
 
 section.content .texts .bot svg {
@@ -204,34 +206,9 @@ section.content .texts .sensors svg {
 }
 
 section.content .texts p {
-    margin-right: 90px;
-}
-
-section.content .texts .bot2 {
-    display: flex;
-    background-color: var(--blue-bot);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-section.content .texts .bot2 svg {
-    width: 300px;
-}
-
-section.content .texts .bot2 svg #ball-1 {
-    animation: ball-1 2s ease-in-out infinite;
-}
-
-section.content .texts .bot2 svg #ball-2 {
-    animation: ball-2 2s ease-in-out infinite;
-}
-
-section.content .texts .bot2 svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-
-section.content .texts .bot2 p {
-    margin-left: 20px;
+    line-height: 30px;
+    margin-right: 60px;
+    margin-left: 60px;
 }
 
 section.content p {

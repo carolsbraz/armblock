@@ -141,7 +141,7 @@ section.content {
     background-color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 50px 50px;
+    padding: 50px 150px;
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
@@ -168,10 +168,11 @@ section.content p.sub {
 section.content .texts .bot {
     display: flex;
     align-items: center;
+    text-align: justify;
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
-    
+    margin: 50px;
 }
 
 section.content .texts .bot p {
@@ -179,7 +180,8 @@ section.content .texts .bot p {
 }
 
 section.content .texts .bot svg {
-    width: 200px;
+    width: 150px;
+    
 }
 
 section.content .texts .bot svg #ball-1 {
@@ -194,20 +196,16 @@ section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
 
-
-
 section.content .robot {
     display: flex;
     align-items:center;
 }
 
-section.content .robot svg {
-    width: 700px;
-
-}
-
 section.content .explication p {
-    margin-right: 90px;
+    line-height: 30px;
+    margin-right: 60px;
+    margin-left: 60px;
+
 }
 
 section.content p {
@@ -216,6 +214,11 @@ section.content p {
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
+
+section.content .imagens svg {
+    padding: 30px;
+}
+
 .content .go-top {
     display: flex;
     justify-content: center;
