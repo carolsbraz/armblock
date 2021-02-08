@@ -211,6 +211,11 @@ section.content p {
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
+
+section.content .imagens svg {
+    padding: 30px;
+}
+
 .content .go-top {
     display: flex;
     justify-content: center;

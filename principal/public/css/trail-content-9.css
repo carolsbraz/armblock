@@ -168,9 +168,11 @@ section.content p.sub {
 section.content .texts .bot {
     display: flex;
     align-items: center;
+    text-align: justify;
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
+    margin: 50px;
 }
 
 section.content .texts .bot svg {
