@@ -164,7 +164,7 @@ section.content p.sub {
     text-align: center;
 }
 
-section.content .texts svg{
+section.content .texts svg {
     align-items: center;
     padding: 30px;
 }
@@ -200,12 +200,11 @@ section.content .texts .bot p {
 
 section.content .robot {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
 section.content .robot svg {
     width: 700px;
-
 }
 
 section.content .explication p {
@@ -218,6 +217,7 @@ section.content p {
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
+
 .content .go-top {
     display: flex;
     justify-content: center;
