@@ -95,6 +95,7 @@ header .menu a.link:hover {
 
 .content .controle {
     width: 100%;
+    max-width: 1100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -164,21 +165,38 @@ section.content p.sub {
     text-align: center;
 }
 
-section.content .texts svg {
+section.content .texts .explication {
+    display: flex;
     align-items: center;
-    padding: 30px;
+    text-align: justify;
+}
+
+section.content .texts .icons {
+    display: flex;
+    width: 100%;
+}
+
+section.content .texts .icons .flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly
+}
+
+section.content .texts .icons svg {
+    width: 100px;
 }
 
 section.content .texts .bot {
     display: flex;
     align-items: center;
+    text-align: justify;
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
 }
 
 section.content .texts .bot svg {
-    width: 200px;
+    width: 90px;
     margin-right: 20px;
 }
 
@@ -194,21 +212,11 @@ section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
 
-section.content .texts .bot p {
-    margin-left: 20px;
-}
-
-section.content .robot {
-    display: flex;
-    align-items: center;
-}
-
-section.content .robot svg {
-    width: 700px;
-}
-
-section.content .explication p {
-    padding: 20px;
+section.content p {
+    font-size: 2.0rem;
+    text-align: justify;
+    line-height: 40px;
+    margin: 20px 0 20px 0;
 }
 
 section.content p {
@@ -236,6 +244,12 @@ section.content p {
     }
 }
 
+@media (max-width: 1000px) {
+    section.content {
+        padding: 50px 50px
+    }
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 50%;
@@ -259,7 +273,30 @@ section.content p {
     }
 }
 
-@media (max-width: 661px) {
+@media (max-width: 1024px) {
+    .content .controle {
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .bot svg {
+        width: 130px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -277,27 +314,27 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
+    section.content .texts .explication {
+        margin: 0;
+    }
+    section.content .texts .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+    section.content .texts .icons .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    section.content .texts .icons svg {
+        width: 100px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
     section.content .texts .bot {
         flex-direction: column;
     }
     section.content .texts .bot svg {
-        width: 220px;
-    }
-    section.content .texts .bot p {
-        margin: 0;
-    }
-    section.content .texts .curiosity {
-        flex-direction: column;
-    }
-    section.content .texts .curiosity svg {
-        width: 220px;
-    }
-    section.content .texts .curiosity .text {
-        margin: 0;
-    }
-    section.content .texts .curiosity .text h2 {
-        text-align: center;
-        margin-top: 20px
+        width: 80px;
     }
     .content .go-top img {
         width: 30px;

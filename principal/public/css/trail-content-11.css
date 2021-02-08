@@ -94,7 +94,7 @@ header .menu a.link:hover {
 }
 
 .content .controle {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -159,36 +159,16 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts .cilindric .legend{
+section.content .texts .legend{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
 }
-section.content .texts .cilindric p{
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .cilindric .legend p{
+section.content .texts .legend p{
     font-size: 15px;
 }
-section.content .texts .cilindric .legend img{
-    width: 350px;
-}
-section.content .texts .cilindric .cartesian .legend2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-}
-section.content .texts .cilindric .cartesian p{
-    margin-right: 60px;
-    margin-left: 60px;
-}
-section.content .texts .cilindric .cartesian .legend2 p{
-    font-size: 15px;
-}
-section.content .texts .cilindric .cartesian .legend2 img{
+section.content .texts .legend img{
     width: 350px;
 }
 section.content p {
@@ -250,66 +230,6 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
-
-@media (max-width: 1024px) {
-    .content .controle {
-        align-items: center;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    section.content .texts .bot {
-        flex-direction: row;
-    }
-    section.content .texts .bot p{
-        margin: 0;
-    }
-
-    section.content .texts .bot svg {
-        width: 220px;
-        margin-right: 20px;
-    }
-    section.content .texts .articulated .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        margin-right: 60px;
-        margin-left: 60px;
-    }
-    section.content .texts .articulated p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend p{
-        font-size: 15px;
-    }
-    section.content .texts .articulated .legend img{
-        width: 350px;
-    }
-    section.content .texts .articulated .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    section.content .texts .scara p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend2 p{
-        font-size: 15px;
-    }
-    section.content .texts .articulated .legend2 img{
-        width: 350px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -323,176 +243,17 @@ section.content p {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 20px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot {
+    section.content .texts .legend{
         flex-direction: column;
         margin: 0;
     }
-    section.content .texts .bot svg {
-        width: 175px;
-    }
-    section.content .texts .articulated .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        margin-right: 60px;
-        margin-left: 60px;
-    }
-    section.content .texts .articulated p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend p{
-        font-size: 10px;
-    }
-    section.content .texts .articulated .legend img{
+    section.content .texts .legend img{
         width: 200px;
-    }
-    section.content .texts .articulated .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    section.content .texts .scara p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend2 p{
-        font-size: 10px;
-    }
-    section.content .texts .articulated .legend2 img{
-        width: 200px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 375px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-        margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 175px;
-    }
-    section.content .texts .articulated .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        margin-right: 60px;
-        margin-left: 60px;
-    }
-    section.content .texts .articulated p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend p{
-        font-size: 10px;
-    }
-    section.content .texts .articulated .legend img{
-        width: 150px;
-    }
-    section.content .texts .articulated .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    section.content .texts .scara p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend2 p{
-        font-size: 10px;
-    }
-    section.content .texts .articulated .legend2 img{
-        width: 150px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-@media (max-width: 320px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-        margin: 0;
-    }
-    section.content .texts .bot .text p{
-        margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 150px;
-        align-items: center;
-    }
-    section.content .texts .articulated .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        margin: 0;
-    }
-    section.content .texts .articulated p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend p{
-        font-size: 10px;
-    }
-    section.content .texts .articulated .legend img{
-        width: 150px;
-    }
-    section.content .texts .articulated .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        margin: 0;
-    }
-    section.content .texts .scara p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend2 p{
-        font-size: 10px;
-    }
-    section.content .texts .articulated .legend2 img{
-        width: 170px;
     }
     .content .go-top img {
         width: 30px;

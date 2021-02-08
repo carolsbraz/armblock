@@ -94,7 +94,7 @@ header .menu a.link:hover {
 }
 
 .content .controle {
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -287,19 +287,6 @@ section.content p {
     section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .curiosity {
-        flex-direction: column;
-    }
-    section.content .texts .curiosity svg {
-        width: 220px;
-    }
-    section.content .texts .curiosity .text {
-        margin: 0;
-    }
-    section.content .texts .curiosity .text h2 {
-        text-align: center;
-        margin-top: 20px
-    }
     .content .go-top img {
         width: 30px;
     }
@@ -313,36 +300,24 @@ section.content p {
     .content .controle .summary {
         order: -1;
     }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
     section.content .texts .bot {
         flex-direction: column;
     }
     section.content .texts .bot svg {
-        width: 160px;
+        width: 120px;
     }
     section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .curiosity {
-        flex-direction: column;
+    section.content .texts .robot{
+        flex-direction: column-reverse;
     }
-    section.content .texts .curiosity svg {
-        width: 180px;
-    }
-    section.content .texts .curiosity .text {
+    section.content .texts .robot p{
         margin: 0;
     }
-    section.content .texts .curiosity .text h2 {
-        text-align: center;
-        margin-top: 20px
+    section.content .texts .robot svg{
+        width: 150px;
+        margin: 20px 0;
     }
     .content .go-top img {
         width: 30px;
