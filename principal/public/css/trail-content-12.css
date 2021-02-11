@@ -185,7 +185,7 @@ section.content .texts .bot {
     border-radius: 8px;
 }
 section.content .texts .bot svg {
-    width: 160px;
+    width: 100px;
 }
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;

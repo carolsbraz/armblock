@@ -158,59 +158,35 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+section.content h3 {
+    text-align: center;
+    width: 100%;
+}
 
+section.content h3 img {
+    margin-right: 30px;
+}
+
+section.content h3 {
+    font-size: 2rem;
+}
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
-}
-
-section.content .texts .bot {
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    background-color: var(--blue-bot);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-section.content .texts .bot svg {
-    width: 270px;
-}
-section.content .texts .bot svg #ball-1 {
-    animation: ball-1 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-2 {
-    animation: ball-2 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-
-section.content .texts .bot p {
-    margin-left: 20px;
 }
 section.content .texts ul{
     margin-left: 35px;
     font-size: 2.0rem;
     line-height: 40px;
 }
-section.content .texts .icons{
-    display: flex;
-    width: 100%;
+section.content p {
+    font-size: 2.0rem;
+    text-align: justify;
+    line-height: 40px;
+    margin: 20px 0 20px 0;
 }
-section.content .texts .icons .flex{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-section.content .texts .icons svg{
-    width: 130px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -265,7 +241,6 @@ section.content p {
     }
 }
 
-
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -279,17 +254,13 @@ section.content p {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 20px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot {
-        flex-direction: column;
+    section.content .texts {
         margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 130px;
     }
     section.content .texts ul{
         margin: 0;
@@ -298,7 +269,6 @@ section.content p {
         width: 30px;
     }
 }
-
 
 @media (max-width: 425px) {
     html {
