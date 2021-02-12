@@ -63,6 +63,14 @@ server.get("/trail-content-12", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-12.html")
 })
 
+server.get("/tutorial", (req, res) => {
+    res.sendFile(__dirname + "/views/video.html")
+})
+
+server.get("/cadastro-login", (req, res) => {
+    res.sendFile(__dirname + "/views/cadastro-login.html")
+})
+
 server.get("/operational-programming", (req, res) => {
     var avaiableSerialPorts = []
 
