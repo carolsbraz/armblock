@@ -172,7 +172,6 @@ section.content .texts .bot {
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
-    margin: 50px;
 }
 
 section.content .texts .bot svg {

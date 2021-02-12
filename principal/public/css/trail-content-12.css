@@ -185,7 +185,7 @@ section.content .texts .bot {
     border-radius: 8px;
 }
 section.content .texts .bot svg {
-    width: 160px;
+    width: 100px;
 }
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
@@ -266,6 +266,97 @@ section.content p {
         margin-top: 15px;
         margin-bottom: 25px;
     }
+<<<<<<< Updated upstream
+=======
+    .content .controle .summary {
+        background-color: var(--secundary-blue);
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    section.content .texts .bot {
+        flex-direction: column;
+    }
+    section.content .texts .bot p {
+        margin: 0;
+    }
+    section.content .texts .bot svg {
+        width: 200px;
+        margin-right: 20px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: 0;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    section.content .texts .polar .legend {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    section.content .texts .polar p {
+        margin: 0;
+    }
+    section.content .texts .polar .legend p {
+        font-size: 10px;
+    }
+    section.content .texts .polar .legend img {
+        width: 250px;
+    }
+    section.content .texts .polar .delta .legend2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    section.content .texts .polar .delta p {
+        margin: 0;
+    }
+    section.content .texts .polar .delta .legend2 p {
+        font-size: 10px;
+    }
+    section.content .texts .polar .delta .legend2 img {
+        width: 250px;
+    }
+    section.content .texts .bot {
+        display: flex;
+        align-items: center;
+        background-color: var(--blue-bot);
+        padding: 30px;
+        border-radius: 8px;
+        margin: 0;
+    }
+    section.content .texts .bot svg {
+        width: 170px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
+    }
+>>>>>>> Stashed changes
     .content .controle a {
         justify-content: center;
     }

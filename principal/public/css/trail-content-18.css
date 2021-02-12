@@ -133,6 +133,7 @@ header .menu a.link:hover {
 .content .controle .next img {
     margin: 0 0 0 10px;
 }
+
 section.content {
     max-width: 1100px;
     width: 90%;
@@ -144,13 +145,16 @@ section.content {
     border-radius: 10px;
     box-shadow: 1px 1px 4px 1px rgb(155, 155, 155);
 }
+
 section.content h1 {
     text-align: center;
     width: 100%;
 }
+
 section.content h1 img {
     margin-right: 30px;
 }
+
 section.content h1 {
     font-size: 3rem;
 }
@@ -159,18 +163,35 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
+section.content .texts ,.icons{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.content .texts .icons img{
+    width: 530px;
+}
+section.content .texts .icons .legend p {
+    font-size: 2rem;
+}
+section.content .texts ul{
+    margin-left: 35px;
+    font-size: 2.0rem;
+    line-height: 40px;
+    margin-bottom: 25px;
+}
 section.content .texts .bot {
     display: flex;
     align-items: center;
-    text-align: justify;
     background-color: var(--blue-bot);
     padding: 30px;
     border-radius: 8px;
 }
+
 section.content .texts .bot svg {
-    width: 220px;
-    margin-right: 20px;
+    width: 90px;
 }
+
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
 }
@@ -182,18 +203,9 @@ section.content .texts .bot svg #ball-2 {
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-section.content .texts .legend{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-}
 
-section.content .texts .legend p{
-    font-size: 15px;
-}
-section.content .texts .legend img{
-    width: 400px;
+section.content .texts .bot p {
+    margin-left: 20px;
 }
 section.content p {
     font-size: 2.0rem;
@@ -201,6 +213,7 @@ section.content p {
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -255,43 +268,7 @@ section.content p {
     }
 }
 
-@media (max-width: 820px) {
-    .content .controle {
-<<<<<<< Updated upstream
-=======
-        align-items: center;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        background-color: var(--secundary-blue);
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    section.content .texts .bot {
->>>>>>> Stashed changes
-        flex-direction: row;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .legend img{
-        width: 300px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
+
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -305,27 +282,61 @@ section.content p {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 20px 0 10px 0;
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .icons img{
+        width: 270px;
+    }
+    section.content .texts .bot{
+        flex-direction: column;
+    }
+    section.content .texts .bot p{
+        margin: 0;
+    }
+    section.content .texts .bot svg{
+        width: 120px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+@media (max-width: 375px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
     section.content .texts .bot{
-        margin: 0;
         flex-direction: column;
+    } 
+    section.content .texts .bot p{
+        margin: 0;
     }
     section.content .texts .bot svg{
         width: 120px;
     }
-    section.content .texts .legend img{
+    section.content .texts .icons img{
         width: 200px;
     }
-
     .content .go-top img {
         width: 30px;
     }
 }
-
 
 @media (max-width: 425px) {
     html {
