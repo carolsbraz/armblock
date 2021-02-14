@@ -163,26 +163,23 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts .arm {
+section.content .texts .text1 .arm {
     display: flex;
+}
+section.content .texts .text1{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: justify;
 }
-section.content .texts .arm svg{
-    width: 130px;    
-    margin-left: 30px;
+section.content .texts .text1 img{
+    display: flex;
+    width: 300px;
+    align-items: center;
 }
-
-section.content .texts .arm .text p {
-    line-height: 30px;
-    margin-right: 60px;
-    margin-left: 60px;
-}
-
-section.content .texts p {
-    line-height: 30px;
-    margin-right: 60px;
-    margin-left: 60px;
+section.content .texts .text1 .arm .photo{
+    display: flex;
+    align-items: center;
 }
 
 section.content p {
