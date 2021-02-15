@@ -100,23 +100,21 @@ section.content {
 }
 
 section.content .branca {
-    width: 90%;
-    max-width: 1100px;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: calc(100vh - 210px);
     background-color: white;
     padding: 30px;
-    height: calc(100vh - 80%);
+    height: calc(100vh - 60%);
     border-radius: 10px;
     box-shadow: 2px 2px 4px 1px var(--gray);
 }
 
-section.content .branca .imgauthentication {
-    display: flex;
-    align-items: center;
+section.content .branca svg {
+    width: 50%;
 }
 
 section.content .branca .button .button-Entrar {
@@ -154,7 +152,7 @@ section.content .branca .formulario .email {
     border-radius: 8px;
     border: 0;
     margin: 0 10px 0 10px;
-    max-width: 280px;
+    width: 80%;
 }
 
 section.content .branca .formulario .senha {
@@ -163,7 +161,7 @@ section.content .branca .formulario .senha {
     border-radius: 8px;
     border: 0;
     margin: 0 10px 0 10px;
-    max-width: 280px;
+    width: 80%;
 }
 
 section.content .branca .flex {
@@ -171,7 +169,7 @@ section.content .branca .flex {
     justify-content: center;
 }
 
-section.content .branca .imgauthentication .line {
+section.content .branca .line {
     margin: 0px 30px;
 }
 
@@ -187,7 +185,7 @@ section.content .branca p {
 }
 
 @media (max-width: 1440px) {
-    section.content .branca .imgauthentication svg {
+    section.content .branca svg {
         width: 500px;
     }
 }
@@ -196,7 +194,7 @@ section.content .branca p {
     html {
         font-size: 55%;
     }
-    section.content .branca .imgauthentication svg {
+    section.content .branca svg {
         width: 400px;
     }
 }
@@ -234,14 +232,10 @@ section.content .branca p {
     section.content .imgtrail {
         order: -1;
     }
-    section.content .branca .imgauthentication {
-        flex-direction: column;
-        text-align: center;
-    }
-    section.content .branca .imgauthentication svg {
+    section.content .branca svg {
         height: 400px;
     }
-    section.content .branca .imgauthentication .line {
+    section.content .branca .line {
         display: none;
     }
 }
@@ -250,7 +244,7 @@ section.content .branca p {
     html {
         font-size: 45%;
     }
-    section.content .branca .imgauthentication svg {
+    section.content .branca svg {
         width: 300px;
     }
     section.content {
@@ -263,7 +257,7 @@ section.content .branca p {
 }
 
 @media (max-width: 375px) {
-    section.content .branca .imgauthentication svg {
+    section.content .branca svg {
         width: 200px;
         height: 200px;
     }

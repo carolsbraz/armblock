@@ -27,6 +27,7 @@
         </div>
     </header>
 
+
     <form action="/enviar-dados" method="get">
         <section class="container">
 
@@ -35,10 +36,16 @@
                     <div class="green title-block block">Configurações</div>
                     <div class="brown serial-block block">Selecione a porta serial:
                         <select name="serialport" id="serial-port">
-                            <% for (porta of portas){%>
-                                <option value="<%= porta %>"><%= porta %></option>
-                              <% } %>
-                </select>
+                                <option value="COM1">COM1</option>  
+                                <option value="COM2">COM2</option>  
+                                <option value="COM3">COM3</option>  
+                                <option value="COM4">COM4</option>  
+                                <option value="COM5">COM5</option>  
+                                <option value="COM6">COM6</option>  
+                                <option value="COM7">COM7</option>  
+                                <option value="COM8">COM8</option>  
+                                <option value="COM9">COM9</option>                              
+                        </select>
                     </div>
                     <div class="dark-blue pin-block block">Pino do motor 1: <input type="number" placeholder="pino" name="pino1"></div>
                     <div class="dark-blue pin-block block">Pino do motor 2: <input type="number" placeholder="pino"></div>

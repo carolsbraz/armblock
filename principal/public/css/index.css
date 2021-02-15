@@ -82,6 +82,15 @@ header .brand .title {
 header .menu a.link {
     color: black;
     transition: 0.5s;
+    margin: 0 10px;
+}
+
+header .menu a.btn-login {
+    background-color: #c2c2c2;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 80px;
+    color: white;
 }
 
 header .menu a.link:hover {
@@ -262,8 +271,15 @@ div.footer {
     html {
         font-size: 50%;
     }
+    header {
+        flex-direction: column;
+    }
     header .brand img {
         width: 50px;
+    }
+    header .menu {
+        order: -1;
+        margin-bottom: 30px;
     }
     section.initial .container {
         flex-direction: column;
@@ -299,13 +315,17 @@ div.footer {
     header .brand {
         justify-content: center;
         flex-direction: column;
+        margin-top: 20px;
     }
     header .brand .title {
         text-align: center;
         margin: 20px 0 0 0;
     }
-    header .menu {
+    header .menu a.link {
         display: none;
+    }
+    header .menu {
+        margin-top: 20px;
     }
     section.initial .container .buttons {
         flex-direction: column;

@@ -2,7 +2,6 @@ const board = document.getElementById('programming-blocks')
 
 let pontos = 1;
 
-
 const dragboard = document.getElementById('here-blocks')
 new Sortable(dragboard, {
     group: {
@@ -99,12 +98,47 @@ btndelete.addEventListener('click', () => {
 const enviar = document.getElementById('enviar')
 
 enviar.addEventListener('click', () => {
-    var i = 1;
-    const motorinput = document.querySelectorAll('#board .yellow input')
+    let blockcommands = ''
 
-    motorinput.forEach(motor => {
-        i += 1
-        motor.setAttribute('name', `motor-${i}`)
-        console.log(i)
+    let finalcommand = ''
+
+    let countcommands = 0;
+
+    const blocks = document.querySelectorAll('#board .block')
+
+    blocks.forEach(block => {
+        countcommands += 1
+        console.log(countcommands)
+
+        if (block.classList.contains("delay")) {
+            blockcommands += '&'
+            blockcommands += '1:'
+            const input = block.querySelectorAll('input')[0];
+            blockcommands += input.value
+        }
+        if (block.classList.contains("abrir-garra")) {
+            blockcommands += '&'
+            blockcommands += '2'
+        }
+        if (block.classList.contains("fechar-garra")) {
+            blockcommands += '&'
+            blockcommands += '3'
+        }
+        if (block.classList.contains("motor")) {
+            blockcommands += '&'
+            blockcommands += '4:'
+            const id = block.querySelectorAll('input')[0];
+            blockcommands += `${id.value}:`
+            const pos = block.querySelectorAll('input')[1];
+            blockcommands += `${pos.value}:`
+            const vel = block.querySelectorAll('input')[2];
+            blockcommands += `${vel.value}`
+            countcommands -= 2
+        }
+
     })
+
+    finalcommand = `prog&${countcommands}${blockcommands}`
+
+    console.log(finalcommand)
 })

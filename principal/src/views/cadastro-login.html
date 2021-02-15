@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArmBlock - Cadastro-login</title>
 
-    <link rel="stylesheet" href="/public/css/cadastro-login.css">
+    <link rel="stylesheet" href="/css/cadastro-login.css">
     <link rel="stylesheet" href="/css/animations/load-animation.css">
 
 </head>
@@ -15,11 +15,11 @@
 
     <div class="cadastro">
 
-        <img src="/public/img/textura-cinza.png" alt="" class="right-back" data-anime="right-texture" style="transition: 5s">
+        <img src="/img/textura-cinza.png" alt="" class="right-back" data-anime="right-texture" style="transition: 5s">
 
         <header>
             <div class="brand">
-                <img src="/public/img/robotic-arm.svg" alt="logo" width="80px">
+                <img src="/img/robotic-arm.svg" alt="logo" width="80px">
                 <h2 class="title">Educational ArmBlock</h2>
             </div>
             <div class="menu">
@@ -29,8 +29,8 @@
 
         <section class="content">
             <div class="branca">
-                <div class="imgauthentication">
-                    <svg viewBox="0 0 800 553" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <svg viewBox="0 0 800 553" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="undraw_authentication_fsn5 1" clip-path="url(#clip0)">
                         <path id="Vector" opacity="0.1" d="M452.503 75.1947C401.224 75.2633 351.866 60.7268 304.655 44.5782C257.444 28.4296 210.597 10.3465 160.272 2.68381C127.906 -2.24172 91.1016 -1.78895 65.8017 16.0952C41.4484 33.3003 34.3963 61.7764 30.9937 88.0847C28.4349 107.876 27.255 128.648 36.8385 146.752C43.4927 159.32 54.8804 169.678 62.9067 181.656C90.9232 223.324 74.0749 276.551 46.8473 319.187C34.0807 339.19 19.1258 358.364 9.47368 379.514C-0.178424 400.663 -4.13668 424.646 5.70751 445.521C15.4625 466.211 37.497 481.228 61.1437 491.484C109.164 512.352 165.074 516.825 219.481 518.547C339.916 522.368 460.585 514.575 580.931 506.782C625.466 503.901 670.201 500.999 713.817 492.65C738.033 488.02 762.969 481.146 780.14 466.081C801.935 446.955 806.394 415.728 790.533 393.282C763.937 355.634 693.806 348.534 674.735 307.799C664.219 285.373 673.288 259.655 686.644 238.039C715.292 191.658 764.602 150.113 765.432 98.2376C766.001 62.6133 740.359 27.8602 702.059 12.3771C661.914 -3.84011 607.177 0.330809 579.051 30.5562C550.129 61.6941 497.78 75.1467 452.503 75.1947Z" fill="#0077B6"/>
                         <path id="Vector_2" d="M680.882 442.721C680.882 442.721 672.451 437.157 664.095 441.116C664.095 441.116 666.668 446.069 677.246 445.602L680.882 442.721Z" fill="#0077B6"/>
@@ -128,33 +128,30 @@
                         </clipPath>
                         </defs>
                         </svg>
-                    <img src="/public/img/Line.png" alt="" class="line" height="300px">
+                <img src="/img/Line.png" alt="" class="line" height="300px">
 
-                </div>
                 <div class="text">
                     <div class="title-text">
                         <p class="login-title">Preencha suas informações para fazer login ou criar uma conta:</p>
                     </div>
-                    <div class="formulario">
-                        <form action="">
+
+                    <form action="/autenticar-user">
+                        <div class="formulario">
                             <div class="inputs">
-                                <input type="text" placeholder="Email" class="email"><br>
-                                <input type="text" placeholder="Senha" class="senha">
+                                <input type="email" placeholder="Email" name="useremail" class="email"><br>
+                                <input type="password" placeholder="Senha" name="userpassword" class="senha">
                             </div>
-                        </form>
-                    </div>
-                    <div class="flex">
-                        <div class="button">
-                            <a href="/trail-summary" class="button-Entrar">
-                                <p class="entrar">Entrar</p>
                         </div>
-                    </div>
+                        <div class="flex">
+                            <input type="submit" class="button" id="btn-login" value="Entrar">
+
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
     </div>
-
-    <script src="/public/js/cadastro-login.js"></script>
+    <script src="/js/cadastro-login.js"></script>
 </body>
 
 </html>

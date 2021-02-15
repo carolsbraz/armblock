@@ -158,32 +158,40 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
+
 section.content .texts .software {
     display: flex;
     align-items: center;
     text-align: justify;
 }
+
 section.content .texts .software svg {
     width: 1800px;
     margin-left: 40px;
 }
-section.content .texts .icons{
+
+section.content .texts .icons {
     display: flex;
     justify-content: space-between;
+    margin: 30px 0;
 }
-section.content .texts .icons .flex{
+
+section.content .texts .icons .flex {
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
+    width: 100%;
 }
-section.content .texts .icons svg{
+
+section.content .texts .icons svg {
     width: 75px;
 }
+
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -209,7 +217,6 @@ section.content .texts .bot svg #ball-2 {
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-
 
 section.content p {
     font-size: 2.0rem;
@@ -308,24 +315,24 @@ section.content p {
     section.content .texts .software {
         flex-direction: column-reverse;
     }
-    section.content .texts .software p{
+    section.content .texts .software p {
         margin: 0;
     }
-    section.content .texts .software svg{
+    section.content .texts .software svg {
         margin-bottom: 40px;
     }
     section.content .texts .software svg {
         width: 220px
     }
-    section.content .texts .icons{
+    section.content .texts .icons {
         flex-direction: column;
     }
-    section.content .texts .icons .flex{
+    section.content .texts .icons .flex {
         width: 100%;
         justify-content: space-evenly;
     }
     section.content .texts .bot {
-        flex-direction:column;
+        flex-direction: column;
     }
     section.content .texts .bot svg {
         width: 120px;
@@ -337,6 +344,7 @@ section.content p {
         width: 30px;
     }
 }
+
 @media (max-width: 425px) {
     html {
         font-size: 45%;
@@ -348,6 +356,7 @@ section.content p {
         padding: 25px 25px;
     }
 }
+
 
 /* animations */
 
