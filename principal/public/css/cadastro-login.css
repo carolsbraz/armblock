@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+    --main-blue: #0077B6;
+    --main-blue-hover: #005d8f;
+    --main-yellow: #FDF172;
+    --gray: #bbbbbb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 65.5%;
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 90%;
+    margin: auto;
+}
+
+html,
+body {
+    font-family: "Montserrat";
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.right-back {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100vh;
+    width: 35vw;
+    z-index: -100000;
+    object-fit: cover;
+}
+
+header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+}
+
+header .brand .title {
+    margin-left: 20px;
+    color: var(--main-blue);
+}
+
+header .menu a.link {
+    color: black;
+    transition: 0.5s;
+}
+
+header .menu a.link:hover {
+    color: rgb(141, 140, 78)
+}
+
+section.content {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 210px);
+    padding: 30px;
+    height: calc(100vh - 240px);
+}
+
+section.content .branca {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 210px);
+    background-color: white;
+    padding: 30px;
+    height: calc(100vh - 60%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+}
+
+section.content .branca svg {
+    width: 50%;
+}
+
+section.content .branca .button .button-Entrar {
+    background-color: var(--main-blue);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    align-items: center;
+}
+
+section.content .branca .text .title-text p {
+    font-size: 1.25rem;
+    line-height: 3.2rem;
+    margin: 0px 30px 0px 30px;
+}
+
+section.content .branca .formulario {
+    margin: 30px 0;
+}
+
+section.content .branca .formulario .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content .branca .formulario .email {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    width: 80%;
+}
+
+section.content .branca .formulario .senha {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    width: 80%;
+}
+
+section.content .branca .flex {
+    display: flex;
+    justify-content: center;
+}
+
+section.content .branca .line {
+    margin: 0px 30px;
+}
+
+section.content .branca .button .button-Entrar:hover {
+    background-color: var(--main-blue-hover);
+}
+
+section.content .branca p {
+    font-size: 1.25rem;
+    line-height: 3.2rem;
+    margin: 0px 30px 0px 30px;
+    text-align: center;
+}
+
+@media (max-width: 1440px) {
+    section.content .branca svg {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+    section.content .branca svg {
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    header .brand img {
+        width: 50px;
+    }
+    header {
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        flex-direction: column-reverse;
+    }
+    header .brand {
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px
+    }
+    header .brand .title {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+    section.content .branca {
+        flex-direction: column;
+        text-align: center;
+    }
+    section.content .branca .button {
+        display: flex;
+        justify-content: center;
+    }
+    section.content .imgtrail {
+        order: -1;
+    }
+    section.content .branca svg {
+        height: 400px;
+    }
+    section.content .branca .line {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 45%;
+    }
+    section.content .branca svg {
+        width: 300px;
+    }
+    section.content {
+        height: auto;
+        margin-top: 50px;
+    }
+    section.content .branca {
+        width: 400px;
+    }
+}
+
+@media (max-width: 375px) {
+    section.content .branca svg {
+        width: 200px;
+        height: 200px;
+    }
+    section.content .branca {
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px) {
+    section.content .imgtrail svg {
+        width: 250px;
+    }
+}
+
+@media (max-height: 565px) {
+    html {
+        font-size: 45%;
+    }
+    section.content .imgtrail svg {
+        width: 300px;
+    }
+    section.content {
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px
+    }
+}
