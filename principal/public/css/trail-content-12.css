@@ -266,8 +266,8 @@ section.content p {
         margin-top: 15px;
         margin-bottom: 25px;
     }
-<<<<<<< Updated upstream
-=======
+
+
     .content .controle .summary {
         background-color: var(--secundary-blue);
     }
@@ -356,7 +356,7 @@ section.content p {
     .content .controle .summary {
         order: -1;
     }
->>>>>>> Stashed changes
+
     .content .controle a {
         justify-content: center;
     }
