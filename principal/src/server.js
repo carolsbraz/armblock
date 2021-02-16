@@ -29,80 +29,73 @@ server.get("/", (req, res) => {
 })
 
 server.get("/cadastro-login", (req, res) => {
-    res.sendFile(__dirname + "/views/cadastro-login.html")
+    res.sendFile(__dirname + "/views/trail-content/cadastro-login.html")
 })
-
 server.get("/home-trail", (req, res) => {
-    res.sendFile(__dirname + "/views/home-trail.html")
+    res.sendFile(__dirname + "/views/trail-content/home-trail.html")
 })
-
 server.get("/trail-summary", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-summary.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-summary.html")
 })
-
 server.get("/trail-content-1", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-1.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-1.html")
 })
-
 server.get("/trail-content-2", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-2.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-2.html")
 })
-
 server.get("/trail-content-3", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-3.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-3.html")
 })
-
 server.get("/trail-content-4", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-4.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-4.html")
 })
-
 server.get("/trail-content-5", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-5.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-5.html")
 })
 server.get("/trail-content-6", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-6.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-6.html")
 })
 server.get("/trail-content-7", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-7.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-7.html")
 })
 server.get("/trail-content-8", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-8.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-8.html")
 })
 server.get("/trail-content-9", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-9.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-9.html")
 })
 server.get("/trail-content-10", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-10.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-10.html")
 })
 server.get("/trail-content-11", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-11.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-11.html")
 })
 server.get("/trail-content-12", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-12.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-12.html")
 })
 server.get("/trail-content-13", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-13.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-13.html")
 })
 server.get("/trail-content-14", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-14.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-14.html")
 })
 server.get("/trail-content-15", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-15.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-15.html")
 })
 server.get("/trail-content-16", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-16.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-16.html")
 })
 server.get("/trail-content-17", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-17.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-17.html")
 })
 server.get("/trail-content-18", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-18.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-18.html")
 })
 server.get("/trail-content-19", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-19.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-19.html")
 })
 server.get("/trail-content-20", (req, res) => {
-    res.sendFile(__dirname + "/views/trail-content-20.html")
+    res.sendFile(__dirname + "/views/trail-content/trail-content-20.html")
 })
 
 server.get("/tutorial", (req, res) => {
