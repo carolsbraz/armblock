@@ -97,19 +97,19 @@ btndelete.addEventListener('click', () => {
 
 const enviar = document.getElementById('enviar')
 
+//chamando os inputs
+const txtConfiguracoes = document.getElementById('conf')
+const txtPorta = document.getElementById('port')
+const txtComando = document.getElementById('final-command')
+
 enviar.addEventListener('click', () => {
+    //gerando string de comandos
     let blockcommands = ''
-
     let finalcommand = ''
-
     let countcommands = 0;
-
     const blocks = document.querySelectorAll('#board .block')
-
     blocks.forEach(block => {
         countcommands += 1
-        console.log(countcommands)
-
         if (block.classList.contains("delay")) {
             blockcommands += '&'
             blockcommands += '1:'
@@ -135,10 +135,33 @@ enviar.addEventListener('click', () => {
             blockcommands += `${vel.value}`
             countcommands -= 2
         }
-
     })
-
     finalcommand = `prog&${countcommands}${blockcommands}`
+        // atribuindo comando ao input
+    txtComando.value = finalcommand;
 
-    console.log(finalcommand)
+    //pegando valor da porta e atribuindo
+    const valorPorta = document.getElementById('serial-port')
+    txtPorta.value = valorPorta.value
+
+    //pegando o valor dos pinos
+    const pino1 = document.getElementById('pino1')
+    const pino2 = document.getElementById('pino2')
+    const pino3 = document.getElementById('pino3')
+    const pino4 = document.getElementById('pino4')
+    const pino5 = document.getElementById('pino5')
+    const pino6 = document.getElementById('pino6')
+    const pino7 = document.getElementById('pino7')
+
+    //gerando string
+    let config = `conf&${pino1.value}&${pino2.value}&${pino3.value}&${pino4.value}&${pino5.value}&${pino6.value}&${pino7.value}`
+
+    //atribuindo string de conf para input
+    txtConfiguracoes.value = config
+
+    //gerando caminho pro server
+    var form = document.getElementById('comandos');
+    form.action = "/enviar-comandos";
+    form.submit();
+
 })

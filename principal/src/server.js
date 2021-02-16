@@ -5,24 +5,22 @@ const server = express()
 var firebase = require("firebase/app");
 
 require("firebase/auth");
+require("firebase/database");
 
 var firebaseConfig = {
     apiKey: "AIzaSyAj9g1tBf7wICyyOXO3-wdHov4RiDJ5XEk",
     authDomain: "armblock-2faec.firebaseapp.com",
+    databaseURL: "https://armblock-2faec-default-rtdb.firebaseio.com",
     projectId: "armblock-2faec",
     storageBucket: "armblock-2faec.appspot.com",
     messagingSenderId: "746158222333",
     appId: "1:746158222333:web:e8418b733e8e8942e44794"
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 //configurar pastas públicas
 server.use(express.static("public"))
-
-const comando = require("./utils/create-command")
-
 
 // configurar caminhos da aplicação
 
@@ -163,6 +161,23 @@ server.get("/autenticar-user", (req, res) => {
             }
         });
 })
+
+server.get("/enviar-comandos", (req, res) => {
+    const port = req.query.port;
+    const conf = req.query.conf;
+    const comand = req.query.commands;
+
+    var user = firebase.auth().currentUser;
+
+    console.log(user.email)
+
+    firebase.database().ref(`usuarios/` + user.uid).set({
+        porta: port,
+        configuracoes: conf,
+        comandos: comand
+    })
+})
+
 
 //ligar o servidor
 http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));
