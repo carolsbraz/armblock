@@ -118,23 +118,30 @@ server.get("/block-programming", (req, res) => {
 server.get("/autenticar-user", (req, res) => {
     const email = req.query.useremail;
     const password = req.query.userpassword;
+
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            console.log(logado)
             res.sendFile(__dirname + "/views/index.html")
         })
         .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(`Deu erro: ${errorCode}, ${errorMessage}`)
+
             if (error.code == 'auth/user-not-found') {
+
                 firebase.auth().createUserWithEmailAndPassword(email, password)
                     .then((user) => {
                         res.sendFile(__dirname + "/views/index.html")
                     })
                     .catch((error) => {
-                        console.log(error.message)
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        console.log(errorCode)
                     });
             }
         });
-})
+});
 
 server.get("/enviar-comandos", (req, res) => {
     const port = req.query.port;
@@ -143,13 +150,18 @@ server.get("/enviar-comandos", (req, res) => {
 
     var user = firebase.auth().currentUser;
 
-    console.log(user.email)
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid).set({
+            porta: port,
+            configuracoes: conf,
+            comandos: comand
+        })
+        res.sendFile(__dirname + "/views/block-programming.html")
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
 
-    firebase.database().ref(`usuarios/` + user.uid).set({
-        porta: port,
-        configuracoes: conf,
-        comandos: comand
-    })
+
 })
 
 

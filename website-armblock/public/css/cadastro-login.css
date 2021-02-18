@@ -117,20 +117,28 @@ section.content .branca svg {
     width: 50%;
 }
 
-section.content .branca .button .button-Entrar {
+section.content .branca .button {
     background-color: var(--main-blue);
     color: white;
-    padding: 10px;
-    width: 100%;
+    padding: 15px;
+    width: 200px;
     display: flex;
     justify-content: center;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 1px var(--gray);
     align-items: center;
+    border-width: 0;
+    font-size: 1.6rem;
+    transition: 1s;
+    cursor: pointer;
+}
+
+section.content .branca .button:hover {
+    background-color: var(--main-blue-hover);
 }
 
 section.content .branca .text .title-text p {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     line-height: 3.2rem;
     margin: 0px 30px 0px 30px;
 }
@@ -146,9 +154,13 @@ section.content .branca .formulario .inputs {
     align-items: center;
 }
 
+section.content .branca .formulario input:focus {
+    box-shadow: 2px 2px 3px 1px var(--gray);
+}
+
 section.content .branca .formulario .email {
     background-color: #f3f3f3;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     border: 0;
     margin: 0 10px 0 10px;
@@ -157,7 +169,7 @@ section.content .branca .formulario .email {
 
 section.content .branca .formulario .senha {
     background-color: #f3f3f3;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     border: 0;
     margin: 0 10px 0 10px;
@@ -171,10 +183,6 @@ section.content .branca .flex {
 
 section.content .branca .line {
     margin: 0px 30px;
-}
-
-section.content .branca .button .button-Entrar:hover {
-    background-color: var(--main-blue-hover);
 }
 
 section.content .branca p {

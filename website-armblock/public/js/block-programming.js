@@ -136,6 +136,7 @@ enviar.addEventListener('click', () => {
             countcommands -= 2
         }
     })
+
     finalcommand = `prog&${countcommands}${blockcommands}`
         // atribuindo comando ao input
     txtComando.value = finalcommand;
