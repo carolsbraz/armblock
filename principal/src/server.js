@@ -2,21 +2,7 @@ const http = require("http")
 const express = require("express")
 const server = express()
 
-var firebase = require("firebase/app");
 
-require("firebase/auth");
-
-var firebaseConfig = {
-    apiKey: "AIzaSyAj9g1tBf7wICyyOXO3-wdHov4RiDJ5XEk",
-    authDomain: "armblock-2faec.firebaseapp.com",
-    projectId: "armblock-2faec",
-    storageBucket: "armblock-2faec.appspot.com",
-    messagingSenderId: "746158222333",
-    appId: "1:746158222333:web:e8418b733e8e8942e44794"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
 //configurar pastas públicas
 server.use(express.static("public"))
@@ -108,6 +94,15 @@ server.get("/trail-content-20", (req, res) => {
 })
 server.get("/trail-content-21", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-21.html")
+})
+server.get("/trail-content-22", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-22.html")
+})
+server.get("/trail-content-23", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-23.html")
+})
+server.get("/trail-content-24", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-24.html")
 })
 server.get("/tutorial", (req, res) => {
     res.sendFile(__dirname + "/views/video.html")
