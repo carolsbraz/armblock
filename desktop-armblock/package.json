@@ -1,0 +1,61 @@
+{
+    "name": "conversor",
+    "version": "1.0.0",
+    "description": "My first electron app",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "package": "electron-forge package",
+        "make": "electron-forge make"
+    },
+    "win": {
+        "icon": "./img/robotic-arm.png"
+    },
+    "keywords": [],
+    "author": "Carol",
+    "license": "ISC",
+    "devDependencies": {
+        "@electron-forge/cli": "^6.0.0-beta.54",
+        "@electron-forge/maker-deb": "^6.0.0-beta.54",
+        "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+        "@electron-forge/maker-zip": "^6.0.0-beta.54",
+        "electron": "^11.2.3",
+        "electron-rebuild": "^2.3.5"
+    },
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "ejs-electron": "^2.1.1",
+        "electron-squirrel-startup": "^1.0.0",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "firebase": "^8.2.6",
+        "serialport": "^9.0.6"
+    },
+    "config": {
+        "forge": {
+            "packagerConfig": {},
+            "makers": [{
+                    "name": "@electron-forge/maker-squirrel",
+                    "config": {
+                        "name": "conversor"
+                    }
+                },
+                {
+                    "name": "@electron-forge/maker-zip",
+                    "platforms": [
+                        "darwin"
+                    ]
+                },
+                {
+                    "name": "@electron-forge/maker-deb",
+                    "config": {}
+                },
+                {
+                    "name": "@electron-forge/maker-rpm",
+                    "config": {}
+                }
+            ]
+        }
+    }
+}

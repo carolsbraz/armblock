@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+    --back-color: #f7f7f7;
+    --main-blue: #0077B6;
+    --secundary-blue: #85ABBE;
+    --shadow-blue: #678D98;
+    --yellow-block: #FFF694;
+    --shadow-yellow-block: #e6db6d;
+    --blue-block: #85ABBE;
+    --red-block: #E26464;
+    --green-block: #87CE86;
+    --brown-block: #CEA086;
+    --dark-blue-block: #678D98;
+    --gray: #bbbbbb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 65.5%;
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 95%;
+    margin: auto;
+}
+
+html,
+body {
+    font-family: "Montserrat";
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 10px 10px 10px 10px;
+}
+
+header {
+    width: 90%;
+    max-width: 2200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+}
+
+header .brand .title {
+    margin-left: 20px;
+    color: var(--main-blue);
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .menu a.link {
+    color: black;
+    transition: 0.5s;
+    margin-right: 20px;
+}
+
+header .menu a.link:hover {
+    color: rgb(141, 140, 78)
+}
+
+header .menu .change-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .menu .change-button .rotine {
+    background-color: var(--shadow-blue);
+    color: white;
+    padding: 15px 10px 15px 10px;
+    width: 200px;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    font-weight: 600;
+}
+
+header .menu .change-button .operation {
+    background-color: var(--secundary-blue);
+    color: white;
+    padding: 15px 10px 15px 10px;
+    width: 200px;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    font-weight: 600;
+}
+
+header .menu .actions-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+form {
+    width: 100%;
+}
+
+section.container {
+    width: 90%;
+    max-width: 3000px;
+    margin: auto;
+    margin-top: 30px;
+    height: calc(100vh - 160px);
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem
+}
+
+section.container .left-board {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+
+section.container .configuration {
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    height: 50%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    width: 100%;
+}
+
+section.container .configuration {
+    overflow-x: auto;
+}
+
+section.container .configuration::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+section.container .configuration::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 0 8px 8px 0;
+}
+
+section.container .configuration::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 0 8px 8px 0;
+}
+
+section.container .configuration .block {
+    padding: 7px 20px 7px 20px;
+    color: white;
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+}
+
+section.container .configuration .block input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 70px;
+}
+
+section.container .configuration .block select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 120px;
+}
+
+section.container .configuration .title-block {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+section.container .robotic-arm {
+    background-color: white;
+    padding: 70px;
+    height: 50%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px
+}
+
+section.container .robotic-arm .arm svg {
+    width: 100%
+}
+
+section.container .board {
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    width: 32%;
+    height: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.container .board .programming-blocks {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 20px 0 20px;
+    margin-bottom: 15px
+}
+
+div.drag {
+    padding: 10px;
+    margin: 10px -30px 10px 0;
+    background-color: white;
+    border-radius: 4px;
+}
+
+section.container .board .programming-blocks::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+section.container .board .programming-blocks::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 8px 8px 8px 8px;
+}
+
+section.container .board .programming-blocks::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 8px 8px 8px 8px;
+}
+
+section.container .board .actions-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+section.container .board .actions-buttons .delete {
+    background-color: var(--secundary-blue);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0px 20px 0px 20px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    align-items: center;
+}
+
+section.container .board .actions-buttons .test {
+    background-color: var(--shadow-blue);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0px 20px 0px 20px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    align-items: center;
+}
+
+section.container .board .actions-buttons p {
+    margin-left: 20px;
+}
+
+section.container .drag-board {
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px 1px var(--gray);
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+section.container .here-blocks {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 20px 0 20px;
+    margin-bottom: 30px;
+}
+
+section.container .here-blocks::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+section.container .here-blocks::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 8px 8px 8px 8px;
+}
+
+section.container .here-blocks::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 8px 8px 8px 8px;
+}
+
+section.container .add-point .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+section.container .add-point .button p {
+    margin-left: 10px;
+}
+
+
+/* Blocks*/
+
+section.container .block {
+    padding: 7px 20px 7px 20px;
+    color: black;
+    font-weight: 600;
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+}
+
+section.container .block input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 70px;
+}
+
+section.container .block select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    margin: 0 10px 0 10px;
+    max-width: 120px;
+}
+
+section.container .selected-block {
+    padding: 7px 20px 7px 20px;
+    color: white;
+    border-radius: 8px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+
+/* Utilidades */
+
+.yellow {
+    background-color: var(--yellow-block) !important;
+}
+
+.blue {
+    background-color: var(--blue-block) !important;
+}
+
+.red {
+    background-color: var(--red-block) !important;
+}
+
+.green {
+    background-color: var(--green-block) !important;
+}
+
+.brown {
+    background-color: var(--brown-block) !important;
+}
+
+.dark-blue {
+    background-color: var(--dark-blue-block) !important;
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 50%;
+    }
+    section.container .left-board {
+        width: 29%
+    }
+    section.container .board {
+        width: 33%;
+    }
+    section.container .drag-board {
+        width: 33%;
+    }
+    section.container .configuration .block {
+        text-align: center;
+    }
+    section.container .board .actions-buttons .test {
+        margin: 0px 5px 0px 5px;
+    }
+    section.container .board .actions-buttons .delete {
+        margin: 0px 5px 0px 5px;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 45%
+    }
+    section.container .left-board {
+        width: 25%
+    }
+    section.container .robotic-arm {
+        padding: 30px;
+    }
+    section.container .board {
+        width: 36%;
+    }
+    section.container .drag-board {
+        width: 36%;
+    }
+    section.container .configuration {
+        padding: 20px !important;
+    }
+    section.container .configuration .block {
+        text-align: center;
+    }
+    section.container .boards .board .block {
+        text-align: center;
+    }
+    section.container .board .actions-buttons .test {
+        padding: 10px;
+    }
+    section.container .board .actions-buttons .delete {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    header .brand img {
+        width: 50px;
+    }
+    header {
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+    header .brand {
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px
+    }
+    header .brand .title {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+    header .menu {
+        flex-direction: column;
+    }
+    header .menu .link-menu {
+        margin: 20px 0 20px 0;
+    }
+    section.container {
+        flex-direction: column;
+        height: 100%;
+    }
+    section.container .left-board {
+        width: 100%
+    }
+    section.container .left-board .configuration {
+        width: 100%
+    }
+    section.container .board {
+        width: 100%;
+        order: 5;
+    }
+    section.container .board .programming-blocks {
+        width: 100%;
+        min-height: 300px;
+        max-height: 600px;
+    }
+    section.container .drag-board {
+        width: 100%;
+        margin-bottom: 30px;
+        max-height: 600px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 509px) {
+    section.container .board .actions-buttons {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section.container .board .actions-buttons .delete {
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 45%;
+    }
+    header .brand {
+        flex-direction: column;
+    }
+    header .menu .change-button .rotine {
+        width: 100px;
+    }
+    header .menu .change-button .operation {
+        width: 100px;
+    }
+    section.container .robotic-arm {
+        padding: 25px !important;
+    }
+    section.container .configuration {
+        padding: 25px !important;
+    }
+    section.container .boards .board {
+        padding: 25px !important;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
