@@ -174,7 +174,7 @@ section.content .texts .bot {
 }
 
 section.content .texts .bot svg {
-    width: 200px;
+    width: 250px;
 }
 
 section.content .texts .bot svg #ball-1 {
@@ -191,6 +191,11 @@ section.content .texts .bot svg #ball-3 {
 
 section.content .texts .bot p {
     margin-left: 20px;
+}
+
+section.content .texts .imagem{
+    width: 800px;
+    align-items: center;
 }
 
 section.content p {
@@ -211,10 +216,27 @@ section.content p {
 
 /* responsividade */
 
+@media (max-width: 1085px) {
+    html {
+        font-size: 55%;
+    }
+    section.content .texts .imagem{
+        width: 580px;
+    }
+    
+}
+
 @media (max-width: 1024px) {
     html {
         font-size: 55%;
     }
+    section.content .texts .imagem{
+        width: 600px;
+    }
+    section.content .texts .imagem2{
+        width: 550px;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -237,6 +259,9 @@ section.content p {
     header .brand .title {
         text-align: center;
         margin: 20px 0 0 0;
+    }
+    section.content .texts .imagem{
+        width: 400px;
     }
 }
 

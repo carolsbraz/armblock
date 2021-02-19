@@ -5,22 +5,24 @@ const server = express()
 var firebase = require("firebase/app");
 
 require("firebase/auth");
-require("firebase/database");
 
 var firebaseConfig = {
     apiKey: "AIzaSyAj9g1tBf7wICyyOXO3-wdHov4RiDJ5XEk",
     authDomain: "armblock-2faec.firebaseapp.com",
-    databaseURL: "https://armblock-2faec-default-rtdb.firebaseio.com",
     projectId: "armblock-2faec",
     storageBucket: "armblock-2faec.appspot.com",
     messagingSenderId: "746158222333",
     appId: "1:746158222333:web:e8418b733e8e8942e44794"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 //configurar pastas públicas
 server.use(express.static("public"))
+
+const comando = require("./utils/create-command")
+
 
 // configurar caminhos da aplicação
 
@@ -116,6 +118,12 @@ server.get("/trail-content-23", (req, res) => {
 server.get("/trail-content-24", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-24.html")
 })
+server.get("/trail-content-25", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-25.html")
+})
+server.get("/trail-content-26", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-26.html")
+})
 server.get("/tutorial", (req, res) => {
     res.sendFile(__dirname + "/views/video.html")
 })
@@ -136,51 +144,23 @@ server.get("/block-programming", (req, res) => {
 server.get("/autenticar-user", (req, res) => {
     const email = req.query.useremail;
     const password = req.query.userpassword;
-
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
+            console.log(logado)
             res.sendFile(__dirname + "/views/index.html")
         })
         .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(`Deu erro: ${errorCode}, ${errorMessage}`)
-
             if (error.code == 'auth/user-not-found') {
-
                 firebase.auth().createUserWithEmailAndPassword(email, password)
                     .then((user) => {
                         res.sendFile(__dirname + "/views/index.html")
                     })
                     .catch((error) => {
-                        var errorCode = error.code;
-                        var errorMessage = error.message;
-                        console.log(errorCode)
+                        console.log(error.message)
                     });
             }
         });
-});
-
-server.get("/enviar-comandos", (req, res) => {
-    const port = req.query.port;
-    const conf = req.query.conf;
-    const comand = req.query.commands;
-
-    var user = firebase.auth().currentUser;
-
-    if (user) {
-        firebase.database().ref(`usuarios/` + user.uid).set({
-            porta: port,
-            configuracoes: conf,
-            comandos: comand
-        })
-        res.sendFile(__dirname + "/views/block-programming.html")
-    } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
-    }
-
 })
-
 
 //ligar o servidor
 http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));

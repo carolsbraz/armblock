@@ -8,6 +8,7 @@
     --secundary-blue-hover: #54666e;
     --blue-bot: #6da6c254;
     --yellow-curiosity: #f4f88483;
+    --red-div: #dd4227;
 }
 
 * {
@@ -158,37 +159,22 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+section.content h2 {
+    text-align: center;
+    width: 100%;
+}
+
+section.content h2 img {
+    margin-right: 30px;
+}
+
+section.content h2 {
+    font-size: 2.5rem;
+}
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
-}
-section.content .texts .bot {
-    display: flex;
-    align-items: center;
-    background-color: var(--blue-bot);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-section.content .texts .bot svg {
-    width: 150px;
-}
-
-section.content .texts .bot svg #ball-1 {
-    animation: ball-1 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-2 {
-    animation: ball-2 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-
-section.content .texts .bot p {
-    margin-left: 20px;
 }
 section.content .texts .icons{
     align-items: center;
@@ -196,7 +182,31 @@ section.content .texts .icons{
     flex-direction: column;
 }
 section.content .texts .icons img{
-    width: 530px;
+    width: 570px;
+}
+section.content .texts .icons1{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.content .texts .icons1 img{
+    width: 600px;
+}
+section.content .texts .icons2{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.content .texts .icons2 img{
+    width: 750px;
+}
+section.content .texts .icons3{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.content .texts .icons3 img{
+    width: 400px;
 }
 section.content .texts .bookmarks{
     margin-left: 50px;
@@ -263,6 +273,34 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
+@media (max-width: 1024px) {
+    .content .controle {
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    } 
+    section.content .texts .icons img{
+        width: 400px;
+    }
+    section.content .texts .icons1 img{
+        width: 550px;
+    }
+    section.content .texts .icons2 img{
+        width: 650px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
 @media (max-width: 800px) {
     .content .controle {
         flex-direction: row;
@@ -279,7 +317,13 @@ section.content p {
         margin: 10px 0 10px 0;
     } 
     section.content .texts .icons img{
-        width: 390px;
+        width: 400px;
+    }
+    section.content .texts .icons1 img{
+        width: 450px;
+    }
+    section.content .texts .icons2 img{
+        width: 550px;
     }
     .content .go-top img {
         width: 30px;
@@ -304,29 +348,29 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot{
-        flex-direction: column;
-    }
-    section.content .texts .bot p{
-        margin: 0;
-    }
-    section.content .texts .bot svg{
-        width: 120px;
-    }
     section.content .texts{
         margin: 0;
-    }
-    section.content .texts .bookmarks{
-        margin-left: 25px;
     }
     section.content .texts .icons img{
         width: 290px;
     }
-
+    section.content .texts .icons1 img{
+        width: 300px;
+    }
+    section.content .texts .icons2 img{
+        width: 400px;
+    }
+    section.content .texts .icons3 img{
+        width: 290px;
+    }
+    section.content .texts .bookmarks{
+        margin-left: 25px;
+    }
     .content .go-top img {
         width: 30px;
     }
-}@media (max-width: 380px) {
+}
+@media (max-width: 375px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -344,19 +388,19 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot{
-        flex-direction: column;
-    }
-    section.content .texts .bot p{
-        margin: 0;
-    }
-    section.content .texts .bot svg{
-        width: 120px;
-    }
     section.content .texts{
         margin: 0;
     }
     section.content .texts .icons img{
+        width: 200px;
+    }
+    section.content .texts .icons1 img{
+        width: 200px;
+    }
+    section.content .texts .icons2 img{
+        width: 350px;
+    }
+    section.content .texts .icons3 img{
         width: 200px;
     }
     section.content .texts .bookmarks{
@@ -365,11 +409,7 @@ section.content p {
     .content .go-top img {
         width: 30px;
     }
-    section.content .texts ul{
-        margin: 0;
-    }
 }
-
 
 @media (max-width: 425px) {
     html {

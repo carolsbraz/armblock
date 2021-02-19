@@ -309,9 +309,6 @@ section.content p {
     .content .go-top img {
         width: 30px;
     }
-    section.content .texts ul{
-        margin: 0;
-    }
 }
 @media (max-width: 320px) {
     .content .controle {
@@ -342,9 +339,6 @@ section.content p {
     }
     .content .go-top img {
         width: 30px;
-    }
-    section.content .texts ul{
-        margin: 0;
     }
 }
 @media (max-width: 425px) {
