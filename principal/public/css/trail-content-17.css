@@ -286,6 +286,7 @@ section.content p {
     }
     .icons{
         flex-direction: column;
+        align-items: center;
 
     }
     section.content .icons .icon-meio{
