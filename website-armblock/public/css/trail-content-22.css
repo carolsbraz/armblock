@@ -172,7 +172,7 @@ section.content .texts .bot {
 }
 
 section.content .texts .bot svg {
-    width: 150px;
+    width: 120px;
 }
 
 section.content .texts .bot svg #ball-1 {
@@ -182,13 +182,11 @@ section.content .texts .bot svg #ball-1 {
 section.content .texts .bot svg #ball-2 {
     animation: ball-2 2s ease-in-out infinite;
 }
-
-section.content .texts .bot svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-
 section.content .texts .bot p {
     margin-left: 20px;
+}
+section.content .texts .bot svg #ball-3 {
+    animation: ball-3 2s ease-in-out infinite;
 }
 section.content .texts .icons{
     align-items: center;
@@ -196,7 +194,7 @@ section.content .texts .icons{
     flex-direction: column;
 }
 section.content .texts .icons img{
-    width: 530px;
+    width: 470px;
 }
 section.content .texts ul{
     margin-left: 35px;
