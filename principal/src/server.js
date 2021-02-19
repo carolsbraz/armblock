@@ -2,7 +2,21 @@ const http = require("http")
 const express = require("express")
 const server = express()
 
+var firebase = require("firebase/app");
 
+require("firebase/auth");
+
+var firebaseConfig = {
+    apiKey: "AIzaSyAj9g1tBf7wICyyOXO3-wdHov4RiDJ5XEk",
+    authDomain: "armblock-2faec.firebaseapp.com",
+    projectId: "armblock-2faec",
+    storageBucket: "armblock-2faec.appspot.com",
+    messagingSenderId: "746158222333",
+    appId: "1:746158222333:web:e8418b733e8e8942e44794"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 //configurar pastas públicas
 server.use(express.static("public"))
