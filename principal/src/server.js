@@ -109,6 +109,13 @@ server.get("/trail-content-20", (req, res) => {
 server.get("/trail-content-21", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-21.html")
 })
+server.get("/trail-content-25", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-25.html")
+})
+server.get("/trail-content-26", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-26.html")
+})
+
 server.get("/tutorial", (req, res) => {
     res.sendFile(__dirname + "/views/video.html")
 })
