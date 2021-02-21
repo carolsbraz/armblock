@@ -1,5 +1,6 @@
 const http = require("http")
 const express = require("express")
+const bodyParser = require('body-parser')
 const server = express()
 
 var firebase = require("firebase/app");
@@ -20,14 +21,18 @@ firebase.initializeApp(firebaseConfig);
 
 //configurar pastas públicas
 server.use(express.static("public"))
-
-const comando = require("./utils/create-command")
-
+server.set('view engine', 'ejs')
+server.use(bodyParser.urlencoded())
 
 // configurar caminhos da aplicação
-
 server.get("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html")
+
+    var user = firebase.auth().currentUser;
+    if (user) {
+        res.render(__dirname + "/views/index", { logado: true })
+    } else {
+        res.render(__dirname + "/views/index", { logado: false })
+    }
 })
 
 server.get("/cadastro-login", (req, res) => {
@@ -141,18 +146,21 @@ server.get("/block-programming", (req, res) => {
     }
 })
 
-server.get("/autenticar-user", (req, res) => {
-    const email = req.query.useremail;
-    const password = req.query.userpassword;
+server.post("/autenticar-user", (req, res) => {
+    const email = req.body.useremail;
+    const password = req.body.usersenha;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            res.sendFile(__dirname + "/views/index.html")
+            do {
+                console.log(user.email)
+            } while (!user)
+            res.render(__dirname + "/views/index", { logado: true })
         })
         .catch((error) => {
             if (error.code == 'auth/user-not-found') {
                 firebase.auth().createUserWithEmailAndPassword(email, password)
                     .then((user) => {
-                        res.sendFile(__dirname + "/views/index.html")
+                        res.render(__dirname + "/views/index", { logado: true })
                     })
                     .catch((error) => {
                         console.log(error.message)
@@ -161,5 +169,12 @@ server.get("/autenticar-user", (req, res) => {
         });
 })
 
-//ligar o servidor
+server.get("/sair-conta", (req, res) => {
+        firebase.auth().signOut().then(() => {
+            res.render(__dirname + "/views/index", { logado: false })
+        }).catch((error) => {
+            console.log(error.code)
+        });
+    })
+    //ligar o servidor
 http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));
