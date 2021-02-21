@@ -97,19 +97,19 @@ btndelete.addEventListener('click', () => {
 
 const enviar = document.getElementById('enviar')
 
+//chamando os inputs
+const txtConfiguracoes = document.getElementById('conf')
+const txtPorta = document.getElementById('port')
+const txtComando = document.getElementById('final-command')
+
 enviar.addEventListener('click', () => {
+    //gerando string de comandos
     let blockcommands = ''
-
     let finalcommand = ''
-
     let countcommands = 0;
-
     const blocks = document.querySelectorAll('#board .block')
-
     blocks.forEach(block => {
         countcommands += 1
-        console.log(countcommands)
-
         if (block.classList.contains("delay")) {
             blockcommands += '&'
             blockcommands += '1:'
@@ -135,7 +135,6 @@ enviar.addEventListener('click', () => {
             blockcommands += `${vel.value}`
             countcommands -= 2
         }
-<<<<<<< HEAD:website-armblock/public/js/block-programming.js
     })
 
     finalcommand = `prog&${countcommands}${blockcommands}`
@@ -154,12 +153,16 @@ enviar.addEventListener('click', () => {
     const pino5 = document.getElementById('pino5')
     const pino6 = document.getElementById('pino6')
     const pino7 = document.getElementById('pino7')
-=======
->>>>>>> 884a9187342f14d9bcb653e3fb541972b6246c6d:principal/public/js/block-programming.js
 
-    })
+    //gerando string
+    let config = `conf&${pino1.value}&${pino2.value}&${pino3.value}&${pino4.value}&${pino5.value}&${pino6.value}&${pino7.value}`
 
-    finalcommand = `prog&${countcommands}${blockcommands}`
+    //atribuindo string de conf para input
+    txtConfiguracoes.value = config
 
-    console.log(finalcommand)
+    //gerando caminho pro server
+    var form = document.getElementById('comandos');
+    form.action = "/enviar-comandos";
+    form.submit();
+
 })

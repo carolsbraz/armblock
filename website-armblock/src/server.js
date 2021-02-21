@@ -146,7 +146,6 @@ server.get("/autenticar-user", (req, res) => {
     const password = req.query.userpassword;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            console.log(logado)
             res.sendFile(__dirname + "/views/index.html")
         })
         .catch((error) => {
