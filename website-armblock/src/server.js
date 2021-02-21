@@ -6,6 +6,7 @@ const server = express()
 var firebase = require("firebase/app");
 
 require("firebase/auth");
+require("firebase/database");
 
 var firebaseConfig = {
     apiKey: "AIzaSyAj9g1tBf7wICyyOXO3-wdHov4RiDJ5XEk",
@@ -170,11 +171,33 @@ server.post("/autenticar-user", (req, res) => {
 })
 
 server.get("/sair-conta", (req, res) => {
-        firebase.auth().signOut().then(() => {
-            res.render(__dirname + "/views/index", { logado: false })
-        }).catch((error) => {
-            console.log(error.code)
-        });
+    firebase.auth().signOut().then(() => {
+        res.render(__dirname + "/views/index", { logado: false })
+    }).catch((error) => {
+        console.log(error.code)
+    });
+})
+
+
+server.get("/enviar-comandos", (req, res) => {
+        const port = req.query.port;
+        const conf = req.query.conf;
+        const comand = req.query.commands;
+
+        var user = firebase.auth().currentUser;
+
+        if (user) {
+            firebase.database().ref(`usuarios/` + user.uid).set({
+                porta: port,
+                configuracoes: conf,
+                comandos: comand
+            })
+            res.sendFile(__dirname + "/views/block-programming.html")
+        } else {
+            res.sendFile(__dirname + "/views/cadastro-login.html")
+        }
+
+
     })
     //ligar o servidor
 http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));
