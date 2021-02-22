@@ -115,7 +115,6 @@ server.get("/trail-content-20", (req, res) => {
 server.get("/trail-content-21", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-21.html")
 })
-<<<<<<< HEAD:website-armblock/src/server.js
 server.get("/trail-content-22", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-22.html")
 })
@@ -131,8 +130,6 @@ server.get("/trail-content-25", (req, res) => {
 server.get("/trail-content-26", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-26.html")
 })
-=======
->>>>>>> parent of 242f1bc (update trail 25 and 26):principal/src/server.js
 server.get("/tutorial", (req, res) => {
     res.sendFile(__dirname + "/views/video.html")
 })
@@ -180,7 +177,6 @@ server.get("/sair-conta", (req, res) => {
         console.log(error.code)
     });
 })
-
 
 server.get("/enviar-comandos", (req, res) => {
         const port = req.query.port;
