@@ -236,13 +236,45 @@ section.container .board {
     justify-content: space-between;
 }
 
+section.container .board .message {
+    background-color: rgba(209, 255, 212, 0.747);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+section.container .board .message a {
+    color: #046b00;
+}
+
+section.container .board .message p {
+    color: #06b800;
+    text-align: justify;
+}
+
+section.container .board .message .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #046b00
+}
+
+section.container .board .message .body .tutorial {
+    margin-top: 20px;
+    color: #06b800;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
 section.container .board .programming-blocks {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     padding: 0 20px 0 20px;
-    margin-bottom: 15px
+    margin: 15px 0;
 }
 
 div.drag {

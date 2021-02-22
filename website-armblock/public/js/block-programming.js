@@ -1,7 +1,5 @@
 const board = document.getElementById('programming-blocks')
 
-let pontos = 1;
-
 const dragboard = document.getElementById('here-blocks')
 new Sortable(dragboard, {
     group: {
@@ -26,10 +24,8 @@ btnAdd.addEventListener('click', () => {
     const newBoard = document.createElement('div')
     newBoard.classList.add('block', 'yellow')
 
-    // yellow content
-    pontos++;
     const idt = document.createElement('span')
-    var idttxt = document.createTextNode(`(Movimento individual ${pontos} )`);
+    var idttxt = document.createTextNode(`(Movimento individual)`);
     var idtblock = document.createTextNode(`Mover o motor`);
     idt.appendChild(idttxt)
     const motorInput = document.createElement('input')
@@ -165,4 +161,13 @@ enviar.addEventListener('click', () => {
     form.action = "/enviar-comandos";
     form.submit();
 
+})
+
+//message modal
+
+const fechar = document.getElementById('fechar-message')
+const message = document.getElementById('message')
+
+fechar.addEventListener('click', () => {
+    message.style.display = 'none'
 })

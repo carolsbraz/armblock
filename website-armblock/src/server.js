@@ -141,7 +141,28 @@ server.get("/operational-programming", (req, res) => {
 server.get("/block-programming", (req, res) => {
     var user = firebase.auth().currentUser;
     if (user) {
-        res.sendFile(__dirname + "/views/block-programming.html")
+        let configuracoes
+        let commands
+        firebase.database().ref("usuarios/" + user.uid).once('value', function(snapshot) {
+            configuracoes = snapshot.val().configuracoes
+            commands = snapshot.val().comandos
+            port = snapshot.val().porta
+
+            var arrayConf = configuracoes.split('&');
+            arrayConf.shift();
+
+            var arrayComman = commands.split('&');
+            arrayComman.shift();
+            arrayComman.shift();
+            console.log(port)
+
+
+            res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port })
+
+        });
+        //remove o conf da string de configuracoes e retorna o array de portas
+
+
     } else {
         res.sendFile(__dirname + "/views/cadastro-login.html")
     }
@@ -152,9 +173,6 @@ server.post("/autenticar-user", (req, res) => {
     const password = req.body.usersenha;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            do {
-                console.log(user.email)
-            } while (!user)
             res.render(__dirname + "/views/index", { logado: true })
         })
         .catch((error) => {
@@ -191,7 +209,12 @@ server.get("/enviar-comandos", (req, res) => {
                 configuracoes: conf,
                 comandos: comand
             })
-            res.sendFile(__dirname + "/views/block-programming.html")
+            var arrayConf = conf.split('&');
+            arrayConf.shift();
+            var arrayComman = comand.split('&');
+            arrayComman.shift();
+            arrayComman.shift();
+            res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port })
         } else {
             res.sendFile(__dirname + "/views/cadastro-login.html")
         }
