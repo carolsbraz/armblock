@@ -183,8 +183,8 @@ section.content .texts .icons{
 section.content .texts .icons .p{
     font-size: 1rem;
 }
-section.content .texts .icons img{
-    width: 700px;
+section.content .texts .icons svg{
+    width: 350px;
 }
 section.content .texts ul{
     margin-left: 35px;

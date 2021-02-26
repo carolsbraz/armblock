@@ -182,7 +182,7 @@ section.content .texts .icons{
     flex-direction: column;
 }
 section.content .texts .icons img{
-    width: 570px;
+    width: 600px;
 }
 section.content .texts .icons1{
     align-items: center;
@@ -198,7 +198,7 @@ section.content .texts .icons2{
     flex-direction: column;
 }
 section.content .texts .icons2 img{
-    width: 750px;
+    width: 650px;
 }
 section.content .texts .icons3{
     align-items: center;
@@ -206,7 +206,7 @@ section.content .texts .icons3{
     flex-direction: column;
 }
 section.content .texts .icons3 img{
-    width: 400px;
+    width: 600px;
 }
 section.content .texts .bookmarks{
     margin-left: 50px;

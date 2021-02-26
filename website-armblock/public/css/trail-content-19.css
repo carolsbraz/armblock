@@ -195,7 +195,6 @@ section.content .texts .bot p {
 
 section.content .texts .imagem{
     width: 800px;
-    align-items: center;
 }
 
 section.content p {
@@ -231,10 +230,36 @@ section.content p {
         font-size: 55%;
     }
     section.content .texts .imagem{
-        width: 600px;
+        width: 530px;
     }
     section.content .texts .imagem2{
         width: 550px;
+    }
+    
+}
+@media (max-width: 982px) {
+    html {
+        font-size: 55%;
+    }
+    section.content .texts .bot svg{
+        width: 160px;
+    }
+    
+    section.content .texts .bot {
+        flex-direction: column;
+    }
+    
+    section.content .texts .imagem{
+        width: 400px;
+    }
+    section.content .texts .imagem2{
+        width: 500px;
+    }
+    
+}
+@media (max-width: 825px) {
+    html {
+        font-size: 45%;
     }
     
 }
@@ -243,8 +268,10 @@ section.content p {
     html {
         font-size: 50%;
     }
-    header .brand img {
-        width: 50px;
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
     }
     header {
         justify-content: center;
@@ -261,7 +288,21 @@ section.content p {
         margin: 20px 0 0 0;
     }
     section.content .texts .imagem{
+        width: 320px;
+    }
+    section.content .texts .imagem2{
         width: 400px;
+    }
+}
+@media (max-width: 766px){
+    div.blue-background {
+        height: 70vh;
+    }
+    section.content {
+        padding: 25px 25px;
+    }
+    header .brand img {
+        width: 50px;
     }
 }
 
@@ -314,11 +355,65 @@ section.content p {
     html {
         font-size: 45%;
     }
+    section.content .texts .bot svg{
+        width: 120px;
+    }
     div.blue-background {
         height: 70vh;
     }
     section.content {
         padding: 25px 25px;
+    }
+    section.content .texts .imagem2{
+        width: 300px;
+    }
+}
+@media (max-width: 424px) {
+    section.content .texts .imagem{
+        width: 250px;
+    }
+}
+@media (max-width: 375px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .bot{
+        flex-direction: column;
+    } 
+    
+    section.content .texts .imagem2{
+        width: 280px;
+    }
+}
+@media (max-width: 374px) {
+    section.content .texts .imagem{
+        width: 200px;
+    }
+    div.blue-background {
+        height: 60vh;
+    }
+    section.content {
+        padding: 4px 4px;
+    }
+}
+@media (max-width: 320px) {
+    
+    section.content .texts .imagem2{
+        width: 220px;
     }
 }
 
