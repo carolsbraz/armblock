@@ -58,9 +58,7 @@
                 </div>
             </div>
             <div class="robotic-arm">
-                <div class="message-arm">
-                    <p>Selecione a junta que deseja mover</p>
-                </div>
+
                 <div class="arm">
                     <svg width="100%" viewBox="0 0 584 553" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="blocks-arm" clip-path="url(#clip0)">
@@ -137,63 +135,56 @@
                         </svg>
 
                 </div>
-                <div class="actions-buttons">
-                    <a href="" class="delete">
-                        <img src="/img/icone-lixeira.svg" alt="" width="30px">
-                        <p>Recomeçar</p>
-                    </a>
-                    <button type="submit" href="" class="test">
-                        <img src="/img/icone-bandeira.svg" alt="" width="30px">
-                        <p>Testar</p>
-                    </button>
-                </div>
             </div>
 
             </div>
 
             <div class="boards">
-                <div class="board" id="board-motor-1">
-                    <div class="red selected-block">Junta selecionada: 1</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor11" maxlength="1"> para</div>
-                    <div class="blue block">Mover para a esquerda</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor12" maxlength="1"> para</div>
-                    <div class="blue block">Mover para a direita</div>
+                <div class="board">
+                    <div class="green selected-block">Junta: 1</div>
+                    <div class="range-sec">
+                        <p>0°</p>
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range">
+                        <p>180°</p>
+                    </div>
+                    <div class="green selected-block">Junta: 2</div>
+                    <div class="range-sec">
+                        <p>0°</p>
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range">
+                        <p>180°</p>
+                    </div>
+                    <div class="green selected-block">Junta: 3</div>
+                    <div class="range-sec">
+                        <p>0°</p>
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range">
+                        <p>180°</p>
+                    </div>
+                    <div class="green selected-block">Junta: 4</div>
+                    <div class="range-sec">
+                        <p>0°</p>
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range">
+                        <p>180°</p>
+                    </div>
+                    <div class="green selected-block">Junta: 5</div>
+                    <div class="range-sec">
+                        <p>0°</p>
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range">
+                        <p>180°</p>
+                    </div>
+                    <div class="green selected-block">Junta: 6</div>
+                    <div class="range-sec">
+                        <p>0°</p>
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range">
+                        <p>180°</p>
+                    </div>
+                    <div class="green selected-block">Junta: 7</div>
+                    <div class="range-sec">
+                        <p>0°</p>
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range">
+                        <p>180°</p>
+                    </div>
                 </div>
-                <div class="board" id="board-motor-2-3">
-                    <div class="red selected-block">Junta selecionada: 2/3</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor21" maxlength="1"> para</div>
-                    <div class="blue block">Mover para cima</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor22" maxlength="1"> para</div>
-                    <div class="blue block">Mover para baixo</div>
-                </div>
-                <div class="board" id="board-motor-4">
-                    <div class="red selected-block">Junta selecionada: 4</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor41" maxlength="1"> para</div>
-                    <div class="blue block">Mover para cima</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor42" maxlength="1"> para</div>
-                    <div class="blue block">Mover para baixo</div>
-                </div>
-                <div class="board" id="board-motor-5">
-                    <div class="red selected-block">Junta selecionada: 5</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor51" maxlength="1"> para</div>
-                    <div class="blue block">Mover para cima</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor52" maxlength="1"> para</div>
-                    <div class="blue block">Mover para baixo</div>
-                </div>
-                <div class="board" id="board-motor-6">
-                    <div class="red selected-block">Junta selecionada: 6</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor61" maxlength="1"> para</div>
-                    <div class="blue block">Mover para direita</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor62" maxlength="1"> para</div>
-                    <div class="blue block">Fechar a esquerda</div>
-                </div>
-                <div class="board" id="board-motor-7">
-                    <div class="red selected-block">Junta selecionada: 7</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor71" maxlength="1"> para</div>
-                    <div class="blue block">Abrir a garra</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor72" maxlength="1"> para</div>
-                    <div class="blue block">Fechar a garra</div>
-                </div>
+
             </div>
 
         </section>

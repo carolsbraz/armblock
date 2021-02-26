@@ -173,6 +173,11 @@ server.post("/autenticar-user", (req, res) => {
     const password = req.body.usersenha;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
+            firebase.database().ref(`usuarios/` + user.uid).set({
+                porta: 'COM1',
+                configuracoes: 'conf&',
+                comandos: 'prog&0&'
+            })
             res.render(__dirname + "/views/index", { logado: true })
         })
         .catch((error) => {
