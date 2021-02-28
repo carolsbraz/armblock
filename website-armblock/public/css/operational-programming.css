@@ -137,7 +137,7 @@ section.container {
     margin-top: 30px;
     height: calc(100vh - 160px);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 1.6rem
 }
 
@@ -209,7 +209,7 @@ section.container .robotic-arm {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 35%;
+    width: 46%;
 }
 
 section.container .robotic-arm .message-arm {
@@ -219,7 +219,7 @@ section.container .robotic-arm .message-arm {
 
 section.container .robotic-arm .arm {
     margin: 10px 0 10px 0;
-    width: 100%;
+    width: 70%;
     max-height: 400px
 }
 
@@ -260,7 +260,7 @@ section.container .robotic-arm .board .actions-buttons p {
 }
 
 section.container .boards {
-    width: 30%;
+    width: 35%;
     position: relative;
     height: 100%;
 }
@@ -304,11 +304,18 @@ section.container .boards .board .block {
 section.container .boards .board .range-sec {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
+    margin: 15px 0;
 }
 
 section.container .boards .board .range-sec .range {
     flex: 0.8;
+}
+
+section.container .boards .board .range-sec input:disabled {
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+    max-width: 70px;
 }
 
 section.container .boards .board .selected-block {

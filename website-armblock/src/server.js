@@ -135,7 +135,23 @@ server.get("/tutorial", (req, res) => {
 })
 
 server.get("/operational-programming", (req, res) => {
-    res.sendFile(__dirname + "/views/operational-programming.html")
+    var user = firebase.auth().currentUser;
+    if (user) {
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
 })
 
 server.get("/block-programming", (req, res) => {
@@ -144,25 +160,39 @@ server.get("/block-programming", (req, res) => {
         let configuracoes
         let commands
         firebase.database().ref("usuarios/" + user.uid).once('value', function(snapshot) {
-            configuracoes = snapshot.val().configuracoes
-            commands = snapshot.val().comandos
-            port = snapshot.val().porta
 
+            if (snapshot.val() != null) {
+                configuracoes = snapshot.val().configuracoes
+                commands = snapshot.val().comandos
+                port = snapshot.val().porta
+            } else {
+                firebase.database().ref(`usuarios/` + user.uid).set({
+                    porta: 'COM1',
+                    configuracoes: '',
+                    comandos: 'prog&0&'
+                })
+                configuracoes = ''
+                commands = 'prog&0&'
+                port = 'COM1'
+                firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
+                    int1: '90',
+                    int2: '90',
+                    int3: '90',
+                    int4: '90',
+                    int5: '90',
+                    int6: '90',
+                    int7: '90'
+                })
+            }
             var arrayConf = configuracoes.split('&');
             arrayConf.shift();
-
             var arrayComman = commands.split('&');
             arrayComman.shift();
             arrayComman.shift();
             console.log(port)
-
-
             res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port })
-
         });
         //remove o conf da string de configuracoes e retorna o array de portas
-
-
     } else {
         res.sendFile(__dirname + "/views/cadastro-login.html")
     }
@@ -173,11 +203,6 @@ server.post("/autenticar-user", (req, res) => {
     const password = req.body.usersenha;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            firebase.database().ref(`usuarios/` + user.uid).set({
-                porta: 'COM1',
-                configuracoes: 'conf&',
-                comandos: 'prog&0&'
-            })
             res.render(__dirname + "/views/index", { logado: true })
         })
         .catch((error) => {
@@ -202,29 +227,216 @@ server.get("/sair-conta", (req, res) => {
 })
 
 server.get("/enviar-comandos", (req, res) => {
-        const port = req.query.port;
-        const conf = req.query.conf;
-        const comand = req.query.commands;
+    const port = req.query.port;
+    const conf = req.query.conf;
+    const comand = req.query.commands;
 
-        var user = firebase.auth().currentUser;
+    var user = firebase.auth().currentUser;
 
-        if (user) {
-            firebase.database().ref(`usuarios/` + user.uid).set({
-                porta: port,
-                configuracoes: conf,
-                comandos: comand
-            })
-            var arrayConf = conf.split('&');
-            arrayConf.shift();
-            var arrayComman = comand.split('&');
-            arrayComman.shift();
-            arrayComman.shift();
-            res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port })
-        } else {
-            res.sendFile(__dirname + "/views/cadastro-login.html")
-        }
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid).set({
+            porta: port,
+            configuracoes: conf,
+            comandos: comand
+        })
+        var arrayConf = conf.split('&');
+        arrayConf.shift();
+        var arrayComman = comand.split('&');
+        arrayComman.shift();
+        arrayComman.shift();
+        res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port })
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
 
 
-    })
-    //ligar o servidor
+})
+
+server.post("/int-1", (req, res) => {
+    const val1 = req.body.valorjunta1;
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid + "/interacao").update({
+            int1: val1
+        })
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
+})
+
+server.post("/int-2", (req, res) => {
+    const val2 = req.body.valorjunta2;
+
+    var user = firebase.auth().currentUser;
+
+
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid + "/interacao").update({
+            int2: val2
+        })
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
+})
+
+server.post("/int-3", (req, res) => {
+    const val3 = req.body.valorjunta3;
+
+    var user = firebase.auth().currentUser;
+
+
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid + "/interacao").update({
+            int3: val3
+        })
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
+})
+
+server.post("/int-4", (req, res) => {
+    const val4 = req.body.valorjunta4;
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid + "/interacao").update({
+            int4: val4
+        })
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
+})
+
+server.post("/int-5", (req, res) => {
+    const val5 = req.body.valorjunta5;
+
+    var user = firebase.auth().currentUser;
+
+
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid + "/interacao").update({
+            int5: val5
+        })
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
+})
+
+server.post("/int-6", (req, res) => {
+    const val6 = req.body.valorjunta6;
+
+    var user = firebase.auth().currentUser;
+
+
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid + "/interacao").update({
+            int6: val6
+        })
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
+})
+
+server.post("/int-7", (req, res) => {
+    const val7 = req.body.valorjunta7;
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+        firebase.database().ref(`usuarios/` + user.uid + "/interacao").update({
+            int7: val7
+        })
+        let int1, int2, int3, int4, int5, int6, int7
+        firebase.database().ref("usuarios/" + user.uid + "/interacao").once('value', function(snapshot) {
+            int1 = snapshot.val().int1
+            int2 = snapshot.val().int2
+            int3 = snapshot.val().int3
+            int4 = snapshot.val().int4
+            int5 = snapshot.val().int5
+            int6 = snapshot.val().int6
+            int7 = snapshot.val().int7
+            int8 = snapshot.val().int8
+            res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
+        });
+    } else {
+        res.sendFile(__dirname + "/views/cadastro-login.html")
+    }
+})
+
+//ligar o servidor
 http.createServer(server).listen(process.env.PORT || 3000, () => console.log("Servidor rodando"));

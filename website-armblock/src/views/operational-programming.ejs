@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArmBlock</title>
-    <link rel="stylesheet" href="/css/block-programming.css">
+    <link rel="stylesheet" href="/css/operational-programming.css">
 </head>
 
 <body>
@@ -19,8 +19,8 @@
             <div class="link-menu"><a href="/" class="link">Voltar ao menu</a></div>
             <div class="buttons">
                 <div class="change-button">
-                    <a href="#" class="rotine">Programação</a>
-                    <a href="/operational-programming" class="operation">Operação</a>
+                    <a href="/block-programming" class="rotine">Programação</a>
+                    <a href="#" class="operation">Operação</a>
                 </div>
 
             </div>
@@ -28,48 +28,12 @@
     </header>
 
     <section class="container">
-        <div class="left-board">
-            <div class="configuration">
-                <div class="configuration-blocks">
-                    <div class="green title-block block">Configurações</div>
-                    <div class="brown serial-block block">Selecione a porta serial:
-                        <select name="serialport" id="serial-port" required>
-                                <option value="COM1" <%= port == 'COM1' ? 'selected' : ''%>>COM1</option>  
-                                <option value="COM2" <%= port == 'COM2' ? 'selected' : ''%>>COM2</option>  
-                                <option value="COM3" <%= port == 'COM3' ? 'selected' : ''%>>COM3</option>  
-                                <option value="COM4" <%= port == 'COM4' ? 'selected' : ''%>>COM4</option>  
-                                <option value="COM5" <%= port == 'COM5' ? 'selected' : ''%>>COM5</option>  
-                                <option value="COM6" <%= port == 'COM6' ? 'selected' : ''%>>COM6</option>  
-                                <option value="COM7" <%= port == 'COM7' ? 'selected' : ''%>>COM7</option>  
-                                <option value="COM8" <%= port == 'COM8' ? 'selected' : ''%>>COM8</option>  
-                                <option value="COM9" <%= port == 'COM9' ? 'selected' : ''%>>COM9</option>
-                            </select>
-                    </div>
 
 
-                    <% if(conf.lenght > 0){ %>
+        <div class="robotic-arm">
 
-                        <% for (let i = 0; i < conf.length; i++){ %>
-
-                            <div class="dark-blue pin-block block">Pino do motor
-                                <%= (i + 1) %>: <input type="number" placeholder="pino" id="pino<%= (i + 1) %>" value="<%= conf[i] %>" required></div>
-                            <% } %>
-
-                                <% } else {%>
-                                    <div class="dark-blue pin-block block">Pino do motor 1: <input type="number" placeholder="pino" id="pino1" required></div>
-                                    <div class="dark-blue pin-block block">Pino do motor 2: <input type="number" placeholder="pino" id="pino2" required></div>
-                                    <div class="dark-blue pin-block block">Pino do motor 3: <input type="number" placeholder="pino" id="pino3" required></div>
-                                    <div class="dark-blue pin-block block">Pino do motor 4: <input type="number" placeholder="pino" id="pino4" required></div>
-                                    <div class="dark-blue pin-block block">Pino do motor 5: <input type="number" placeholder="pino" id="pino5" required></div>
-                                    <div class="dark-blue pin-block block">Pino do motor 6: <input type="number" placeholder="pino" id="pino6" required></div>
-                                    <div class="dark-blue pin-block block">Pino do motor 7: <input type="number" placeholder="pino" id="pino7" required></div>
-                                    <% } %>
-                </div>
-            </div>
-            <div class="robotic-arm">
-
-                <div class="arm">
-                    <svg viewBox="0 0 584 553" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="arm">
+                <svg width="100%" viewBox="0 0 584 553" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="blocks-arm" clip-path="url(#clip0)">
                         <g id="id-motor-1">
                         <path id="Vector" d="M304 489C321.673 489 336 475.345 336 458.5C336 441.655 321.673 428 304 428C286.327 428 272 441.655 272 458.5C272 475.345 286.327 489 304 489Z" fill="#A2E62E"/>
@@ -142,109 +106,75 @@
                         </clipPath>
                         </defs>
                         </svg>
-                </div>
+
             </div>
         </div>
 
-        <div class="board" id="board">
-
-            <% if(enviado == true) {%>
-                <div class="message" id="message">
-                    <div class="header">
-                        <h3>Comandos enviados!</h3>
-                        <a href="#" id="fechar-message"><b>X</b></a>
-                    </div>
-                    <div class="body">
-                        <p>Os dados foram enviados com sucesso! Verifique se você ativou a leitura de comandos na aplicação desktop do ArmBlock! Se não sabe o que fazer agora, acesse o link abaixo:</p>
-                        <a href="/tutorial" class="tutorial">Tutorial de Programação em Blocos</a>
-                    </div>
-                </div>
-                <% } %>
-                    <div class="programming-blocks" id="programming-blocks">
-
-                        <% for (let i = 0; i < comman.length; i++){ %>
-
-                            <% var arrayComands = comman[i].split(':'); %>
-                                <% console.log(arrayComands) %>
-
-                                    <% if(arrayComands[0] == '1'){ %>
-                                        <div class="block green delay">Atraso de <input type="number" placeholder="tempo" id="delay" value="<%= arrayComands[1] %>">segundos</div>
-                                        <% } %>
-
-                                            <% if(arrayComands[0] == '2'){ %>
-                                                <div class="block green abrir-garra" id="open">Abrir garra</div>
-
-                                                <% } %>
-
-                                                    <% if(arrayComands[0] == '3'){ %>
-                                                        <div class="block green fechar-garra" id="close">Fechar garra</div>
-                                                        <% } %>
-
-                                                            <% if(arrayComands[0] == '4'){ %>
-                                                                <div class="block yellow motor"><span>(Movimento individual)</span><br>Mover o motor <input type="number" placeholder="motor" value="<%=arrayComands[1]%>">
-                                                                    <div class="drag">
-                                                                        <div class="block blue" id="degres">Para <input type="number" placeholder="graus" value="<%=arrayComands[2]%>">°</div>
-                                                                        <div class="block brown">Na velocidade: <input type="number" placeholder="velo..." value="<%=arrayComands[3]%>"> graus/seg</div>
-                                                                    </div>
-                                                                </div>
-                                                                <% } %>
-
-                                                                    <% } %>
-
-
-
-
-                    </div>
-                    <div class="actions-buttons">
-                        <a href="#" class="delete" id="delete">
-                            <img src="/img/icone-lixeira.svg" alt="" width="30px">
-                            <p>Recomeçar</p>
-                        </a>
-                        <form id="comandos" action="return: false;">
-                            <input type="text" class="conf" id="conf" name="conf" style="display: none;">
-                            <input type="text" class="port" id="port" name="port" style="display: none;">
-                            <input type="text" class="final-command" id="final-command" name="commands" style="display: none;">
-                            <a class="test" id=enviar>
-                                <img src="/img/icone-bandeira.svg" alt="" width="30px">
-                                <p>Testar</p>
-                            </a>
-                        </form>
-                    </div>
         </div>
 
-        <div class="drag-board" id="drag-board">
-            <div class="here-blocks" id="here-blocks">
-                <p class="undrag"><b>Ações</b></p>
-                <br>
-                <div class="block green delay">Atraso de <input type="number" placeholder="tempo" id="delay">segundos</div>
-                <div class="block green abrir-garra" id="open">Abrir garra</div>
-                <div class="block green fechar-garra" id="close">Fechar garra</div>
-                <br>
-                <p class="undrag"><b>Movimentos individuais</b></p>
-                <br>
-                <div class="block yellow motor"><span>(Movimento individual 1)</span><br>Mover o motor <input type="number" placeholder="motor">
-                    <div class="drag">
-                        <div class="block blue" id="degres">Para <input type="number" placeholder="graus">°</div>
-                        <div class="block brown">Na velocidade: <input type="number" placeholder="velo..."> graus/seg</div>
+        <div class="boards">
+            <div class="board">
+                <div class="green selected-block">Junta 1</div>
+                <form action="/int-1" method="post" id="int-1">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range" min="0" max="180" step="1" value="<%= int1 %>">
+                        <input type="text" id="inputjunta1" value="<%= int1 %>" disabled>
                     </div>
-                </div>
+                </form>
+                <div class="green selected-block">Junta 2</div>
+                <form action="/int-2" method="post" id="int-2">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta2" id="valorjunta2" class="range" min="0" max="180" step="1" value="<%= int2 %>">
+                        <input type="text" id="inputjunta2" value="<%= int2 %>" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 3</div>
+                <form action="/int-3" method="post" id="int-3">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta3" id="valorjunta3" class="range" min="0" max="180" step="1" value="<%= int3 %>">
+                        <input type="text" id="inputjunta3" value="<%= int3 %>" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 4</div>
+                <form action="/int-4" method="post" id="int-4">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta4" id="valorjunta4" class="range" min="0" max="180" step="1" value="<%= int4 %>">
+                        <input type="text" id="inputjunta4" value="<%= int4 %>" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 5</div>
+                <form action="/int-5" method="post" id="int-5">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta5" id="valorjunta5" class="range" min="0" max="180" step="1" value="<%= int5 %>">
+                        <input type="text" id="inputjunta5" value="<%= int5 %>" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 6</div>
+                <form action="/int-6" method="post" id="int-6">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta6" id="valorjunta6" class="range" min="0" max="180" step="1" value="<%= int6 %>">
+                        <input type="text" id="inputjunta6" value="<%= int6 %>" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block"> Garra </div>
+                <form action="/int-7" method="post" id="int-7">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta7" id="valorjunta7" class="range" min="0" max="180" step="1" value="<%= int7 %>">
+                        <input type="text" id="inputjunta7" value="<%= int7 %>" disabled>
+                    </div>
+                </form>
             </div>
-            <div class="add-point">
-                <div class="button" id="add-button"><img src="/img/plus.svg" alt="" width="15px">
-                    <p>Novo movimento individual</p>
-                </div>
-                <br>
-            </div>
+
         </div>
+
     </section>
 
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js "></script>
-    <script src="/js/block-programming.js"></script>
+    <script src="/js/operational-programming.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-
 
 </body>
 
