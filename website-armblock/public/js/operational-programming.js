@@ -1,6 +1,5 @@
 const range1 = document.getElementById('valorjunta1')
 const range2 = document.getElementById('valorjunta2')
-const range3 = document.getElementById('valorjunta3')
 const range4 = document.getElementById('valorjunta4')
 const range5 = document.getElementById('valorjunta5')
 const range6 = document.getElementById('valorjunta6')
@@ -8,7 +7,6 @@ const range7 = document.getElementById('valorjunta7')
 
 const input1 = document.getElementById('inputjunta1')
 const input2 = document.getElementById('inputjunta2')
-const input3 = document.getElementById('inputjunta3')
 const input4 = document.getElementById('inputjunta4')
 const input5 = document.getElementById('inputjunta5')
 const input6 = document.getElementById('inputjunta6')
@@ -20,10 +18,6 @@ range1.addEventListener('input', () => {
 
 range2.addEventListener('input', () => {
     input2.value = range2.value
-})
-
-range3.addEventListener('input', () => {
-    input3.value = range3.value
 })
 
 range4.addEventListener('input', () => {
@@ -49,11 +43,6 @@ range1.addEventListener('change', () => {
 
 range2.addEventListener('change', () => {
     const form = document.getElementById('int-2');
-    form.submit();
-})
-
-range3.addEventListener('change', () => {
-    const form = document.getElementById('int-3');
     form.submit();
 })
 
