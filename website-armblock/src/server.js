@@ -176,12 +176,12 @@ server.get("/block-programming", (req, res) => {
                 port = 'COM1'
                 firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
                     int1: '90',
-                    int2: '90',
-                    int3: '90',
-                    int4: '90',
-                    int5: '90',
-                    int6: '90',
-                    int7: '90'
+                    int2: '45',
+                    int3: '140',
+                    int4: '0',
+                    int5: '180',
+                    int6: '10',
+                    int7: '100'
                 })
             }
             var arrayConf = configuracoes.split('&');
@@ -234,7 +234,7 @@ server.get("/enviar-comandos", (req, res) => {
     var user = firebase.auth().currentUser;
 
     if (user) {
-        firebase.database().ref(`usuarios/` + user.uid).set({
+        firebase.database().ref(`usuarios/` + user.uid).update({
             porta: port,
             configuracoes: conf,
             comandos: comand
