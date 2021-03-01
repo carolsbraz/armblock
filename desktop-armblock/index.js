@@ -1,9 +1,3 @@
-var firebase = require("firebase/app");
-
-// Add the Firebase products that you want to use
-require("firebase/auth");
-require("firebase/database");
-
 var firebaseConfig = {
     apiKey: "AIzaSyAj9g1tBf7wICyyOXO3-wdHov4RiDJ5XEk",
     authDomain: "armblock-2faec.firebaseapp.com",
@@ -11,9 +5,8 @@ var firebaseConfig = {
     projectId: "armblock-2faec",
     storageBucket: "armblock-2faec.appspot.com",
     messagingSenderId: "746158222333",
-    appId: "1:746158222333:web:9df32bea5c17f121e44794"
+    appId: "1:746158222333:web:aa5d6d616599f3a1e44794"
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
