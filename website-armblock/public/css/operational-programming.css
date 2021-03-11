@@ -359,6 +359,9 @@ section.container .boards .board .selected-block {
     html {
         font-size: 55%;
     }
+    header .brand img {
+        width: 60px;
+    }
     section.container .configuration .block {
         text-align: center;
     }

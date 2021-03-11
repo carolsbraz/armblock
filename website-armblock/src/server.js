@@ -168,7 +168,7 @@ server.get("/block-programming", (req, res) => {
             } else {
                 firebase.database().ref(`usuarios/` + user.uid).set({
                     porta: 'COM1',
-                    configuracoes: '',
+                    configuracoes: 'conf&&&&&&&',
                     comandos: 'prog&0&'
                 })
                 configuracoes = ''
@@ -186,15 +186,19 @@ server.get("/block-programming", (req, res) => {
             }
             var arrayConf = configuracoes.split('&');
             arrayConf.shift();
+            console.log(arrayConf.length)
             var arrayComman = commands.split('&');
             arrayComman.shift();
             arrayComman.shift();
             console.log(port)
-            res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port })
+            res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
         });
         //remove o conf da string de configuracoes e retorna o array de portas
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        let conf = "conf&&&&&&&"
+        var arrayConf = conf.split('&');
+        arrayConf.shift();
+        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: "", com: "COM1", logado: false, user: "" })
     }
 })
 
@@ -203,7 +207,53 @@ server.post("/autenticar-user", (req, res) => {
     const password = req.body.usersenha;
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((user) => {
-            res.render(__dirname + "/views/index", { logado: true })
+
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    var uid = user.uid;
+                    console.log(uid)
+
+                    let configuracoes
+                    let commands
+                    firebase.database().ref("usuarios/" + user.uid).once('value', function(snapshot) {
+
+                        if (snapshot.val() != null) {
+                            configuracoes = snapshot.val().configuracoes
+                            commands = snapshot.val().comandos
+                            port = snapshot.val().porta
+                        } else {
+                            firebase.database().ref(`usuarios/` + user.uid).set({
+                                porta: 'COM1',
+                                configuracoes: 'conf&&&&&&&',
+                                comandos: 'prog&0&'
+                            })
+                            configuracoes = ''
+                            commands = 'prog&0&'
+                            port = 'COM1'
+                            firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
+                                int1: '90',
+                                int2: '45',
+                                int3: '140',
+                                int4: '0',
+                                int5: '180',
+                                int6: '10',
+                                int7: '100'
+                            })
+                        }
+                        var arrayConf = configuracoes.split('&');
+                        arrayConf.shift();
+                        console.log(arrayConf.length)
+                        var arrayComman = commands.split('&');
+                        arrayComman.shift();
+                        arrayComman.shift();
+                        console.log(port)
+                        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
+                    });
+
+                }
+            });
+
+
         })
         .catch((error) => {
             if (error.code == 'auth/user-not-found') {
@@ -220,7 +270,10 @@ server.post("/autenticar-user", (req, res) => {
 
 server.get("/sair-conta", (req, res) => {
     firebase.auth().signOut().then(() => {
-        res.render(__dirname + "/views/index", { logado: false })
+        let conf = "conf&&&&&&&"
+        var arrayConf = conf.split('&');
+        arrayConf.shift();
+        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: "", com: "COM1", logado: false })
     }).catch((error) => {
         console.log(error.code)
     });
@@ -242,6 +295,7 @@ server.get("/enviar-comandos", (req, res) => {
         var arrayConf = conf.split('&');
         arrayConf.shift();
         var arrayComman = comand.split('&');
+
         arrayComman.shift();
         arrayComman.shift();
         res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port })

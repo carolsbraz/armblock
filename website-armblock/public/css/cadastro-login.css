@@ -137,6 +137,10 @@ section.content .branca .button:hover {
     background-color: var(--main-blue-hover);
 }
 
+section.content .branca .text {
+    width: 50%;
+}
+
 section.content .branca .text .title-text p {
     font-size: 1.6rem;
     line-height: 3.2rem;
@@ -193,6 +197,9 @@ section.content .branca p {
 }
 
 @media (max-width: 1440px) {
+    header .brand img {
+        width: 60px;
+    }
     section.content .branca svg {
         width: 500px;
     }
@@ -232,6 +239,9 @@ section.content .branca p {
     section.content .branca {
         flex-direction: column;
         text-align: center;
+    }
+    section.content .branca .text {
+        width: 100%;
     }
     section.content .branca .button {
         display: flex;

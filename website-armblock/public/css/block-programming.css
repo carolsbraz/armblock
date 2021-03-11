@@ -83,19 +83,19 @@ header .menu {
 header .menu a.link {
     color: black;
     transition: 0.5s;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 header .menu a.link:hover {
     color: rgb(141, 140, 78)
 }
 
-header .menu .change-button {
+header .change-button {
     display: flex;
     justify-content: space-between;
 }
 
-header .menu .change-button .rotine {
+header .change-button .rotine {
     background-color: var(--shadow-blue);
     color: white;
     padding: 15px 10px 15px 10px;
@@ -108,7 +108,7 @@ header .menu .change-button .rotine {
     font-weight: 600;
 }
 
-header .menu .change-button .operation {
+header .change-button .operation {
     background-color: var(--secundary-blue);
     color: white;
     padding: 15px 10px 15px 10px;
@@ -121,7 +121,7 @@ header .menu .change-button .operation {
     font-weight: 600;
 }
 
-header .menu .actions-buttons {
+header .actions-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -234,6 +234,52 @@ section.container .board {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+section.container .board .error-message {
+    background-color: rgba(255, 209, 209, 0.747);
+    padding: 30px;
+    border-radius: 10px;
+    display: none;
+}
+
+section.container .board .error-message a {
+    color: #6b0000;
+}
+
+section.container .board .error-message p {
+    color: #b80000;
+    text-align: justify;
+}
+
+section.container .board .error-message .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #6b0000
+}
+
+section.container .board .limit-message {
+    background-color: rgba(255, 222, 209, 0.747);
+    padding: 30px;
+    border-radius: 10px;
+    display: none;
+}
+
+section.container .board .limit-message a {
+    color: #6b3000;
+}
+
+section.container .board .limit-message p {
+    color: #b84400;
+    text-align: justify;
+}
+
+section.container .board .limit-message .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #6b0000
 }
 
 section.container .board .message {
@@ -444,6 +490,9 @@ section.container .selected-block {
 }
 
 @media (max-width: 1440px) {
+    header .brand img {
+        width: 60px;
+    }
     html {
         font-size: 50%;
     }
@@ -470,6 +519,12 @@ section.container .selected-block {
 @media (max-width: 1024px) {
     html {
         font-size: 45%
+    }
+    header .change-button .operation {
+        width: 130px;
+    }
+    header .change-button .rotine {
+        width: 130px;
     }
     section.container .left-board {
         width: 25%
@@ -526,6 +581,9 @@ section.container .selected-block {
         flex-direction: column;
     }
     header .menu .link-menu {
+        margin: 20px 0 0 0;
+    }
+    header .change-button {
         margin: 20px 0 20px 0;
     }
     section.container {
@@ -557,11 +615,14 @@ section.container .selected-block {
 }
 
 @media (max-width: 509px) {
-    section.container .board .actions-buttons {
+    header .change-button .operation {
+        width: 150;
+    }
+    section.container .actions-buttons {
         flex-direction: column;
         justify-content: space-between;
     }
-    section.container .board .actions-buttons .delete {
+    section.container .actions-buttons .delete {
         margin-bottom: 20px
     }
 }
