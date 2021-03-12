@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:wght@400;500;600;700&display=swap');
+ :root {
+    --main-blue: #0077B6;
+    --main-blue-hover: #005d8f;
+    --main-yellow: #FDF172;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+html {
+    font-size: 65.5%;
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 90%;
+    margin: auto;
+}
+
+html,
+body {
+    font-family: "Montserrat";
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 10px 10px 10px 10px;
+}
+
+header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+}
+
+header .brand .title {
+    margin-left: 20px;
+    color: var(--main-blue);
+}
+
+header .menu a.link {
+    color: black;
+    transition: 0.5s;
+}
+
+header .menu a.link:hover {
+    color: rgb(141, 140, 78)
+}
+
+section.members {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 50px
+}
+
+section.members>div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0
+}
+
+section.members .member-right .apresentation {
+    text-align: right;
+    margin-right: 20px;
+}
+
+section.members .member-left .apresentation {
+    margin-left: 20px;
+}
+
+section.members img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 50%;
+    }
+    header .brand img {
+        width: 50px;
+    }
+    header {
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        flex-direction: column-reverse;
+    }
+    header .brand {
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px
+    }
+    header .brand .title {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+    section.members>div {
+        flex-direction: column;
+    }
+    section.members .member-right .apresentation {
+        text-align: center;
+        margin: 20px 0;
+    }
+    section.members .member-left .apresentation {
+        text-align: center;
+        margin: 20px 0;
+    }
+    section.members img {
+        order: -1;
+        width: 150px;
+        height: 150px;
+    }
+}

@@ -155,6 +155,10 @@ section.content ul {
     line-height: 40px;
 }
 
+section.content ul a {
+    color: black;
+}
+
 .hide {
     display: none;
 }

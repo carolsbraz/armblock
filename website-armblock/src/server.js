@@ -40,6 +40,10 @@ server.get("/cadastro-login", (req, res) => {
     res.sendFile(__dirname + "/views/cadastro-login.html")
 })
 
+server.get("/quem-somos", (req, res) => {
+    res.sendFile(__dirname + "/views/quem-somos.html")
+})
+
 server.get("/home-trail", (req, res) => {
     res.sendFile(__dirname + "/views/home-trail.html")
 })
@@ -174,15 +178,7 @@ server.get("/block-programming", (req, res) => {
                 configuracoes = ''
                 commands = 'prog&0&'
                 port = 'COM1'
-                firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
-                    int1: '90',
-                    int2: '45',
-                    int3: '140',
-                    int4: '0',
-                    int5: '180',
-                    int6: '10',
-                    int7: '100'
-                })
+
             }
             var arrayConf = configuracoes.split('&');
             arrayConf.shift();
@@ -227,7 +223,7 @@ server.post("/autenticar-user", (req, res) => {
                                 configuracoes: 'conf&&&&&&&',
                                 comandos: 'prog&0&'
                             })
-                            configuracoes = ''
+                            configuracoes = 'conf&&&&&&&'
                             commands = 'prog&0&'
                             port = 'COM1'
                             firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
@@ -259,7 +255,48 @@ server.post("/autenticar-user", (req, res) => {
             if (error.code == 'auth/user-not-found') {
                 firebase.auth().createUserWithEmailAndPassword(email, password)
                     .then((user) => {
-                        res.render(__dirname + "/views/index", { logado: true })
+                        firebase.auth().onAuthStateChanged(user => {
+                            if (user) {
+
+                                let configuracoes
+                                let commands
+                                firebase.database().ref("usuarios/" + user.uid).once('value', function(snapshot) {
+
+                                    if (snapshot.val() != null) {
+                                        configuracoes = snapshot.val().configuracoes
+                                        commands = snapshot.val().comandos
+                                        port = snapshot.val().porta
+                                    } else {
+                                        firebase.database().ref(`usuarios/` + user.uid).set({
+                                            porta: 'COM1',
+                                            configuracoes: 'conf&&&&&&&',
+                                            comandos: 'prog&0&'
+                                        })
+                                        configuracoes = 'conf&&&&&&&'
+                                        commands = 'prog&0&'
+                                        port = 'COM1'
+                                        firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
+                                            int1: '90',
+                                            int2: '45',
+                                            int3: '140',
+                                            int4: '0',
+                                            int5: '180',
+                                            int6: '10',
+                                            int7: '100'
+                                        })
+                                    }
+                                    var arrayConf = configuracoes.split('&');
+                                    arrayConf.shift();
+                                    console.log(arrayConf.length)
+                                    var arrayComman = commands.split('&');
+                                    arrayComman.shift();
+                                    arrayComman.shift();
+                                    console.log(port)
+                                    res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
+                                });
+
+                            }
+                        });
                     })
                     .catch((error) => {
                         console.log(error.message)
@@ -298,7 +335,7 @@ server.get("/enviar-comandos", (req, res) => {
 
         arrayComman.shift();
         arrayComman.shift();
-        res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port })
+        res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
     } else {
         res.sendFile(__dirname + "/views/cadastro-login.html")
     }
