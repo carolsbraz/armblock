@@ -1,110 +1,67 @@
-const motor1 = document.getElementById('motor-1');
-const motor2 = document.getElementById('motor-2-3');
-const motor4 = document.getElementById('motor-4');
-const motor5 = document.getElementById('motor-5');
-const motor6 = document.getElementById('motor-6');
-const motor7 = document.getElementById('motor-7');
+const range1 = document.getElementById('valorjunta1')
+const range2 = document.getElementById('valorjunta2')
+const range4 = document.getElementById('valorjunta4')
+const range5 = document.getElementById('valorjunta5')
+const range6 = document.getElementById('valorjunta6')
+const range7 = document.getElementById('valorjunta7')
 
-const boardmotor1 = document.getElementById('board-motor-1');
-const boardmotor2 = document.getElementById('board-motor-2-3');
-const boardmotor4 = document.getElementById('board-motor-4');
-const boardmotor5 = document.getElementById('board-motor-5');
-const boardmotor6 = document.getElementById('board-motor-6');
-const boardmotor7 = document.getElementById('board-motor-7');
+const input1 = document.getElementById('inputjunta1')
+const input2 = document.getElementById('inputjunta2')
+const input4 = document.getElementById('inputjunta4')
+const input5 = document.getElementById('inputjunta5')
+const input6 = document.getElementById('inputjunta6')
+const input7 = document.getElementById('inputjunta7')
 
-motor1.addEventListener('click', () => {
-    motor1.classList.add('selecionado')
-    motor2.classList.remove('selecionado')
-    motor4.classList.remove('selecionado')
-    motor5.classList.remove('selecionado')
-    motor6.classList.remove('selecionado')
-    motor7.classList.remove('selecionado')
-
-    boardmotor1.style.visibility = "visible"
-    boardmotor2.style.visibility = "hidden"
-    boardmotor4.style.visibility = "hidden"
-    boardmotor5.style.visibility = "hidden"
-    boardmotor6.style.visibility = "hidden"
-    boardmotor7.style.visibility = "hidden"
+range1.addEventListener('input', () => {
+    input1.value = range1.value
 })
 
-motor2.addEventListener('click', () => {
-    motor1.classList.remove('selecionado')
-    motor2.classList.add('selecionado')
-    motor4.classList.remove('selecionado')
-    motor5.classList.remove('selecionado')
-    motor6.classList.remove('selecionado')
-    motor7.classList.remove('selecionado')
-
-    boardmotor1.style.visibility = "hidden"
-    boardmotor2.style.visibility = "visible"
-    boardmotor4.style.visibility = "hidden"
-    boardmotor5.style.visibility = "hidden"
-    boardmotor6.style.visibility = "hidden"
-    boardmotor7.style.visibility = "hidden"
+range2.addEventListener('input', () => {
+    input2.value = range2.value
 })
 
-
-motor4.addEventListener('click', () => {
-    motor1.classList.remove('selecionado')
-    motor2.classList.remove('selecionado')
-    motor4.classList.add('selecionado')
-    motor5.classList.remove('selecionado')
-    motor6.classList.remove('selecionado')
-    motor7.classList.remove('selecionado')
-
-
-    boardmotor1.style.visibility = "hidden"
-    boardmotor2.style.visibility = "hidden"
-    boardmotor4.style.visibility = "visible"
-    boardmotor5.style.visibility = "hidden"
-    boardmotor6.style.visibility = "hidden"
-    boardmotor7.style.visibility = "hidden"
+range4.addEventListener('input', () => {
+    input4.value = range4.value
 })
 
-motor5.addEventListener('click', () => {
-    motor1.classList.remove('selecionado')
-    motor2.classList.remove('selecionado')
-    motor4.classList.remove('selecionado')
-    motor5.classList.add('selecionado')
-    motor6.classList.remove('selecionado')
-    motor7.classList.remove('selecionado')
-
-    boardmotor1.style.visibility = "hidden"
-    boardmotor2.style.visibility = "hidden"
-    boardmotor4.style.visibility = "hidden"
-    boardmotor5.style.visibility = "visible"
-    boardmotor6.style.visibility = "hidden"
-    boardmotor7.style.visibility = "hidden"
+range5.addEventListener('input', () => {
+    input5.value = range5.value
 })
 
-motor6.addEventListener('click', () => {
-    motor1.classList.remove('selecionado')
-    motor2.classList.remove('selecionado')
-    motor4.classList.remove('selecionado')
-    motor5.classList.remove('selecionado')
-    motor6.classList.add('selecionado')
-    motor7.classList.remove('selecionado')
-
-    boardmotor1.style.visibility = "hidden"
-    boardmotor2.style.visibility = "hidden"
-    boardmotor4.style.visibility = "hidden"
-    boardmotor5.style.visibility = "hidden"
-    boardmotor6.style.visibility = "visible"
-    boardmotor7.style.visibility = "hidden"
+range6.addEventListener('input', () => {
+    input6.value = range6.value
 })
-motor7.addEventListener('click', () => {
-    motor1.classList.remove('selecionado')
-    motor2.classList.remove('selecionado')
-    motor4.classList.remove('selecionado')
-    motor5.classList.remove('selecionado')
-    motor6.classList.remove('selecionado')
-    motor7.classList.add('selecionado')
 
-    boardmotor1.style.visibility = "hidden"
-    boardmotor2.style.visibility = "hidden"
-    boardmotor4.style.visibility = "hidden"
-    boardmotor5.style.visibility = "hidden"
-    boardmotor6.style.visibility = "hidden"
-    boardmotor7.style.visibility = "visible"
+range7.addEventListener('input', () => {
+    input7.value = range7.value
+})
+
+range1.addEventListener('change', () => {
+    const form = document.getElementById('int-1');
+    form.submit();
+})
+
+range2.addEventListener('change', () => {
+    const form = document.getElementById('int-2');
+    form.submit();
+})
+
+range4.addEventListener('change', () => {
+    const form = document.getElementById('int-4');
+    form.submit();
+})
+
+range5.addEventListener('change', () => {
+    const form = document.getElementById('int-5');
+    form.submit();
+})
+
+range6.addEventListener('change', () => {
+    const form = document.getElementById('int-6');
+    form.submit();
+})
+
+range7.addEventListener('change', () => {
+    const form = document.getElementById('int-7');
+    form.submit();
 })

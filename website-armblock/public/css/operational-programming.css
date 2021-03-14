@@ -137,7 +137,7 @@ section.container {
     margin-top: 30px;
     height: calc(100vh - 160px);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 1.6rem
 }
 
@@ -209,7 +209,7 @@ section.container .robotic-arm {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 35%;
+    width: 46%;
 }
 
 section.container .robotic-arm .message-arm {
@@ -219,7 +219,7 @@ section.container .robotic-arm .message-arm {
 
 section.container .robotic-arm .arm {
     margin: 10px 0 10px 0;
-    width: 100%;
+    width: 70%;
     max-height: 400px
 }
 
@@ -260,7 +260,7 @@ section.container .robotic-arm .board .actions-buttons p {
 }
 
 section.container .boards {
-    width: 30%;
+    width: 35%;
     position: relative;
     height: 100%;
 }
@@ -275,7 +275,22 @@ section.container .boards .board {
     left: 0;
     width: 100%;
     height: 100%;
-    visibility: hidden;
+    overflow-x: auto
+}
+
+section.container .boards .board::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+section.container .boards .board::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 8px 8px 8px 8px;
+}
+
+section.container .boards .board::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 8px 8px 8px 8px;
 }
 
 section.container .boards .board .block {
@@ -286,20 +301,21 @@ section.container .boards .board .block {
     margin: 10px 0 10px 0;
 }
 
-section.container .boards .board .block input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 0;
-    margin: 0 10px 0 10px;
-    max-width: 70px;
+section.container .boards .board .range-sec {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
 }
 
-section.container .boards .board .block select {
+section.container .boards .board .range-sec .range {
+    flex: 0.8;
+}
+
+section.container .boards .board .range-sec input:disabled {
     padding: 10px;
     border-radius: 8px;
     border: 0;
-    margin: 0 10px 0 10px;
-    max-width: 120px;
+    max-width: 70px;
 }
 
 section.container .boards .board .selected-block {
@@ -310,21 +326,6 @@ section.container .boards .board .selected-block {
     display: flex;
     justify-content: center;
     font-weight: 600;
-}
-
-.selecionado {
-    animation: selecionado 0.5s ease-in-out infinite alternate;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-#motor-1,
-#motor-2-3,
-#motor-4,
-#motor-5,
-#motor-6,
-#motor-7 {
-    cursor: pointer;
 }
 
 
@@ -357,6 +358,9 @@ section.container .boards .board .selected-block {
 @media (max-width: 1440px) {
     html {
         font-size: 55%;
+    }
+    header .brand img {
+        width: 60px;
     }
     section.container .configuration .block {
         text-align: center;
@@ -480,4 +484,9 @@ section.container .boards .board .selected-block {
     to {
         transform: scale(1.1)
     }
+}
+
+
+}
+
 }

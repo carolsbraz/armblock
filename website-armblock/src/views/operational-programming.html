@@ -27,42 +27,12 @@
         </div>
     </header>
 
+    <section class="container">
 
-    <form action="/enviar-dados" method="get">
-        <section class="container">
+        <div class="robotic-arm">
 
-            <div class="configuration">
-                <div class="configuration-blocks">
-                    <div class="green title-block block">Configurações</div>
-                    <div class="brown serial-block block">Selecione a porta serial:
-                        <select name="serialport" id="serial-port">
-                                <option value="COM1">COM1</option>  
-                                <option value="COM2">COM2</option>  
-                                <option value="COM3">COM3</option>  
-                                <option value="COM4">COM4</option>  
-                                <option value="COM5">COM5</option>  
-                                <option value="COM6">COM6</option>  
-                                <option value="COM7">COM7</option>  
-                                <option value="COM8">COM8</option>  
-                                <option value="COM9">COM9</option>                              
-                        </select>
-                    </div>
-                    <div class="dark-blue pin-block block">Pino do motor 1: <input type="number" placeholder="pino" name="pino1"></div>
-                    <div class="dark-blue pin-block block">Pino do motor 2: <input type="number" placeholder="pino"></div>
-                    <div class="dark-blue pin-block block">Pino do motor 3: <input type="number" placeholder="pino"></div>
-                    <div class="dark-blue pin-block block">Pino do motor 4: <input type="number" placeholder="pino"></div>
-                    <div class="dark-blue pin-block block">Pino do motor 5: <input type="number" placeholder="pino" name="pino5"></div>
-                    <div class="dark-blue pin-block block">Pino do motor 6: <input type="number" placeholder="pino" name="pino6"></div>
-                    <div class="dark-blue pin-block block">Pino do motor 7: <input type="number" placeholder="pino" name="pino7"></div>
-
-                </div>
-            </div>
-            <div class="robotic-arm">
-                <div class="message-arm">
-                    <p>Selecione a junta que deseja mover</p>
-                </div>
-                <div class="arm">
-                    <svg width="100%" viewBox="0 0 584 553" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="arm">
+                <svg width="100%" viewBox="0 0 584 553" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="blocks-arm" clip-path="url(#clip0)">
                         <g id="id-motor-1">
                         <path id="Vector" d="M304 489C321.673 489 336 475.345 336 458.5C336 441.655 321.673 428 304 428C286.327 428 272 441.655 272 458.5C272 475.345 286.327 489 304 489Z" fill="#A2E62E"/>
@@ -136,69 +106,68 @@
                         </defs>
                         </svg>
 
-                </div>
-                <div class="actions-buttons">
-                    <a href="" class="delete">
-                        <img src="/img/icone-lixeira.svg" alt="" width="30px">
-                        <p>Recomeçar</p>
-                    </a>
-                    <button type="submit" href="" class="test">
-                        <img src="/img/icone-bandeira.svg" alt="" width="30px">
-                        <p>Testar</p>
-                    </button>
-                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="boards">
+            <div class="board">
+                <div class="green selected-block">Junta 1</div>
+                <form action="/int-1" method="post" id="int-1">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta1" id="valorjunta1" class="range" min="0" max="180" step="1">
+                        <input type="text" id="inputjunta1" value="90" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 2</div>
+                <form action="/int-2" method="post" id="int-2">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta2" id="valorjunta2" class="range" min="0" max="180" step="1">
+                        <input type="text" id="inputjunta2" value="90" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 3</div>
+                <form action="/int-3" method="post" id="int-3">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta3" id="valorjunta3" class="range" min="0" max="180" step="1">
+                        <input type="text" id="inputjunta3" value="90" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 4</div>
+                <form action="/int-4" method="post" id="int-4">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta4" id="valorjunta4" class="range" min="0" max="180" step="1">
+                        <input type="text" id="inputjunta4" value="90" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 5</div>
+                <form action="/int-5" method="post" id="int-5">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta5" id="valorjunta5" class="range" min="0" max="180" step="1">
+                        <input type="text" id="inputjunta5" value="90" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block">Junta 6</div>
+                <form action="/int-6" method="post" id="int-6">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta6" id="valorjunta6" class="range" min="0" max="180" step="1">
+                        <input type="text" id="inputjunta6" value="90" disabled>
+                    </div>
+                </form>
+                <div class="green selected-block"> Garra </div>
+                <form action="/int-7" method="post" id="int-7">
+                    <div class="range-sec">
+                        <input type="range" name="valorjunta7" id="valorjunta7" class="range" min="0" max="180" step="1">
+                        <input type="text" id="inputjunta7" value="90" disabled>
+                    </div>
+                </form>
             </div>
 
-            </div>
+        </div>
 
-            <div class="boards">
-                <div class="board" id="board-motor-1">
-                    <div class="red selected-block">Junta selecionada: 1</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor11" maxlength="1"> para</div>
-                    <div class="blue block">Mover para a esquerda</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor12" maxlength="1"> para</div>
-                    <div class="blue block">Mover para a direita</div>
-                </div>
-                <div class="board" id="board-motor-2-3">
-                    <div class="red selected-block">Junta selecionada: 2/3</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor21" maxlength="1"> para</div>
-                    <div class="blue block">Mover para cima</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor22" maxlength="1"> para</div>
-                    <div class="blue block">Mover para baixo</div>
-                </div>
-                <div class="board" id="board-motor-4">
-                    <div class="red selected-block">Junta selecionada: 4</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor41" maxlength="1"> para</div>
-                    <div class="blue block">Mover para cima</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor42" maxlength="1"> para</div>
-                    <div class="blue block">Mover para baixo</div>
-                </div>
-                <div class="board" id="board-motor-5">
-                    <div class="red selected-block">Junta selecionada: 5</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor51" maxlength="1"> para</div>
-                    <div class="blue block">Mover para cima</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor52" maxlength="1"> para</div>
-                    <div class="blue block">Mover para baixo</div>
-                </div>
-                <div class="board" id="board-motor-6">
-                    <div class="red selected-block">Junta selecionada: 6</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor61" maxlength="1"> para</div>
-                    <div class="blue block">Mover para direita</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor62" maxlength="1"> para</div>
-                    <div class="blue block">Fechar a esquerda</div>
-                </div>
-                <div class="board" id="board-motor-7">
-                    <div class="red selected-block">Junta selecionada: 7</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor71" maxlength="1"> para</div>
-                    <div class="blue block">Abrir a garra</div>
-                    <div class="yellow block">Aperte <input type="text" placeholder="tecla" name="keymotor72" maxlength="1"> para</div>
-                    <div class="blue block">Fechar a garra</div>
-                </div>
-            </div>
+    </section>
 
-        </section>
-
-    </form>
 
 
 
