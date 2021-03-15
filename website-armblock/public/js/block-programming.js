@@ -52,15 +52,14 @@ btnAdd.addEventListener('click', () => {
     const newBoard = document.createElement('div')
     newBoard.classList.add('block', 'yellow', 'motor')
 
-    const idt = document.createElement('span')
-    var idttxt = document.createTextNode(`(Movimento individual)`);
+
+
     var idtblock = document.createTextNode(`Mover o motor`);
-    idt.appendChild(idttxt)
+
     const motorInput = document.createElement('input')
     motorInput.setAttribute('type', 'number')
     motorInput.setAttribute('placeholder', 'motor')
 
-    const br = document.createElement('br')
 
     // internal yellow
 
@@ -90,21 +89,19 @@ btnAdd.addEventListener('click', () => {
     const redBlock = document.createElement('div')
     redBlock.classList.add('block', 'brown')
 
-    var degre = document.createTextNode(`Para`);
-    redBlock.appendChild(degre)
+    var vel = document.createTextNode(`Na velocidade`);
+    redBlock.appendChild(vel)
 
     const speedInput = document.createElement('input')
     speedInput.setAttribute('type', 'number')
     speedInput.setAttribute('placeholder', 'velo...')
     redBlock.appendChild(speedInput)
 
-    var degresymbol = document.createTextNode(`°`);
-    redBlock.appendChild(degresymbol)
+    var velsymbol = document.createTextNode(`graus/seg`);
+    redBlock.appendChild(velsymbol)
 
     drag.appendChild(redBlock)
 
-    newBoard.appendChild(idt)
-    newBoard.appendChild(br)
     newBoard.appendChild(idtblock)
     newBoard.appendChild(motorInput)
     newBoard.appendChild(drag)
@@ -125,6 +122,7 @@ const enviar = document.getElementById('enviar')
 const txtConfiguracoes = document.getElementById('conf')
 const txtPorta = document.getElementById('port')
 const txtComando = document.getElementById('final-command')
+const txtMov = document.getElementById('mov')
 
 enviar.addEventListener('click', (event) => {
     //gerando string de comandos
@@ -168,8 +166,7 @@ enviar.addEventListener('click', (event) => {
             const vel = block.querySelectorAll('input')[2];
 
             if (id.value != "" && pos.value != "" && vel.value != "") {
-
-                if (parseInt(pos.value, 10) >= 5 && parseInt(pos.value, 10) <= 180) {
+                if (parseInt(pos.value, 10) >= 5 && parseInt(pos.value, 10) <= 180 && parseInt(vel.value) >= 5 && parseInt(vel.value) <= 100) {
                     blockcommands += `${id.value}:`
                     blockcommands += `${pos.value}:`
                     blockcommands += `${vel.value}`
@@ -177,6 +174,10 @@ enviar.addEventListener('click', (event) => {
                     const limiteerror = document.getElementById('limit-message')
                     limiteerror.style.display = 'inline'
                     permissao = false
+
+                    if (parseInt(pos.value, 10) < 5 && parseInt(pos.value, 10) > 180) {
+                        pos.classList.add('error');
+                    }
                 }
 
             } else {
@@ -193,6 +194,28 @@ enviar.addEventListener('click', (event) => {
     finalcommand = `prog&${countcommands}${blockcommands}`
         // atribuindo comando ao input
     txtComando.value = finalcommand;
+
+    let movtext = '';
+    let movimentos = '';
+    let countmov = 0;
+    const movs = document.querySelectorAll('#board .block')
+
+    movs.forEach(mov => {
+        console.log(mov)
+        if (mov.classList.contains("motor")) {
+
+            countmov++;
+            const id = mov.querySelectorAll('input')[0];
+            const pos = mov.querySelectorAll('input')[1];
+            const vel = mov.querySelectorAll('input')[2];
+
+            movimentos += `&${id.value}:${pos.value}:${vel.value}`
+        }
+    });
+
+    movtext = `mov&${countmov}${movimentos}`
+
+    txtMov.value = movtext
 
     //pegando valor da porta e atribuindo
     const valorPorta = document.getElementById('serial-port')

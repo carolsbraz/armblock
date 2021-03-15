@@ -221,7 +221,8 @@ server.post("/autenticar-user", (req, res) => {
                             firebase.database().ref(`usuarios/` + user.uid).set({
                                 porta: 'COM1',
                                 configuracoes: 'conf&&&&&&&',
-                                comandos: 'prog&0&'
+                                comandos: 'prog&0&',
+                                movimentos: 'mov&1&&&'
                             })
                             configuracoes = 'conf&&&&&&&'
                             commands = 'prog&0&'
@@ -270,7 +271,8 @@ server.post("/autenticar-user", (req, res) => {
                                         firebase.database().ref(`usuarios/` + user.uid).set({
                                             porta: 'COM1',
                                             configuracoes: 'conf&&&&&&&',
-                                            comandos: 'prog&0&'
+                                            comandos: 'prog&0&',
+                                            movimentos: 'mov&1&&&'
                                         })
                                         configuracoes = 'conf&&&&&&&'
                                         commands = 'prog&0&'
@@ -320,6 +322,7 @@ server.get("/enviar-comandos", (req, res) => {
     const port = req.query.port;
     const conf = req.query.conf;
     const comand = req.query.commands;
+    const mov = req.query.mov;
 
     var user = firebase.auth().currentUser;
 
@@ -327,7 +330,8 @@ server.get("/enviar-comandos", (req, res) => {
         firebase.database().ref(`usuarios/` + user.uid).update({
             porta: port,
             configuracoes: conf,
-            comandos: comand
+            comandos: comand,
+            movimentos: mov
         })
         var arrayConf = conf.split('&');
         arrayConf.shift();

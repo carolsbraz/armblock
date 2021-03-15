@@ -38,8 +38,11 @@
     <section class="container">
         <div class="left-board">
             <div class="configuration">
+                <center>
+                    <h3>Configurações</h3>
+                </center>
+                <br>
                 <div class="configuration-blocks">
-                    <div class="green title-block block">Configurações</div>
                     <div class="brown serial-block block">Selecione a porta serial:
                         <select name="serialport" id="serial-port" required>
                                 <option value="COM1" <%= com == 'COM1' ? 'selected' : ''%>>COM1</option>  
@@ -53,15 +56,11 @@
                                 <option value="COM9" <%= com == 'COM9' ? 'selected' : ''%>>COM9</option>
                             </select>
                     </div>
-
-
                     <% for (let i = 0; i < conf.length; i++){ %>
 
                         <div class="dark-blue pin-block block">Pino do motor
                             <%= (i + 1) %>: <input type="number" placeholder="pino" id="pino<%= (i + 1) %>" value="<%= conf[i] %>" required></div>
                         <% } %>
-
-
                 </div>
             </div>
             <div class="robotic-arm">
@@ -144,7 +143,10 @@
         </div>
 
         <div class="board" id="board">
-
+            <center>
+                <h3>Programa</h3>
+            </center>
+            <br>
             <div class="error-message" id="error-message">
                 <div class="header">
                     <h3>Existem campos não preenchidos!</h3>
@@ -158,15 +160,31 @@
 
             <div class="limit-message" id="limit-message">
                 <div class="header">
-                    <h3>Existem valores ultrapassando o limite!</h3>
+                    <h3>Existem valores ultrapassando os limites.</h3>
                     <a href="#" id="fechar-limit"><b>X</b></a>
                 </div>
                 <div class="body">
-                    <p>Por favor, confira seus dados e lembre-se de manter os valores de posição dentro dos limites da junta:</p>
+                    <p>Por favor, confira seus dados nos campos em destaque e lembre-se de manter os valores conforme os limites abaixo:</p>
                     <br>
-                    <p><b>Mínimo: 5°</b></p>
-                    <p><b>Máximo: 180°</b></p>
+                    <table>
+                        <th></th>
+                        <th>Juntas</th>
+                        <th>Velocidade</th>
+                        <th>Atraso</th>
 
+                        <tr>
+                            <td><b>Min</b></td>
+                            <td>5°</td>
+                            <td>5 graus/seg</td>
+                            <td>1 segundo</td>
+                        </tr>
+                        <tr>
+                            <td><b>Máx</b></td>
+                            <td>180°</td>
+                            <td>100 graus/seg</td>
+                            <td>20 segundos</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
@@ -223,6 +241,7 @@
                             <p>Recomeçar</p>
                         </a>
                         <form id="comandos" action="return: false;">
+                            <input type="text" class="mov" id="mov" name="mov" style="display: none;">
                             <input type="text" class="conf" id="conf" name="conf" style="display: none;">
                             <input type="text" class="port" id="port" name="port" style="display: none;">
                             <input type="text" class="final-command" id="final-command" name="commands" style="display: none;">
@@ -235,6 +254,10 @@
         </div>
 
         <div class="drag-board" id="drag-board">
+            <center>
+                <h3>Blocos de programação</h3>
+            </center>
+            <br>
             <div class="here-blocks" id="here-blocks">
                 <p class="undrag"><b>Ações</b></p>
                 <br>
@@ -244,7 +267,7 @@
                 <br>
                 <p class="undrag"><b>Movimentos individuais</b></p>
                 <br>
-                <div class="block yellow motor"><span>(Movimento individual)</span><br>Mover o motor <input type="number" placeholder="motor">
+                <div class="block yellow motor">Mover o motor <input type="number" placeholder="motor" class="error">
                     <div class="drag">
                         <div class="block blue" id="degres">Para <input type="number" placeholder="graus">°</div>
                         <div class="block brown">Na velocidade: <input type="number" placeholder="velo..."> graus/seg</div>
@@ -253,7 +276,7 @@
             </div>
             <div class="add-point">
                 <div class="button" id="add-button"><img src="/img/plus.svg" alt="" width="15px">
-                    <p>Novo movimento individual</p>
+                    <p>Novo tipo de movimento individual</p>
                 </div>
                 <br>
             </div>
