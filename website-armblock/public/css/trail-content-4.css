@@ -191,6 +191,16 @@ section.content .texts .sensors {
 section.content .texts .sensors svg {
     width: 220px;
 }
+section.content .texts .sensors svg #shape-red {
+    animation: shape-red 8s ease-in infinite;
+    transform-origin: bottom ;
+    transform-box: fill-box;
+}
+section.content .texts .sensors svg #led {
+    animation: led 0.90s linear infinite;
+    transform-origin: right ;
+    transform-box: fill-box;
+}
 section.content .texts p {
     margin-right: 90px;
 }
@@ -216,6 +226,7 @@ section.content .texts .bot2 svg #ball-2 {
 section.content .texts .bot2 svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -461,11 +472,23 @@ section.content p {
     }
 }
 
-@keyframes int {
+@keyframes shape-red {
     from {
-        transform: scale(0.8)
+        transform: scale(0.4)
     }
     to {
-        transform: scale(1)
+        transform: scale(1.1)
+    }
+}
+
+@keyframes led {
+    0% {
+        opacity: 50%;
+    }
+    90% {
+        opacity: 3;
+    }
+    100% {
+        opacity: 2;
     }
 }

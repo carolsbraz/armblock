@@ -172,9 +172,26 @@ section.content .texts .text1{
     align-items: center;
     text-align: justify;
 }
+section.content .texts .text2{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: justify;
+}
+section.content .texts .image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
 section.content .texts .text1 img{
     display: flex;
     width: 150px;
+    
+}
+section.content .texts .image img{
+    display: flex;
+    width: 190px;
     align-items: center;
 }
 section.content .texts .text1 .arm .photo{

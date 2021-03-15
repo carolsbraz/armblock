@@ -170,9 +170,23 @@ section.content .texts .bot {
     padding: 30px;
     border-radius: 8px;
 }
+section.content .texts .equation {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-bot);
+    padding: 10px;
+    border-radius: 8px;
+}
+section.content .texts .equation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
 
 section.content .texts .bot svg {
     width: 120px;
+    margin-right: 20px;
 }
 
 section.content .texts .bot svg #ball-1 {
