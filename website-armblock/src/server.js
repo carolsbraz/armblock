@@ -334,6 +334,8 @@ server.post("/autenticar-user", (req, res) => {
                     });
             } else if (error.code == 'auth/wrong-password') {
                 res.render(__dirname + "/views/cadastro-login", { senha: true })
+            } else {
+                console.log(error.code)
             }
 
         });
