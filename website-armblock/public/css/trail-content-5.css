@@ -294,22 +294,10 @@ section.content .texts .software svg #y {
     transform-origin: center ;
     transform-box: fill-box;
 }
-section.content .texts .software svg #camera {
-    animation: camera 2s linear infinite;
-    animation-delay: 3s ;
-    transform-origin: center ;
-    transform-box: fill-box;
-}
-section.content .texts .robot svg #relogio{
-    animation: relogio 2s infinite linear;
-    animation-delay: 3s ;
-    transform-origin: center;
-    transform-box: fill-box;
-}
 section.content .texts .icons {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 section.content .texts .icons .flex {
@@ -320,6 +308,38 @@ section.content .texts .icons .flex {
 
 section.content .texts .icons svg {
     width: 75px;
+}
+section.content .texts .icons .flex .java .legend{
+    font-size: 17px;
+    text-align: center;
+}
+section.content .texts .icons .flex .csharp .legend{
+    font-size: 17px;
+    text-align: center;
+}
+section.content .texts .icons .flex .cmais .legend{
+    font-size: 17px;
+    text-align: center;
+}
+section.content .texts .icons .flex .c .legend{
+    font-size: 17px;
+    text-align: center;
+}
+section.content .texts .icons .flex .javascript .legend{
+    font-size: 17px;
+    text-align: center;
+}
+section.content .texts .icons .flex .python .legend{
+    font-size: 17px;
+    text-align: center;
+}
+section.content .texts .icons .flex .r .legend{
+    font-size: 17px;
+    text-align: center;
+}
+section.content .texts .icons .flex .matlab .legend{
+    font-size: 17px;
+    text-align: center;
 }
 section.content .texts .bot {
     display: flex;
@@ -334,6 +354,7 @@ section.content .texts .bot svg {
     width: 120px;
     margin-right: 20px;
 }
+
 
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
@@ -448,10 +469,10 @@ section.content p {
         margin: 0;
     }
     section.content .texts .software svg {
-        margin-bottom: 40px;
+        margin: 0;
     }
     section.content .texts .software svg {
-        width: 220px
+        width: 180px
     }
     section.content .texts .icons {
         flex-direction: column;
@@ -747,23 +768,4 @@ section.content p {
     }
 }
 
-@keyframes camera {
-    0% {
-        opacity: 0%;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
-@keyframes relogio {
-    from {
-        transform: rotateZ(0deg);
-    }
-    to{
-        transform: rotateZ(360deg);
-    }
-}
