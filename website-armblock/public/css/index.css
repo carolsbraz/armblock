@@ -145,7 +145,7 @@ section.initial .container .button-trail:hover {
 }
 
 section.initial .container .button-blocks {
-    background-color: var(--secundary-blue);
+    background-color: var(--main-blue);
     padding: 25px;
     border-radius: 8px;
     color: white;
@@ -158,7 +158,7 @@ section.initial .container .button-blocks {
 }
 
 section.initial .container .button-blocks:hover {
-    background-color: var(--secundary-blue-hover);
+    background-color: var(--main-blue-hover);
 }
 
 section.initial .container .buttons img {
@@ -310,22 +310,25 @@ div.footer {
     }
     header {
         justify-content: center;
-        margin-top: 25px;
+        margin-top: 15px;
     }
     header .brand {
         justify-content: center;
         flex-direction: column;
-        margin-top: 20px;
     }
     header .brand .title {
         text-align: center;
         margin: 20px 0 0 0;
     }
     header .menu a.link {
-        display: none;
+        margin-bottom: 5px;
     }
     header .menu {
         margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     section.initial .container .buttons {
         flex-direction: column;

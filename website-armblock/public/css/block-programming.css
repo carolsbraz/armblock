@@ -151,29 +151,36 @@ section.container .left-board {
 section.container .configuration {
     background-color: white;
     padding: 20px 20px 20px 20px;
-    height: 50%;
     border-radius: 8px;
     box-shadow: 2px 2px 4px 1px var(--gray);
     width: 100%;
-}
-
-section.container .configuration {
+    height: 50%;
     overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-section.container .configuration::-webkit-scrollbar {
+section.container .configuration .configuration-blocks {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 20px 0 20px;
+}
+
+section.container .configuration .configuration-blocks::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
-section.container .configuration::-webkit-scrollbar-track {
+section.container .configuration .configuration-blocks::-webkit-scrollbar-track {
     background: rgb(240, 240, 240);
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px 8px 8px 8px;
 }
 
-section.container .configuration::-webkit-scrollbar-thumb {
+section.container .configuration .configuration-blocks::-webkit-scrollbar-thumb {
     background: #c2c2c2;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px 8px 8px 8px;
 }
 
 section.container .configuration .block {
@@ -266,13 +273,20 @@ section.container .board .limit-message {
     display: none;
 }
 
+section.container .board .limit-message table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #999;
+    padding: 0.5rem;
+}
+
 section.container .board .limit-message a {
     color: #6b3000;
 }
 
-section.container .board .limit-message p {
+section.container .board .limit-message td {
     color: #b84400;
-    text-align: justify;
+    text-align: center;
 }
 
 section.container .board .limit-message .header {
@@ -396,6 +410,7 @@ section.container .here-blocks {
     overflow-y: auto;
     padding: 0 20px 0 20px;
     margin-bottom: 30px;
+    height: 100%;
 }
 
 section.container .here-blocks::-webkit-scrollbar {
@@ -442,6 +457,12 @@ section.container .block input {
     border: 0;
     margin: 0 10px 0 10px;
     max-width: 70px;
+}
+
+input.error {
+    border: solid;
+    border-width: 1px;
+    border-color: #b80000;
 }
 
 section.container .block select {

@@ -79,22 +79,22 @@ section.members {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-    margin-top: 50px
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 section.members>div {
     display: flex;
     align-items: center;
-    margin: 10px 0
 }
 
 section.members .member-right .apresentation {
     text-align: right;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 section.members .member-left .apresentation {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 section.members img {
