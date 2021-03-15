@@ -131,7 +131,7 @@
 
                 <div class="text">
                     <div class="title-text">
-                        <p class="login-title">Preencha suas informações para fazer login e permitir o acesso a programação do braço robótico:</p>
+                        <p class="login-title">Preencha suas informações para fazer login e permitir o acesso à programação do braço robótico:</p>
                     </div>
 
                     <form method="post" id="dados" action="return: false;">
@@ -143,6 +143,11 @@
                             <center>
                                 <p class="error" id="length-error" style="color: red; display: none">A senha precisa ter no mínimo 6 dígitos.</p>
                             </center>
+                            <% if(senha == true){ %>
+                                <center>
+                                    <p class="error" id="length-error" style="color: red;">Senha incorreta.</p>
+                                </center>
+                                <% } %>
                         </div>
                         <div class="flex">
                             <input type="submit" class="button" id="btn-login" value="Entrar">

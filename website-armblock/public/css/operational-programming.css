@@ -440,9 +440,12 @@ section.container .boards .board .selected-block {
     }
     section.container .boards {
         width: 100%;
+        min-height: 500px;
+        margin-bottom: 20px;
     }
     section.container .board {
         padding: 50px !important;
+        height: 100%;
     }
 }
 

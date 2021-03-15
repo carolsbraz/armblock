@@ -1,27 +1,22 @@
-comecar = function() {
-    const email = document.getElementById('user-email').value
-    console.log(email)
-    const senha = document.getElementById('user-senha').value
-    console.log(senha)
-    firebase.auth().signInWithEmailAndPassword(email, senha)
-        .then((user) => {
-            console.log(`Logado: ${user.uid}`);
-        })
-        .catch((error) => {
-            if (error.code == 'auth/user-not-found') {
-                firebase.auth().createUserWithEmailAndPassword(email, senha)
-                    .then((user) => {
-                        console.log(`Logado: ${user.uid}`);
-                    })
-                    .catch((error) => {
-                        console.log(error.message)
-                    });
-            }
-        });
-}
+var btn = document.getElementById('btn-login')
 
-const login = document.getElementById('btn-login')
-
-login.addEventListener('click', () => {
-    comecar()
+btn.addEventListener('click', () => {
+    var senha = document.getElementById('usersenha').value
+    var email = document.getElementById('useremail').value
+    var erro = document.getElementById('length-error')
+    console.log(senha.length)
+    if (senha.length < 6) {
+        erro.innerHTML = 'A senha precisa ter no mínimo 6 dígitos.'
+        erro.style.display = 'inline'
+    } else if (email.length == 0 || senha.length == 0) {
+        erro.innerHTML = 'Por favor, preencha os campos acima.'
+        erro.style.display = 'inline'
+    } else if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
+        erro.innerHTML = 'Por favor, insira um email válido.'
+        erro.style.display = 'inline'
+    } else {
+        var form = document.getElementById('dados');
+        form.action = "/autenticar-user";
+        form.submit();
+    }
 })

@@ -173,7 +173,7 @@ enviar.addEventListener('click', (event) => {
             const vel = block.querySelectorAll('input')[2];
 
             if (id.value != "" && pos.value != "" && vel.value != "") {
-                if (parseInt(pos.value, 10) >= 0 && parseInt(pos.value, 10) <= 180 && parseInt(vel.value) >= 5 && parseInt(vel.value) <= 100) {
+                if (parseInt(pos.value, 10) >= 0 && parseInt(pos.value, 10) <= 180 && parseInt(vel.value) >= 5 && parseInt(vel.value) <= 100 && parseInt(id.value) >= 1 && parseInt(id.value) <= 6) {
                     blockcommands += `${id.value}:`
                     blockcommands += `${pos.value}:`
                     blockcommands += `${vel.value}`

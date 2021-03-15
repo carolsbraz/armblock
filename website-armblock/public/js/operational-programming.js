@@ -13,27 +13,27 @@ const input6 = document.getElementById('inputjunta6')
 const input7 = document.getElementById('inputjunta7')
 
 range1.addEventListener('input', () => {
-    input1.value = range1.value
+    input1.value = range1.value + '°'
 })
 
 range2.addEventListener('input', () => {
-    input2.value = range2.value
+    input2.value = range2.value + '°'
 })
 
 range4.addEventListener('input', () => {
-    input4.value = range4.value
+    input4.value = range4.value + '°'
 })
 
 range5.addEventListener('input', () => {
-    input5.value = range5.value
+    input5.value = range5.value + '°'
 })
 
 range6.addEventListener('input', () => {
-    input6.value = range6.value
+    input6.value = range6.value + '°'
 })
 
 range7.addEventListener('input', () => {
-    input7.value = range7.value
+    input7.value = range7.value + '°'
 })
 
 range1.addEventListener('change', () => {

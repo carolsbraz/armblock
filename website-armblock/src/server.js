@@ -37,7 +37,7 @@ server.get("/", (req, res) => {
 })
 
 server.get("/cadastro-login", (req, res) => {
-    res.sendFile(__dirname + "/views/cadastro-login.html")
+    res.render(__dirname + "/views/cadastro-login", { senha: false })
 })
 
 server.get("/quem-somos", (req, res) => {
@@ -154,7 +154,7 @@ server.get("/operational-programming", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
@@ -332,7 +332,10 @@ server.post("/autenticar-user", (req, res) => {
                     .catch((error) => {
                         console.log(error.message)
                     });
+            } else if (error.code == 'auth/wrong-password') {
+                res.render(__dirname + "/views/cadastro-login", { senha: true })
             }
+
         });
 })
 
@@ -379,7 +382,7 @@ server.get("/enviar-comandos", (req, res) => {
 
         res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email, mov: arrayMov })
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 
 
@@ -407,7 +410,7 @@ server.post("/int-1", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
@@ -434,7 +437,7 @@ server.post("/int-2", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
@@ -461,7 +464,7 @@ server.post("/int-3", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
@@ -487,7 +490,7 @@ server.post("/int-4", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
@@ -514,7 +517,7 @@ server.post("/int-5", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
@@ -541,7 +544,7 @@ server.post("/int-6", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
@@ -567,7 +570,7 @@ server.post("/int-7", (req, res) => {
             res.render(__dirname + "/views/operational-programming", { int1: int1, int2: int2, int3: int3, int4: int4, int5: int5, int6: int6, int7: int7 })
         });
     } else {
-        res.sendFile(__dirname + "/views/cadastro-login.html")
+        res.render(__dirname + "/views/cadastro-login", { senha: false })
     }
 })
 
