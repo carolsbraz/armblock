@@ -188,11 +188,32 @@ section.content .texts .bot svg #ball-2 {
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
+section.content .texts .robot svg #eye{
+    animation: eye 2s linear infinite;
+}
+section.content .texts .robot svg #eye2{
+    animation: eye2 2s linear infinite;
+}
+section.content .texts .robot svg #hand{
+    animation: hand 3s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+section.content .texts .robot svg #hand-2{
+    animation: hand-2 5s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+section.content .texts .robot svg #hand-3{
+    animation: hand-3 3s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
 
 section.content .texts .bot p {
     margin-left: 20px;
 }
-
 section.content .robot {
     display: flex;
     align-items: center;
@@ -380,5 +401,56 @@ section.content p {
     }
     to {
         transform: scale(1)
+    }
+}
+
+@keyframes eye {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes eye2 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hand {
+    from {
+        transform-origin: rotateX(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes hand-2 {
+    from {
+        transform-origin: rotateX(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes hand-3 {
+    from {
+        transform-origin: rotateX(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
     }
 }

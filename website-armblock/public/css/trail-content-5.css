@@ -176,6 +176,136 @@ section.content .texts .software svg {
     margin-left: 40px;
 }
 
+section.content .texts .software svg #linear-3 {
+    animation: linear-3 6s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-4 {
+    animation: linear-4 3s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-5 {
+    animation: linear-5 5s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-6 {
+    animation: linear-6 4s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-7 {
+    animation: linear-7 3s linear infinite;
+    transform-origin: center left: 0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-8 {
+    animation: linear-8 4s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-9 {
+    animation: linear-9 3s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-10 {
+    animation: linear-10 3s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-11 {
+    animation: linear-11 5s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-12 {
+    animation: linear-12 2s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-13 {
+    animation: linear-13 5s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-14 {
+    animation: linear-14 4s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-15 {
+    animation: linear-15 3s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #linear-16 {
+    animation: linear-16 4s linear infinite;
+    transform-origin: center left:0px; right: 100%;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #s {
+    animation: s 4s ease-in infinite;
+    animation-delay: 3s;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #t {
+    animation: t 5s linear infinite;
+    animation-delay: 4s;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #h {
+    animation: h 6s linear infinite;
+    animation-delay: 5s;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #e {
+    animation: e 7s linear infinite;
+    animation-delay: 6s ;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #f {
+    animation: f 8s linear infinite;
+    animation-delay: 7s ;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #a {
+    animation: a 9s linear infinite;
+    animation-delay: 8s ;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #n {
+    animation: n 10s linear infinite;
+    animation-delay: 9s ;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #y {
+    animation: y 11s linear infinite;
+    animation-delay: 10s ;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .software svg #camera {
+    animation: camera 2s linear infinite;
+    animation-delay: 3s ;
+    transform-origin: center ;
+    transform-box: fill-box;
+}
+section.content .texts .robot svg #relogio{
+    animation: relogio 2s infinite linear;
+    animation-delay: 3s ;
+    transform-origin: center;
+    transform-box: fill-box;
+}
 section.content .texts .icons {
     display: flex;
     justify-content: space-between;
@@ -191,7 +321,6 @@ section.content .texts .icons .flex {
 section.content .texts .icons svg {
     width: 75px;
 }
-
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -396,11 +525,245 @@ section.content p {
     }
 }
 
-@keyframes int {
+@keyframes linear-3 {
     from {
         transform: scale(0.8)
     }
     to {
         transform: scale(1)
+    }
+}
+
+@keyframes linear-4 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-5 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-6 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-7 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-8 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-9 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-10 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-11 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-12 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-13 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-14 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-15 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes linear-16 {
+    from {
+        transform: scale(0.8)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes s {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes t {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes h {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes e {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes a {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes n {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes y {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes camera {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes relogio {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
     }
 }
