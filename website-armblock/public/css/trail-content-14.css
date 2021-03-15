@@ -199,13 +199,19 @@ section.content .texts .icons svg{
     width: 100px;
     height: 130px;
 }
+section.content .texts .icons .flex .icon svg #led-red {
+    animation: led-red 2s linear infinite;
+}
+section.content .texts .icons .flex .icon svg #led-blue {
+    animation: led-blue 2s linear infinite;
+}
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
-
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -377,11 +383,16 @@ section.content p {
     }
 }
 
-@keyframes int {
-    from {
-        transform: scale(0.8)
+@keyframes led-red {
+    0% {
+        opacity: 0;
     }
-    to {
-        transform: scale(1)
+    
+}
+
+@keyframes led-blue {
+    0% {
+        opacity: 0;
     }
+    
 }

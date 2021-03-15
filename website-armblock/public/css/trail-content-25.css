@@ -180,6 +180,14 @@ section.content .texts .div{
 section.content .texts .div .red{
     color: var(--red-div);
 }
+section.content .texts .icons{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.content .texts .icons img{
+    width: 350px;
+}
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -262,6 +270,37 @@ section.content p {
     }
     section.content .texts{
         margin: 0;
+    }
+    section.content .texts .icons img{
+        width: 250px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+@media (max-width: 320px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts{
+        margin: 0;
+    }
+    section.content .texts .icons img{
+        width: 200px;
     }
     .content .go-top img {
         width: 30px;
