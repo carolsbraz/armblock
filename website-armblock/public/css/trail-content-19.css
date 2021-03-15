@@ -174,7 +174,8 @@ section.content .texts .bot {
 }
 
 section.content .texts .bot svg {
-    width: 250px;
+    width: 120px;
+    margin-right: 20px;
 }
 
 section.content .texts .bot svg #ball-1 {
