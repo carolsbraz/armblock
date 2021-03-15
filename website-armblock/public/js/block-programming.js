@@ -143,7 +143,14 @@ enviar.addEventListener('click', (event) => {
             const input = block.querySelectorAll('input')[0];
             console.log(input.value)
             if (input.value != "") {
-                blockcommands += input.value
+                if (input.value > 0 && input.value <= 20) {
+                    blockcommands += input.value
+                } else {
+                    const messageerror = document.getElementById('delay-message')
+                    messageerror.style.display = 'inline'
+                    permissao = false
+                }
+
             } else {
                 const messageerror = document.getElementById('error-message')
                 messageerror.style.display = 'inline'
@@ -166,7 +173,7 @@ enviar.addEventListener('click', (event) => {
             const vel = block.querySelectorAll('input')[2];
 
             if (id.value != "" && pos.value != "" && vel.value != "") {
-                if (parseInt(pos.value, 10) >= 5 && parseInt(pos.value, 10) <= 180 && parseInt(vel.value) >= 5 && parseInt(vel.value) <= 100) {
+                if (parseInt(pos.value, 10) >= 0 && parseInt(pos.value, 10) <= 180 && parseInt(vel.value) >= 5 && parseInt(vel.value) <= 100) {
                     blockcommands += `${id.value}:`
                     blockcommands += `${pos.value}:`
                     blockcommands += `${vel.value}`
@@ -198,7 +205,7 @@ enviar.addEventListener('click', (event) => {
     let movtext = '';
     let movimentos = '';
     let countmov = 0;
-    const movs = document.querySelectorAll('#board .block')
+    const movs = document.querySelectorAll('#here-blocks .block')
 
     movs.forEach(mov => {
         console.log(mov)
@@ -230,8 +237,8 @@ enviar.addEventListener('click', (event) => {
     const pino6 = document.getElementById('pino6')
     const pino7 = document.getElementById('pino7')
 
-    if (pino1.value == '' || pino2.value == '' || pino3.value == '' || pino4.value == '' || pino5.value == '' || pino6.value == '' || pino7.value == '') {
-        const messageerror = document.getElementById('error-message')
+    if (pino1.value == '' || pino1.value < 3 || pino1.value > 13 || pino2.value == '' || pino2.value < 3 || pino2.value > 13 || pino3.value == '' || pino3.value < 3 || pino3.value > 13 || pino4.value == '' || pino4.value < 3 || pino4.value > 13 || pino5.value == '' || pino5.value < 3 || pino5.value > 13 || pino6.value == '' || pino6.value < 3 || pino6.value > 13 || pino7.value == '' || pino7.value < 3 || pino7.value > 13) {
+        const messageerror = document.getElementById('conf-message')
         messageerror.style.display = 'inline'
         permissao = false
     }
@@ -255,6 +262,24 @@ enviar.addEventListener('click', (event) => {
 })
 
 //message modal
+
+const fecharConf = document.getElementById('fechar-conf')
+const messageConf = document.getElementById('conf-message')
+
+if (fecharConf != null) {
+    fecharConf.addEventListener('click', () => {
+        messageConf.style.display = 'none'
+    })
+}
+
+const fecharDelay = document.getElementById('fechar-delay')
+const messageDelay = document.getElementById('delay-message')
+
+if (fecharDelay != null) {
+    fecharDelay.addEventListener('click', () => {
+        messageDelay.style.display = 'none'
+    })
+}
 
 const fecharlimit = document.getElementById('fechar-limit')
 const messagelimit = document.getElementById('limit-message')

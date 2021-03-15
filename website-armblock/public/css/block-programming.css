@@ -289,6 +289,10 @@ section.container .board .limit-message td {
     text-align: center;
 }
 
+section.container .board .limit-message p {
+    color: #b84400;
+}
+
 section.container .board .limit-message .header {
     display: flex;
     justify-content: space-between;

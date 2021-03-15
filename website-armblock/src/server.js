@@ -163,21 +163,25 @@ server.get("/block-programming", (req, res) => {
     if (user) {
         let configuracoes
         let commands
+        let mov
         firebase.database().ref("usuarios/" + user.uid).once('value', function(snapshot) {
 
             if (snapshot.val() != null) {
                 configuracoes = snapshot.val().configuracoes
                 commands = snapshot.val().comandos
                 port = snapshot.val().porta
+                mov = snapshot.val().movimentos
             } else {
                 firebase.database().ref(`usuarios/` + user.uid).set({
                     porta: 'COM1',
                     configuracoes: 'conf&&&&&&&',
-                    comandos: 'prog&0&'
+                    comandos: 'prog&0&',
+                    movimentos: 'mov&1&&&'
                 })
-                configuracoes = ''
+                configuracoes = 'conf&&&&&&&'
                 commands = 'prog&0&'
                 port = 'COM1'
+                mov = "mov&1&&&"
 
             }
             var arrayConf = configuracoes.split('&');
@@ -186,15 +190,24 @@ server.get("/block-programming", (req, res) => {
             var arrayComman = commands.split('&');
             arrayComman.shift();
             arrayComman.shift();
+
+            var arrayMov = mov.split('&')
+            arrayMov.shift();
+            arrayMov.shift();
+            console.log(arrayMov)
             console.log(port)
-            res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
+            res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email, mov: arrayMov })
         });
         //remove o conf da string de configuracoes e retorna o array de portas
     } else {
         let conf = "conf&&&&&&&"
         var arrayConf = conf.split('&');
         arrayConf.shift();
-        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: "", com: "COM1", logado: false, user: "" })
+        mov = "mov&1&&&"
+        var arrayMov = mov.split('&')
+        arrayMov.shift();
+        arrayMov.shift();
+        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: "", com: "COM1", logado: false, user: "", mov: arrayMov })
     }
 })
 
@@ -211,12 +224,14 @@ server.post("/autenticar-user", (req, res) => {
 
                     let configuracoes
                     let commands
+                    let mov
                     firebase.database().ref("usuarios/" + user.uid).once('value', function(snapshot) {
 
                         if (snapshot.val() != null) {
                             configuracoes = snapshot.val().configuracoes
                             commands = snapshot.val().comandos
                             port = snapshot.val().porta
+                            mov = snapshot.val().movimentos
                         } else {
                             firebase.database().ref(`usuarios/` + user.uid).set({
                                 porta: 'COM1',
@@ -227,6 +242,7 @@ server.post("/autenticar-user", (req, res) => {
                             configuracoes = 'conf&&&&&&&'
                             commands = 'prog&0&'
                             port = 'COM1'
+                            mov = "mov&1&&&"
                             firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
                                 int1: '90',
                                 int2: '45',
@@ -243,8 +259,13 @@ server.post("/autenticar-user", (req, res) => {
                         var arrayComman = commands.split('&');
                         arrayComman.shift();
                         arrayComman.shift();
-                        console.log(port)
-                        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
+
+                        var arrayMov = mov.split('&')
+                        arrayMov.shift();
+                        arrayMov.shift();
+
+                        console.log(arrayMov)
+                        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email, mov: arrayMov })
                     });
 
                 }
@@ -261,12 +282,14 @@ server.post("/autenticar-user", (req, res) => {
 
                                 let configuracoes
                                 let commands
+                                let mov
                                 firebase.database().ref("usuarios/" + user.uid).once('value', function(snapshot) {
 
                                     if (snapshot.val() != null) {
                                         configuracoes = snapshot.val().configuracoes
                                         commands = snapshot.val().comandos
                                         port = snapshot.val().porta
+                                        mov = snapshot.val().movimentos
                                     } else {
                                         firebase.database().ref(`usuarios/` + user.uid).set({
                                             porta: 'COM1',
@@ -277,6 +300,7 @@ server.post("/autenticar-user", (req, res) => {
                                         configuracoes = 'conf&&&&&&&'
                                         commands = 'prog&0&'
                                         port = 'COM1'
+                                        mov = "mov&1&::"
                                         firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
                                             int1: '90',
                                             int2: '45',
@@ -293,8 +317,13 @@ server.post("/autenticar-user", (req, res) => {
                                     var arrayComman = commands.split('&');
                                     arrayComman.shift();
                                     arrayComman.shift();
-                                    console.log(port)
-                                    res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
+
+                                    var arrayMov = mov.split('&')
+                                    arrayMov.shift();
+                                    arrayMov.shift();
+
+                                    console.log(arrayMov)
+                                    res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email, mov: arrayMov })
                                 });
 
                             }
@@ -312,7 +341,11 @@ server.get("/sair-conta", (req, res) => {
         let conf = "conf&&&&&&&"
         var arrayConf = conf.split('&');
         arrayConf.shift();
-        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: "", com: "COM1", logado: false })
+        mov = "mov&1&&&"
+        var arrayMov = mov.split('&')
+        arrayMov.shift();
+        arrayMov.shift();
+        res.render(__dirname + "/views/block-programming", { enviado: false, conf: arrayConf, comman: "", com: "COM1", logado: false, mov: arrayMov })
     }).catch((error) => {
         console.log(error.code)
     });
@@ -336,10 +369,15 @@ server.get("/enviar-comandos", (req, res) => {
         var arrayConf = conf.split('&');
         arrayConf.shift();
         var arrayComman = comand.split('&');
+        arrayComman.shift();
+        arrayComman.shift();
 
-        arrayComman.shift();
-        arrayComman.shift();
-        res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email })
+        var arrayMov = mov.split('&')
+        arrayMov.shift();
+        arrayMov.shift();
+
+
+        res.render(__dirname + "/views/block-programming", { enviado: true, conf: arrayConf, comman: arrayComman, com: port, logado: true, user: user.email, mov: arrayMov })
     } else {
         res.sendFile(__dirname + "/views/cadastro-login.html")
     }
