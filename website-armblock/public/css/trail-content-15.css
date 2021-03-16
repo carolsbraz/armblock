@@ -158,13 +158,23 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+section.content h2 {
+    text-align: center;
+    width: 100%;
+}
 
+section.content h2 img {
+    margin-right: 30px;
+}
+
+section.content h2 {
+    font-size: 2rem;
+}
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
-
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -174,7 +184,7 @@ section.content .texts .bot {
 }
 
 section.content .texts .bot svg {
-    width: 200px;
+    width: 100px;
 }
 
 section.content .texts .bot svg #ball-1 {
@@ -192,7 +202,35 @@ section.content .texts .bot svg #ball-3 {
 section.content .texts .bot p {
     margin-left: 20px;
 }
-
+section.content .texts .equation {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-bot);
+    padding: 10px;
+    border-radius: 8px;
+}
+section.content .texts .equation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+section.content .texts .icons{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.content .texts .icons img{
+    width: 470px;
+}
+section.content .texts ul{
+    margin-left: 35px;
+    font-size: 2.0rem;
+    line-height: 40px;
+}
+section.content .texts .equation{
+    align-items: center;
+}
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
