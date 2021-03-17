@@ -158,28 +158,35 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts ,.icons{
+
+section.content .texts,
+.icons {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-section.content .texts .icons img{
+
+section.content .texts .icons img {
     width: 530px;
 }
+
 section.content .texts .icons .legend p {
     font-size: 2rem;
 }
-section.content .texts ul{
+
+section.content .texts ul {
     margin-left: 35px;
     font-size: 2.0rem;
     line-height: 40px;
     margin-bottom: 25px;
 }
+
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -207,6 +214,7 @@ section.content .texts .bot svg #ball-3 {
 section.content .texts .bot p {
     margin-left: 20px;
 }
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -268,7 +276,6 @@ section.content p {
     }
 }
 
-
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -277,6 +284,7 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
+        margin: 0 0 10px 0;
     }
     .content .controle a {
         justify-content: center;
@@ -287,22 +295,23 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .icons img{
+    section.content .texts .icons img {
         width: 270px;
     }
-    section.content .texts .bot{
+    section.content .texts .bot {
         flex-direction: column;
     }
-    section.content .texts .bot p{
+    section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .bot svg{
+    section.content .texts .bot svg {
         width: 120px;
     }
     .content .go-top img {
         width: 30px;
     }
 }
+
 @media (max-width: 375px) {
     .content .controle {
         flex-direction: column;
@@ -321,16 +330,16 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot{
+    section.content .texts .bot {
         flex-direction: column;
-    } 
-    section.content .texts .bot p{
+    }
+    section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .bot svg{
+    section.content .texts .bot svg {
         width: 120px;
     }
-    section.content .texts .icons img{
+    section.content .texts .icons img {
         width: 200px;
     }
     .content .go-top img {

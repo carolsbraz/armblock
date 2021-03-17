@@ -158,11 +158,13 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
+
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -190,19 +192,23 @@ section.content .texts .bot svg #ball-3 {
 section.content .texts .bot p {
     margin-left: 20px;
 }
-section.content .texts .icons{
+
+section.content .texts .icons {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-section.content .texts .icons img{
+
+section.content .texts .icons img {
     width: 600px;
 }
-section.content .texts .bookmarks{
+
+section.content .texts .bookmarks {
     margin-left: 50px;
     font-size: 2.0rem;
     line-height: 40px;
 }
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -263,6 +269,7 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
+
 @media (max-width: 800px) {
     .content .controle {
         flex-direction: row;
@@ -277,8 +284,8 @@ section.content p {
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
-    } 
-    section.content .texts .icons img{
+    }
+    section.content .texts .icons img {
         width: 390px;
     }
     .content .go-top img {
@@ -294,6 +301,7 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
+        margin: 0 0 10px 0;
     }
     .content .controle a {
         justify-content: center;
@@ -304,29 +312,30 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot{
+    section.content .texts .bot {
         flex-direction: column;
     }
-    section.content .texts .bot p{
+    section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .bot svg{
+    section.content .texts .bot svg {
         width: 120px;
     }
-    section.content .texts{
+    section.content .texts {
         margin: 0;
     }
-    section.content .texts .bookmarks{
+    section.content .texts .bookmarks {
         margin-left: 25px;
     }
-    section.content .texts .icons img{
+    section.content .texts .icons img {
         width: 290px;
     }
-
     .content .go-top img {
         width: 30px;
     }
-}@media (max-width: 380px) {
+}
+
+@media (max-width: 380px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -344,32 +353,31 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot{
+    section.content .texts .bot {
         flex-direction: column;
     }
-    section.content .texts .bot p{
+    section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .bot svg{
+    section.content .texts .bot svg {
         width: 120px;
     }
-    section.content .texts{
+    section.content .texts {
         margin: 0;
     }
-    section.content .texts .icons img{
+    section.content .texts .icons img {
         width: 200px;
     }
-    section.content .texts .bookmarks{
+    section.content .texts .bookmarks {
         margin-left: 25px;
     }
     .content .go-top img {
         width: 30px;
     }
-    section.content .texts ul{
+    section.content .texts ul {
         margin: 0;
     }
 }
-
 
 @media (max-width: 425px) {
     html {

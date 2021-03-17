@@ -158,11 +158,13 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
+
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -170,6 +172,7 @@ section.content .texts .bot {
     padding: 30px;
     border-radius: 8px;
 }
+
 section.content .texts .equation {
     display: flex;
     align-items: center;
@@ -177,7 +180,8 @@ section.content .texts .equation {
     padding: 10px;
     border-radius: 8px;
 }
-section.content .texts .equation{
+
+section.content .texts .equation {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,28 +200,35 @@ section.content .texts .bot svg #ball-1 {
 section.content .texts .bot svg #ball-2 {
     animation: ball-2 2s ease-in-out infinite;
 }
+
 section.content .texts .bot p {
     margin-left: 20px;
 }
+
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-section.content .texts .icons{
+
+section.content .texts .icons {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-section.content .texts .icons img{
+
+section.content .texts .icons img {
     width: 470px;
 }
-section.content .texts ul{
+
+section.content .texts ul {
     margin-left: 35px;
     font-size: 2.0rem;
     line-height: 40px;
 }
-section.content .texts .equation{
+
+section.content .texts .equation {
     align-items: center;
 }
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -278,6 +289,7 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
+
 @media (max-width: 800px) {
     .content .controle {
         flex-direction: row;
@@ -292,8 +304,8 @@ section.content p {
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
-    } 
-    section.content .texts .icons img{
+    }
+    section.content .texts .icons img {
         width: 390px;
     }
     .content .go-top img {
@@ -309,6 +321,7 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
+        margin: 0 0 10px 0;
     }
     .content .controle a {
         justify-content: center;
@@ -319,25 +332,24 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .bot{
+    section.content .texts .bot {
         flex-direction: column;
     }
-    section.content .texts .bot p{
+    section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .bot svg{
+    section.content .texts .bot svg {
         width: 120px;
     }
-    section.content .texts{
+    section.content .texts {
         margin: 0;
     }
-    section.content .texts .text .icons img{
+    section.content .texts .text .icons img {
         width: 150px;
     }
     .content .go-top img {
         width: 30px;
     }
-    
 }
 
 @media (max-width: 425px) {

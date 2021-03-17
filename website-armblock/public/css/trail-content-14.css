@@ -309,6 +309,7 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
+        margin: 0 0 10px 0;
     }
     .content .controle a {
         justify-content: center;

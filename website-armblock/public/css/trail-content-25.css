@@ -159,35 +159,43 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
+
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
 
-section.content .texts .text{
+section.content .texts .text {
     font-size: 1.7rem;
 }
-section.content .texts .blue{
+
+section.content .texts .blue {
     color: var(--main-blue-hover);
 }
-section.content .texts .instruction p{
+
+section.content .texts .instruction p {
     margin-left: 20px;
 }
-section.content .texts .div{
+
+section.content .texts .div {
     font-size: 1.7rem;
 }
-section.content .texts .div .red{
+
+section.content .texts .div .red {
     color: var(--red-div);
 }
-section.content .texts .icons{
+
+section.content .texts .icons {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-section.content .texts .icons img{
+
+section.content .texts .icons img {
     width: 350px;
 }
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -249,7 +257,6 @@ section.content p {
     }
 }
 
-
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -258,6 +265,7 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
+        margin: 0 0 10px 0;
     }
     .content .controle a {
         justify-content: center;
@@ -268,16 +276,17 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts{
+    section.content .texts {
         margin: 0;
     }
-    section.content .texts .icons img{
+    section.content .texts .icons img {
         width: 250px;
     }
     .content .go-top img {
         width: 30px;
     }
 }
+
 @media (max-width: 320px) {
     .content .controle {
         flex-direction: column;
@@ -296,10 +305,10 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts{
+    section.content .texts {
         margin: 0;
     }
-    section.content .texts .icons img{
+    section.content .texts .icons img {
         width: 200px;
     }
     .content .go-top img {
