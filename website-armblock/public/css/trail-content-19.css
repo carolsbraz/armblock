@@ -164,21 +164,52 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts .text{
+
+section.content .texts .bot {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-bot);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+section.content .texts .bot svg {
+    width: 150px;
+}
+
+section.content .texts .bot svg #ball-1 {
+    animation: ball-1 2s ease-in-out infinite;
+}
+
+section.content .texts .bot svg #ball-2 {
+    animation: ball-2 2s ease-in-out infinite;
+}
+
+section.content .texts .bot svg #ball-3 {
+    animation: ball-3 2s ease-in-out infinite;
+}
+
+section.content .texts .bot p {
+    margin-left: 20px;
+}
+
+section.content .texts .icons {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    text-align: justify;
 }
 
-section.content .icons{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+section.content .texts .icons svg {
+    width: 600px;
 }
 
-section.content .icons img{
-    width: 150px;
+section.content .texts ul {
+    margin-left: 35px;
+    font-size: 2.0rem;
+    line-height: 40px;
+}
+
+section.content .texts .equation {
     align-items: center;
 }
 
@@ -188,6 +219,14 @@ section.content p {
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
+
+section.content p {
+    font-size: 2.0rem;
+    text-align: justify;
+    line-height: 40px;
+    margin: 20px 0 20px 0;
+}
+
 .content .go-top {
     display: flex;
     justify-content: center;
@@ -203,6 +242,12 @@ section.content p {
 @media (max-width: 1024px) {
     html {
         font-size: 55%;
+    }
+}
+
+@media (max-width: 1000px) {
+    section.content {
+        padding: 50px 50px
     }
 }
 
@@ -229,7 +274,30 @@ section.content p {
     }
 }
 
-@media (max-width: 661px) {
+@media (max-width: 800px) {
+    .content .controle {
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .icons img {
+        width: 390px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -237,12 +305,13 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
+        margin: 0 0 10px 0;
     }
     .content .controle a {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 20px 0 10px 0;
+        margin: 10px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
@@ -250,24 +319,17 @@ section.content p {
     section.content .texts .bot {
         flex-direction: column;
     }
-    section.content .texts .bot svg {
-        width: 220px;
-    }
     section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .curiosity {
-        flex-direction: column;
+    section.content .texts .bot svg {
+        width: 120px;
     }
-    section.content .texts .curiosity svg {
-        width: 220px;
-    }
-    section.content .texts .curiosity .text {
+    section.content .texts {
         margin: 0;
     }
-    section.content .texts .curiosity .text h2 {
-        text-align: center;
-        margin-top: 20px
+    section.content .texts .text .icons img {
+        width: 150px;
     }
     .content .go-top img {
         width: 30px;
@@ -283,14 +345,6 @@ section.content p {
     }
     section.content {
         padding: 25px 25px;
-    }
-    .icons{
-        flex-direction: column;
-        align-items: center;
-
-    }
-    section.content .icons .icon-meio{
-        margin: 30px 0;
     }
 }
 

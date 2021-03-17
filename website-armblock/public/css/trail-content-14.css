@@ -158,63 +158,45 @@ section.content h1 img {
 section.content h1 {
     font-size: 3rem;
 }
-
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
-
-section.content .texts .bot {
+section.content .texts .text1 .arm {
+    display: flex;
+}
+section.content .texts .text1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+section.content .texts .text2{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: justify;
+}
+section.content .texts .image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+section.content .texts .text1 img{
+    display: flex;
+    width: 150px;
+    
+}
+section.content .texts .image img{
+    display: flex;
+    width: 190px;
+    align-items: center;
+}
+section.content .texts .text1 .arm .photo{
     display: flex;
     align-items: center;
-    background-color: var(--blue-bot);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-section.content .texts .bot svg {
-    width: 350px;
-}
-
-section.content .texts .bot svg #ball-1 {
-    animation: ball-1 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-2 {
-    animation: ball-2 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-
-section.content .texts .bot p {
-    margin-left: 20px;
-}
-
-section.content .texts .icons {
-    display: flex;
-    width: 100%;
-}
-
-section.content .texts .icons .flex {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly
-}
-
-section.content .texts .icons svg {
-    width: 100px;
-    height: 130px;
-}
-
-section.content .texts .icons .flex .icon svg #led-red {
-    animation: led-red 2s linear infinite;
-}
-
-section.content .texts .icons .flex .icon svg #led-blue {
-    animation: led-blue 2s linear infinite;
 }
 
 section.content p {
@@ -223,14 +205,6 @@ section.content p {
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
-
-section.content p {
-    font-size: 2.0rem;
-    text-align: justify;
-    line-height: 40px;
-    margin: 20px 0 20px 0;
-}
-
 .content .go-top {
     display: flex;
     justify-content: center;
@@ -278,28 +252,6 @@ section.content p {
     }
 }
 
-@media (max-width: 1024px) {
-    .content .controle {
-        flex-direction: row;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .bot svg {
-        width: 350px
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
 
 @media (max-width: 450px) {
     .content .controle {
@@ -309,43 +261,42 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
-        margin: 0 0 10px 0;
     }
     .content .controle a {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 10px 0 10px 0;
+        margin: 20px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
+    section.content .texts .arm{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0;
+    }
+    section.content .texts .arm p {
+        line-height: 40px;
+    }
+    section.content .texts .arm svg{
+        width: 130px;    
+        margin-left: 10px;
+    }
     section.content .texts .bot {
         flex-direction: column;
-    }
-    section.content .texts .bot p {
         margin: 0;
     }
     section.content .texts .bot svg {
-        width: 140px
+        width: 120px;
     }
-    section.content .texts .icons {
-        flex-direction: column;
-        align-items: center;
-    }
-    section.content .texts .icons .flex {
-        flex-direction: column;
-        align-items: center;
-    }
-    section.content .texts .icons svg {
+    section.content .texts .arm img {
         width: 150px;
-        margin-bottom: 30px;
     }
     .content .go-top img {
         width: 30px;
     }
 }
-
 @media (max-width: 425px) {
     html {
         font-size: 45%;
@@ -397,26 +348,11 @@ section.content p {
     }
 }
 
-@keyframes led-red {
-    0% {
-        opacity: 0.3;
+@keyframes int {
+    from {
+        transform: scale(0.8)
     }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.3;
-    }
-}
-
-@keyframes led-blue {
-    0% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.3;
+    to {
+        transform: scale(1)
     }
 }

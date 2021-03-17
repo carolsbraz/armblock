@@ -159,50 +159,43 @@ section.content h1 {
     font-size: 3rem;
 }
 
-section.content h2 {
-    text-align: center;
-    width: 100%;
-}
-
-section.content h2 img {
-    margin-right: 30px;
-}
-
-section.content h2 {
-    font-size: 2rem;
-}
-
 section.content p.sub {
     font-size: 2.5rem;
     font-weight: 400px;
     text-align: center;
 }
 
-section.content .texts .icons {
-    align-items: center;
+section.content .texts .bot {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue-bot);
+    padding: 30px;
+    border-radius: 8px;
 }
 
-section.content .texts .icons .p {
-    font-size: 1rem;
+section.content .texts .bot svg {
+    width: 120px;
+    margin-right: 20px;
 }
 
-section.content .texts .icons svg {
-    width: 350px;
+section.content .texts .bot svg #ball-1 {
+    animation: ball-1 2s ease-in-out infinite;
 }
 
-section.content .texts ul {
-    margin-left: 35px;
-    font-size: 2.0rem;
-    line-height: 40px;
+section.content .texts .bot svg #ball-2 {
+    animation: ball-2 2s ease-in-out infinite;
 }
 
-section.content p {
-    font-size: 2.0rem;
-    text-align: justify;
-    line-height: 40px;
-    margin: 20px 0 20px 0;
+section.content .texts .bot svg #ball-3 {
+    animation: ball-3 2s ease-in-out infinite;
+}
+
+section.content .texts .bot p {
+    margin-left: 20px;
+}
+
+section.content .texts .imagem {
+    width: 800px;
 }
 
 section.content p {
@@ -224,15 +217,51 @@ section.content p {
 
 /* responsividade */
 
+@media (max-width: 1085px) {
+    html {
+        font-size: 55%;
+    }
+    section.content .texts .imagem {
+        width: 580px;
+    }
+}
+
 @media (max-width: 1024px) {
     html {
         font-size: 55%;
     }
+    section.content {
+        padding: 100px 100px;
+    }
+    section.content .texts .imagem {
+        width: 530px;
+    }
+    section.content .texts .imagem2 {
+        width: 550px;
+    }
 }
 
-@media (max-width: 1000px) {
-    section.content {
-        padding: 50px 50px
+@media (max-width: 982px) {
+    html {
+        font-size: 55%;
+    }
+    section.content .texts .bot svg {
+        width: 160px;
+    }
+    section.content .texts .bot {
+        flex-direction: column;
+    }
+    section.content .texts .imagem {
+        width: 400px;
+    }
+    section.content .texts .imagem2 {
+        width: 500px;
+    }
+}
+
+@media (max-width: 825px) {
+    html {
+        font-size: 45%;
     }
 }
 
@@ -240,8 +269,8 @@ section.content p {
     html {
         font-size: 50%;
     }
-    header .brand img {
-        width: 50px;
+    section.content {
+        padding: 50px 50px;
     }
     header {
         justify-content: center;
@@ -257,32 +286,24 @@ section.content p {
         text-align: center;
         margin: 20px 0 0 0;
     }
-}
-
-@media (max-width: 1024px) {
-    .content .controle {
-        flex-direction: row;
-        margin-top: 15px;
-        margin-bottom: 25px;
+    section.content .texts .imagem {
+        width: 320px;
     }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .icons img {
-        width: 500px;
-    }
-    .content .go-top img {
-        width: 30px;
+    section.content .texts .imagem2 {
+        width: 400px;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 766px) {
+    div.blue-background {
+        height: 70vh;
+    }
+    header .brand img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 661px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -290,7 +311,78 @@ section.content p {
     }
     .content .controle .summary {
         order: -1;
-        margin: 0 0 10px 0;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 20px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .bot {
+        flex-direction: column;
+    }
+    section.content .texts .bot svg {
+        width: 220px;
+    }
+    section.content .texts .bot p {
+        margin: 0;
+    }
+    section.content .texts .curiosity {
+        flex-direction: column;
+    }
+    section.content .texts .curiosity svg {
+        width: 220px;
+    }
+    section.content .texts .curiosity .text {
+        margin: 0;
+    }
+    section.content .texts .curiosity .text h2 {
+        text-align: center;
+        margin-top: 20px
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 45%;
+    }
+    section.content .texts .bot svg {
+        width: 120px;
+    }
+    div.blue-background {
+        height: 70vh;
+    }
+    section.content {
+        padding: 25px 25px;
+    }
+    section.content .texts .imagem {
+        width: 250px;
+    }
+    section.content .texts .imagem2 {
+        width: 300px;
+    }
+}
+
+@media (max-width: 424px) {
+    section.content .texts .imagem {
+        width: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
     }
     .content .controle a {
         justify-content: center;
@@ -304,64 +396,23 @@ section.content p {
     section.content .texts .bot {
         flex-direction: column;
     }
-    section.content .texts .bot p {
-        margin: 0;
+    section.content .texts .imagem2 {
+        width: 280px;
     }
-    section.content .texts .bot svg {
-        width: 120px;
+}
+
+@media (max-width: 374px) {
+    section.content .texts .imagem {
+        width: 200px;
     }
-    section.content .texts {
-        margin: 0;
-    }
-    section.content .texts .icons img {
-        width: 290px;
-    }
-    .content .go-top img {
-        width: 30px;
+    div.blue-background {
+        height: 60vh;
     }
 }
 
 @media (max-width: 320px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts {
-        margin: 0;
-    }
-    section.content .texts .icons p {
-        font-size: 12px;
-    }
-    section.content .texts .icons img {
-        width: 200px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 425px) {
-    html {
-        font-size: 45%;
-    }
-    div.blue-background {
-        height: 70vh;
-    }
-    section.content {
-        padding: 25px 25px;
+    section.content .texts .imagem2 {
+        width: 220px;
     }
 }
 

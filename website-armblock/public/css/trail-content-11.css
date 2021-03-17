@@ -159,17 +159,41 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
+section.content .texts .bot {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    background-color: var(--blue-bot);
+    padding: 30px;
+    border-radius: 8px;
+}
+section.content .texts .bot svg {
+    width: 220px;
+    margin-right: 20px;
+}
+section.content .texts .bot svg #ball-1 {
+    animation: ball-1 2s ease-in-out infinite;
+}
+
+section.content .texts .bot svg #ball-2 {
+    animation: ball-2 2s ease-in-out infinite;
+}
+
+section.content .texts .bot svg #ball-3 {
+    animation: ball-3 2s ease-in-out infinite;
+}
 section.content .texts .legend{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: justify;
 }
+
 section.content .texts .legend p{
     font-size: 15px;
 }
 section.content .texts .legend img{
-    width: 350px;
+    width: 400px;
 }
 section.content p {
     font-size: 2.0rem;
@@ -230,11 +254,11 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
+
+@media (max-width: 820px) {
+    .content .controle {
 <<<<<<< Updated upstream
 =======
-
-@media (max-width: 1024px) {
-    .content .controle {
         align-items: center;
         margin-top: 15px;
         margin-bottom: 25px;
@@ -246,54 +270,28 @@ section.content p {
         justify-content: center;
     }
     section.content .texts .bot {
+>>>>>>> Stashed changes
         flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 25px;
     }
-    section.content .texts .bot p{
-        margin: 0;
+    
+    .content .controle a {
+        justify-content: center;
     }
-
-    section.content .texts .bot svg {
-        width: 220px;
-        margin-right: 20px;
+    .content .controle .back {
+        margin: 10px 0 10px 0;
     }
-    section.content .texts .articulated .legend{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        margin-right: 60px;
-        margin-left: 60px;
+    .content .controle .next {
+        margin: 10px 0 10px 0;
     }
-    section.content .texts .articulated p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend p{
-        font-size: 15px;
-    }
-    section.content .texts .articulated .legend img{
-        width: 350px;
-    }
-    section.content .texts .articulated .legend2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-    }
-    section.content .texts .scara p{
-        margin: 0;
-    }
-    section.content .texts .articulated .legend2 p{
-        font-size: 15px;
-    }
-    section.content .texts .articulated .legend2 img{
-        width: 350px;
+    section.content .texts .legend img{
+        width: 300px;
     }
     .content .go-top img {
         width: 30px;
     }
 }
-
->>>>>>> Stashed changes
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -307,22 +305,27 @@ section.content p {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 10px 0 10px 0;
+        margin: 20px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .legend{
-        flex-direction: column;
+    section.content .texts .bot{
         margin: 0;
+        flex-direction: column;
+    }
+    section.content .texts .bot svg{
+        width: 120px;
     }
     section.content .texts .legend img{
         width: 200px;
     }
+
     .content .go-top img {
         width: 30px;
     }
 }
+
 
 @media (max-width: 425px) {
     html {

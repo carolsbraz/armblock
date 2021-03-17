@@ -164,54 +164,22 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-
-section.content .texts .icons {
-    align-items: center;
+section.content .texts .text{
     display: flex;
     flex-direction: column;
+    align-items: left;
+    text-align: justify;
 }
 
-section.content .texts .icons img {
-    width: 530px;
-}
-
-section.content .texts .icons .legend p {
-    font-size: 2rem;
-}
-
-section.content .texts ul {
-    margin-left: 35px;
-    font-size: 2.0rem;
-    line-height: 40px;
-    margin-bottom: 25px;
-}
-
-section.content .texts .bot {
+section.content .icons{
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+section.content .icons img{
+    width: 150px;
     align-items: center;
-    background-color: var(--blue-bot);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-section.content .texts .bot svg {
-    width: 90px;
-}
-
-section.content .texts .bot svg #ball-1 {
-    animation: ball-1 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-2 {
-    animation: ball-2 2s ease-in-out infinite;
-}
-
-section.content .texts .bot svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-
-section.content .texts .bot p {
-    margin-left: 20px;
 }
 
 section.content p {
@@ -220,14 +188,6 @@ section.content p {
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
-
-section.content p {
-    font-size: 2.0rem;
-    text-align: justify;
-    line-height: 40px;
-    margin: 20px 0 20px 0;
-}
-
 .content .go-top {
     display: flex;
     justify-content: center;
@@ -243,12 +203,6 @@ section.content p {
 @media (max-width: 1024px) {
     html {
         font-size: 55%;
-    }
-}
-
-@media (max-width: 1000px) {
-    section.content {
-        padding: 50px 50px
     }
 }
 
@@ -275,43 +229,7 @@ section.content p {
     }
 }
 
-@media (max-width: 450px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-        margin: 0 0 10px 0;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .icons img {
-        width: 270px;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-    }
-    section.content .texts .bot p {
-        margin: 0;
-    }
-    section.content .texts .bot svg {
-        width: 120px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 375px) {
+@media (max-width: 661px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -324,7 +242,7 @@ section.content p {
         justify-content: center;
     }
     .content .controle .back {
-        margin: 10px 0 10px 0;
+        margin: 20px 0 10px 0;
     }
     .content .controle .next {
         margin: 10px 0 10px 0;
@@ -332,14 +250,24 @@ section.content p {
     section.content .texts .bot {
         flex-direction: column;
     }
+    section.content .texts .bot svg {
+        width: 220px;
+    }
     section.content .texts .bot p {
         margin: 0;
     }
-    section.content .texts .bot svg {
-        width: 120px;
+    section.content .texts .curiosity {
+        flex-direction: column;
     }
-    section.content .texts .icons img {
-        width: 200px;
+    section.content .texts .curiosity svg {
+        width: 220px;
+    }
+    section.content .texts .curiosity .text {
+        margin: 0;
+    }
+    section.content .texts .curiosity .text h2 {
+        text-align: center;
+        margin-top: 20px
     }
     .content .go-top img {
         width: 30px;
@@ -355,6 +283,14 @@ section.content p {
     }
     section.content {
         padding: 25px 25px;
+    }
+    .icons{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    section.content .icons .icon-meio{
+        margin: 30px 0;
     }
 }
 
