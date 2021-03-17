@@ -131,8 +131,15 @@ server.get("/trail-content-24", (req, res) => {
 server.get("/trail-content-25", (req, res) => {
     res.sendFile(__dirname + "/views/trail-content-25.html")
 })
+server.get("/trail-content-26", (req, res) => {
+    res.sendFile(__dirname + "/views/trail-content-26.html")
+})
 server.get("/tutorial", (req, res) => {
     res.sendFile(__dirname + "/views/video.html")
+})
+
+server.get("/tutorial-prog", (req, res) => {
+    res.sendFile(__dirname + "/views/tutorial-prog.html")
 })
 
 server.get("/operational-programming", (req, res) => {

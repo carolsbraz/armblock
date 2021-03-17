@@ -87,7 +87,7 @@ header .menu a.link {
 }
 
 header .menu a.link:hover {
-    color: rgb(141, 140, 78)
+    color: rgb(78, 100, 141)
 }
 
 header .change-button {
@@ -551,6 +551,14 @@ section.container .selected-block {
     header .change-button .rotine {
         width: 130px;
     }
+    header .menu .link-menu {
+        text-align: center;
+        margin: 0;
+    }
+    header .menu .link-menu .link {
+        text-align: center;
+        margin: 0;
+    }
     section.container .left-board {
         width: 25%
     }
@@ -606,7 +614,10 @@ section.container .selected-block {
         flex-direction: column;
     }
     header .menu .link-menu {
-        margin: 20px 0 0 0;
+        margin: 0 0 10px 0;
+    }
+    header .menu .link-menu .link {
+        margin: 0 0 0 0;
     }
     header .change-button {
         margin: 20px 0 20px 0;

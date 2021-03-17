@@ -24,13 +24,16 @@
         </div>
 
         <div class="menu">
-            <%if (logado == false) { %>
-                <a href="/cadastro-login" class="btn-login link">
+            <div class="link-menu"><a class="link" href="/img/armblock-setup.exe" download="ArmBlock Desktop (ver. 1.0.0).exe">Baixar app desktop</a></div>
+            <div class="link-menu">
+                <%if (logado == false) { %>
+                    <a href="/cadastro-login" class="btn-login link">
                                 Fazer login</a>
-                <% } else { %>
-                    <a href="/sair-conta" class="btn-login link">Sair de <%= user %> </a>
-                    <% }%>
-                        <div class="link-menu"><a href="/" class="link">Voltar ao menu</a></div>
+                    <% } else { %>
+                        <a href="/sair-conta" class="btn-login link">Sair de <%= user %> </a>
+                        <% }%>
+            </div>
+            <div class="link-menu"><a href="/" class="link">Voltar ao menu</a></div>
 
         </div>
     </header>
@@ -225,7 +228,7 @@
                     </div>
                     <div class="body">
                         <p>Os dados foram enviados com sucesso! Verifique se você ativou a leitura de comandos na aplicação desktop do ArmBlock! Se não sabe o que fazer agora, acesse o link abaixo:</p>
-                        <a href="/tutorial" class="tutorial">Tutorial de Programação em Blocos</a>
+                        <a href="/tutorial-prog" class="tutorial">Tutorial de Programação em Blocos</a>
                     </div>
                 </div>
                 <% } %>
