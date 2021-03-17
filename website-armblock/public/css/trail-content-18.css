@@ -163,23 +163,6 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-section.content .texts ,.icons{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-section.content .texts .icons img{
-    width: 530px;
-}
-section.content .texts .icons .legend p {
-    font-size: 2rem;
-}
-section.content .texts ul{
-    margin-left: 35px;
-    font-size: 2.0rem;
-    line-height: 40px;
-    margin-bottom: 25px;
-}
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -189,7 +172,7 @@ section.content .texts .bot {
 }
 
 section.content .texts .bot svg {
-    width: 90px;
+    width: 150px;
 }
 
 section.content .texts .bot svg #ball-1 {
@@ -206,6 +189,22 @@ section.content .texts .bot svg #ball-3 {
 
 section.content .texts .bot p {
     margin-left: 20px;
+}
+section.content .texts .icons{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+section.content .texts .icons svg{
+    width: 600px;
+}
+section.content .texts ul{
+    margin-left: 35px;
+    font-size: 2.0rem;
+    line-height: 40px;
+}
+section.content .texts .equation{
+    align-items: center;
 }
 section.content p {
     font-size: 2.0rem;
@@ -267,7 +266,28 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
-
+@media (max-width: 800px) {
+    .content .controle {
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    } 
+    section.content .texts .icons img{
+        width: 390px;
+    }
+    .content .go-top img {
+        width: 30px;
+    }
+}
 
 @media (max-width: 450px) {
     .content .controle {
@@ -287,9 +307,6 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts .icons img{
-        width: 270px;
-    }
     section.content .texts .bot{
         flex-direction: column;
     }
@@ -299,43 +316,16 @@ section.content p {
     section.content .texts .bot svg{
         width: 120px;
     }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-@media (max-width: 375px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .bot{
-        flex-direction: column;
-    } 
-    section.content .texts .bot p{
+    section.content .texts{
         margin: 0;
     }
-    section.content .texts .bot svg{
-        width: 120px;
-    }
-    section.content .texts .icons img{
-        width: 200px;
+    section.content .texts .text .icons img{
+        width: 150px;
     }
     .content .go-top img {
         width: 30px;
     }
+    
 }
 
 @media (max-width: 425px) {

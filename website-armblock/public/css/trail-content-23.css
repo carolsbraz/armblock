@@ -195,16 +195,13 @@ section.content .texts .icons{
     display: flex;
     flex-direction: column;
 }
-section.content .texts .icons svg{
+section.content .texts .icons img{
     width: 600px;
 }
-section.content .texts ul{
-    margin-left: 35px;
+section.content .texts .bookmarks{
+    margin-left: 50px;
     font-size: 2.0rem;
     line-height: 40px;
-}
-section.content .texts .equation{
-    align-items: center;
 }
 section.content p {
     font-size: 2.0rem;
@@ -319,14 +316,60 @@ section.content p {
     section.content .texts{
         margin: 0;
     }
-    section.content .texts .text .icons img{
-        width: 150px;
+    section.content .texts .bookmarks{
+        margin-left: 25px;
+    }
+    section.content .texts .icons img{
+        width: 290px;
+    }
+
+    .content .go-top img {
+        width: 30px;
+    }
+}@media (max-width: 380px) {
+    .content .controle {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .content .controle .summary {
+        order: -1;
+    }
+    .content .controle a {
+        justify-content: center;
+    }
+    .content .controle .back {
+        margin: 10px 0 10px 0;
+    }
+    .content .controle .next {
+        margin: 10px 0 10px 0;
+    }
+    section.content .texts .bot{
+        flex-direction: column;
+    }
+    section.content .texts .bot p{
+        margin: 0;
+    }
+    section.content .texts .bot svg{
+        width: 120px;
+    }
+    section.content .texts{
+        margin: 0;
+    }
+    section.content .texts .icons img{
+        width: 200px;
+    }
+    section.content .texts .bookmarks{
+        margin-left: 25px;
     }
     .content .go-top img {
         width: 30px;
     }
-    
+    section.content .texts ul{
+        margin: 0;
+    }
 }
+
 
 @media (max-width: 425px) {
     html {
