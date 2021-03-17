@@ -180,13 +180,12 @@ server.get("/block-programming", (req, res) => {
                     porta: 'COM1',
                     configuracoes: 'conf&&&&&&&',
                     comandos: 'prog&0&',
-                    movimentos: 'mov&1&&&'
+                    movimentos: "mov&1&::"
                 })
                 configuracoes = 'conf&&&&&&&'
                 commands = 'prog&0&'
                 port = 'COM1'
-                mov = "mov&1&&&"
-
+                mov = "mov&1&::"
             }
             var arrayConf = configuracoes.split('&');
             arrayConf.shift();
@@ -207,7 +206,7 @@ server.get("/block-programming", (req, res) => {
         let conf = "conf&&&&&&&"
         var arrayConf = conf.split('&');
         arrayConf.shift();
-        mov = "mov&1&&&"
+        mov = "mov&1&::"
         var arrayMov = mov.split('&')
         arrayMov.shift();
         arrayMov.shift();
@@ -241,12 +240,12 @@ server.post("/autenticar-user", (req, res) => {
                                 porta: 'COM1',
                                 configuracoes: 'conf&&&&&&&',
                                 comandos: 'prog&0&',
-                                movimentos: 'mov&1&&&'
+                                movimentos: "mov&1&::"
                             })
                             configuracoes = 'conf&&&&&&&'
                             commands = 'prog&0&'
                             port = 'COM1'
-                            mov = "mov&1&&&"
+                            mov = "mov&1&::"
                             firebase.database().ref(`usuarios/` + user.uid + "/interacao").set({
                                 int1: '90',
                                 int2: '45',
@@ -299,7 +298,7 @@ server.post("/autenticar-user", (req, res) => {
                                             porta: 'COM1',
                                             configuracoes: 'conf&&&&&&&',
                                             comandos: 'prog&0&',
-                                            movimentos: 'mov&1&&&'
+                                            movimentos: "mov&1&::"
                                         })
                                         configuracoes = 'conf&&&&&&&'
                                         commands = 'prog&0&'
@@ -350,7 +349,7 @@ server.get("/sair-conta", (req, res) => {
         let conf = "conf&&&&&&&"
         var arrayConf = conf.split('&');
         arrayConf.shift();
-        mov = "mov&1&&&"
+        mov = "mov&1&::"
         var arrayMov = mov.split('&')
         arrayMov.shift();
         arrayMov.shift();
