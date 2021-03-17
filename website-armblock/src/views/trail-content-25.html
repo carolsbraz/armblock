@@ -38,81 +38,71 @@
         <div class="texts" data-anime="up">
             <p>Antes de iniciar o programa você irá colocar uma observação sobre o nome do seu programa. </p>
 
-            <p class="div"> 
-                <span class="red"> 1 // Programa:</span> Pisca pisca
+            <p class="div">
+                <span class="red">// Programa:</span> Pisca pisca
                 <br>
-                <span class="red">2 // Autor :</span> (Seu Nome)
+                <span class="red">// Autor :</span> (Seu Nome)
             </p>
 
             <p>
-                 Comece uma linha com barras duplas “// ” e tudo o que vier depois nessa linha será tratado como um comentário.
-                 Após os comentários, vem a estrutura do setup(). É nela que definimos que o pino 11 do Arduino será utilizado como saída, para servir como fonte de energia para o circuito.
+                Se iniciar uma linha com barras duplas “// ”, tudo o que vier depois nessa linha será tratado como um comentário. Após os comentários, vem a estrutura do setup(). É nela que definimos que o pino 11 do Arduíno será utilizado como saída, para servir como
+                fonte de energia para o circuito.
             </p>
 
-           <p class="div">
-                <span class="blue">void</span> setup()
+            <p class="div">
+                <span class="blue">void</span> setup(){
                 <br>
-                {
+                <span class="red">//Define a porta do led como saida</span>
+                <br> pinMode(13, OUTPUT);
+                <br> }
                 <br>
-                <span class="red">//Define a porta do led como saida</span> 
-                <br>
-                pinMode(11, OUTPUT);
-                <br>
-                }
-                <br>
-           </p>
+            </p>
 
-           <p>
-               Por fim, temos o loop(), que contém as instruções para apagar o LED, e também o intervalo entre as ações:
+            <p>
+                Por fim, temos o loop(), que contém as instruções para apagar o LED, e também o intervalo entre as ações:
                 <br>
-           </p>
+            </p>
 
-           <p class="div">
-                <span class="blue">void</span> loop()
-                <br>
-                {
+            <p class="div">
+                <span class="blue">void</span> loop(){
                 <br>
                 <span class="red">//Acende o led</span>
+                <br> digitalWrite(13, HIGH);
                 <br>
-                digitalWrite(11, HIGH);
                 <br>
-                <br>
-                
+
                 <span class="red">//Aguarda intervalo de tempo em milissegundos</span>
+                <br> delay(1000);
                 <br>
-                delay(1000);
                 <br>
-                <br>
-                
+
                 <span class="red">//Apaga o led</span>
+                <br> digitalWrite(13, LOW);
                 <br>
-                digitalWrite(11, LOW);
                 <br>
-                <br>
-                
+
                 <span class="red">//Aguarda intervalo de tempo em milissegundos</span>
-                <br>
-                delay(1000);
-                <br>
-                }
-           </p>
+                <br> delay(1000);
+                <br> }
+            </p>
 
-           <p>
-                A linha do código contendo digitalWrite(11, HIGH);, liga o pino 11, acendendo o led. O comando delay(1000);, especifica o intervalo, em milésimos de segundos (milissegundos), no qual o programa fica parado antes de avançar para a próxima linha. Quanto maior esse número, mais tempo o programa vai esperar para passar para a próxima linha.
-           </p>
+            <p>
+                A linha do código contendo digitalWrite(13, HIGH);, liga o pino 13, acendendo o led. O comando delay(1000);, especifica o intervalo, em milésimos de segundos (milissegundos), no qual o programa fica parado antes de avançar para a próxima linha. Quanto
+                maior esse número, mais tempo o programa vai esperar para passar para a próxima linha.
+            </p>
 
-           <p>O comando digitalWrite(11, LOW);, apaga o LED, desligando o pino 11, e depois ocorre uma nova parada (delay) no programa. Após essa espera, o processo é então reiniciado, voltando para o início do loop().
-           </p>
+            <p>O comando digitalWrite(13, LOW);, apaga o LED, desligando o pino 13, e depois ocorre uma nova parada (delay) no programa. Após essa espera, o processo é então reiniciado, voltando para o início do loop().
+            </p>
 
-           <p>
-            Você reparou que todo comando termina com um ponto e vírgula “;“? Ele é muito importante na programação porque define que o comando acabou ali. Se está faltando um “;” o programa não irá funcionar de jeito nenhum!
-           </p>
-           <br>
-            
-           <div class="icons">
-            <img src="/img/Arduino IDE codigo.png" alt="Arduino IDE código pisca">
+            <p>
+                Você reparou que todo comando termina com um ponto e vírgula “;“? Ele é muito importante na programação porque define que o comando acabou ali. Se está faltando um “;” o programa não irá funcionar corretamente!
+            </p>
             <br>
-           </div>
+
+            <div class="icons">
+                <img src="/img/Arduino IDE codigo.png" alt="Arduino IDE código pisca">
+                <br>
+            </div>
             <br>
             <div class="go-top">
                 <a href="#top"><img src="/img/up-arrow.svg" alt="icone da trilha" width="40px" id="up"></a>
