@@ -158,6 +158,17 @@
                 </div>
             </div>
 
+            <div class="error-message" id="conf-message">
+                <div class="header">
+                    <h3>Configurações inválidas!</h3>
+                    <a href="#" id="fechar-conf"><b>X</b></a>
+                </div>
+                <div class="body">
+                    <p>Existem campos de configurações não preenchidos.</p>
+
+                </div>
+            </div>
+
             <div class="limit-message" id="limit-message">
                 <div class="header">
                     <h3>Existem valores ultrapassando os limites.</h3>
@@ -170,21 +181,39 @@
                         <th></th>
                         <th>Juntas</th>
                         <th>Velocidade</th>
-                        <th>Atraso</th>
-
+                        <th>Motor</th>
                         <tr>
                             <td><b>Min</b></td>
-                            <td>5°</td>
+                            <td>0°</td>
                             <td>5 graus/seg</td>
-                            <td>1 segundo</td>
+                            <td>1</td>
                         </tr>
                         <tr>
                             <td><b>Máx</b></td>
                             <td>180°</td>
                             <td>100 graus/seg</td>
-                            <td>20 segundos</td>
+                            <td>6</td>
                         </tr>
                     </table>
+                </div>
+            </div>
+
+            <div class="limit-message" id="delay-message">
+                <div class="header">
+                    <h3>Existem valores de delay ultrapassando os limites.</h3>
+                    <a href="#" id="fechar-delay"><b>X</b></a>
+                </div>
+                <div class="body">
+                    <p>Por favor, confira seus dados nos campos em destaque e lembre-se de manter os valores conforme os limites abaixo:</p>
+                    <br>
+
+                    <p><b>Delay</b></p>
+                    <br>
+                    <p><b>Mínimo:</b> 1 segundo</p>
+
+                    <p><b>Máximo:</b> 20 segundos</p>
+
+
                 </div>
             </div>
 
@@ -221,7 +250,7 @@
                                                         <% } %>
 
                                                             <% if(arrayComands[0] == '4'){ %>
-                                                                <div class="block yellow motor"><span>(Movimento individual)</span><br>Mover o motor <input type="number" placeholder="motor" value="<%=arrayComands[1]%>">
+                                                                <div class="block yellow motor">Mover o motor <input type="number" placeholder="motor" value="<%=arrayComands[1]%>">
                                                                     <div class="drag">
                                                                         <div class="block blue" id="degres">Para <input type="number" placeholder="graus" value="<%=arrayComands[2]%>">°</div>
                                                                         <div class="block brown">Na velocidade: <input type="number" placeholder="velo..." value="<%=arrayComands[3]%>"> graus/seg</div>
@@ -267,12 +296,19 @@
                 <br>
                 <p class="undrag"><b>Movimentos individuais</b></p>
                 <br>
-                <div class="block yellow motor">Mover o motor <input type="number" placeholder="motor" class="error">
-                    <div class="drag">
-                        <div class="block blue" id="degres">Para <input type="number" placeholder="graus">°</div>
-                        <div class="block brown">Na velocidade: <input type="number" placeholder="velo..."> graus/seg</div>
-                    </div>
-                </div>
+
+                <% for (let i = 0; i < mov.length; i++){ %>
+
+                    <% var arrayMov = mov[i].split(':'); %>
+
+                        <div class="block yellow motor">Mover o motor <input type="number" placeholder="motor" value="<%=arrayMov[0]%>">
+                            <div class="drag">
+                                <div class="block blue" id="degres">Para <input type="number" placeholder="graus" value="<%=arrayMov[1]%>">°</div>
+                                <div class="block brown">Na velocidade: <input type="number" placeholder="velo..." value="<%=arrayMov[2]%>"> graus/seg</div>
+                            </div>
+                        </div>
+                        <% } %>
+
             </div>
             <div class="add-point">
                 <div class="button" id="add-button"><img src="/img/plus.svg" alt="" width="15px">

@@ -289,6 +289,10 @@ section.container .board .limit-message td {
     text-align: center;
 }
 
+section.container .board .limit-message p {
+    color: #b84400;
+}
+
 section.container .board .limit-message .header {
     display: flex;
     justify-content: space-between;
@@ -643,7 +647,10 @@ section.container .selected-block {
         flex-direction: column;
         justify-content: space-between;
     }
-    section.container .actions-buttons .delete {
+    section.container .board .actions-buttons .delete {
+        margin-bottom: 20px
+    }
+    section.container .board {
         margin-bottom: 20px
     }
 }
