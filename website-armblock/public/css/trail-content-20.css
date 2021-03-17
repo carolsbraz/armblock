@@ -165,8 +165,7 @@ section.content p.sub {
     text-align: center;
 }
 
-section.content .texts,
-.icons {
+section.content .texts .icons {
     align-items: center;
     display: flex;
     flex-direction: column;
