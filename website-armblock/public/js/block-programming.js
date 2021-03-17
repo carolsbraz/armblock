@@ -181,10 +181,6 @@ enviar.addEventListener('click', (event) => {
                     const limiteerror = document.getElementById('limit-message')
                     limiteerror.style.display = 'inline'
                     permissao = false
-
-                    if (parseInt(pos.value, 10) < 5 && parseInt(pos.value, 10) > 180) {
-                        pos.classList.add('error');
-                    }
                 }
 
             } else {
