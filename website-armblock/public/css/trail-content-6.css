@@ -189,6 +189,27 @@ section.content .texts text{
     text-align: justify;
     align-items: center;
 }
+section.content .texts .icons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+section.content .texts .icons svg{
+    width: 200px;
+}
+section.content .texts .icons img{
+    width: 200px;
+}
+section.content .texts .legend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+section.content .texts .legend p{
+    font-size: 15px;
+}
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -294,8 +315,8 @@ section.content p {
     section.content .texts .manipulator p {
         line-height: 40px;
     }
-    section.content .texts .manipulator svg{
-        width: 120px;
+    section.content .texts .icons svg{
+        width: 150px;
     }
     section.content .texts .bot {
         flex-direction: column;
