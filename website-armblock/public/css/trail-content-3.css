@@ -332,9 +332,11 @@ section.content p {
     }
     section.content .texts .bot {
         flex-direction: column;
+        margin: 0;
     }
     section.content .texts .bot svg {
         width: 80px;
+        margin: 0;
     }
     .content .go-top img {
         width: 30px;

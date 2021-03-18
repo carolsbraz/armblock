@@ -280,7 +280,6 @@ section.content p {
     }
     section.content .texts .bot {
         flex-direction: column;
-        margin: 0;
     }
     section.content .texts .bot svg {
         width: 90px;

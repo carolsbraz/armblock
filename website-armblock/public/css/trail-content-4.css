@@ -204,29 +204,6 @@ section.content .texts .sensors svg #led {
 section.content .texts p {
     margin-right: 90px;
 }
-section.content .texts .bot2 {
-    display: flex;
-    align-items: center;
-    background-color: var(--blue-bot);
-    padding: 30px;
-    border-radius: 8px;
-}
-section.content .texts .bot2 p {
-    margin-left: 20px;
-}
-section.content .texts .bot2 svg {
-    width: 110px;
-}
-section.content .texts .bot2 svg #ball-1 {
-    animation: ball-1 2s ease-in-out infinite;
-}
-section.content .texts .bot2 svg #ball-2 {
-    animation: ball-2 2s ease-in-out infinite;
-}
-section.content .texts .bot2 svg #ball-3 {
-    animation: ball-3 2s ease-in-out infinite;
-}
-
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -333,12 +310,13 @@ section.content p {
     }
     section.content .texts .bot {
         flex-direction: column;
+        margin: 0;
     }
     section.content .texts .bot svg {
-        width: 220px;
+        width: 100px;
     }
     section.content .texts .bot p {
-        margin: 20px;
+        margin: 0;
     }
     section.content .texts .sensors {
         flex-direction: column-reverse;
@@ -347,75 +325,7 @@ section.content p {
         margin: 0;
     }
     section.content .texts .sensors svg {
-        width: 220px;
-    }
-    section.content .texts .bot2 {
-        flex-direction: column;
-    }
-    section.content .texts .bot2 svg {
-        width: 220px;
-    }
-    section.content .texts .bot2 p {
-        margin: 0;
-    }
-    section.content .texts .bot2 .text .links {
-        font-size: 15px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 375px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-        align-items: center;
-    }
-    section.content .texts .bot svg {
-        width: 150px;
-    }
-    section.content .texts .bot p {
-        margin: 20px;
-    }
-    section.content .texts .sensors {
-        flex-direction: column-reverse;
-    }
-    section.content .texts .sensors .text p {
-        margin: 0;
-    }
-    section.content .texts .sensors svg {
-        width: 150px;
-    }
-    section.content .texts .bot2 {
-        flex-direction: column;
-        align-items: center;
-    }
-    section.content .texts .bot2 svg {
-        width: 150px;
-    }
-    section.content .texts .bot2 p {
-        margin: 0;
-    }
-    section.content .texts .bot2 .text .links {
-        font-size: 15px;
-    }
+        width: 180px;
     .content .go-top img {
         width: 30px;
     }

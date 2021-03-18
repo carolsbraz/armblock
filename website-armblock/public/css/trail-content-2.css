@@ -312,7 +312,7 @@ section.content p {
         width: 30px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -325,7 +325,7 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .bot svg {
-        width: 120px;
+        width: 100px;
     }
     section.content .texts .bot p {
         margin: 0;

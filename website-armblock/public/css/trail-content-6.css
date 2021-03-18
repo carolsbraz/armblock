@@ -323,7 +323,8 @@ section.content p {
         margin: 0;
     }
     section.content .texts .bot svg {
-        width: 120px;
+        width: 100px;
+        margin: 0;
     }
     .content .go-top img {
         width: 30px;

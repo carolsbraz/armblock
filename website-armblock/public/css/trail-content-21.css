@@ -304,7 +304,7 @@ section.content p {
         margin: 0;
     }
     section.content .texts .bot svg {
-        width: 120px;
+        width: 100px;
     }
     .content .go-top img {
         width: 30px;
@@ -329,6 +329,12 @@ section.content p {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
+    section.content .texts ul {
+        margin-left: 20px;
+    }
+    section.content .texts .icons img {
+        width: 220px;
+    }
     section.content .texts .bot {
         flex-direction: column;
     }
@@ -336,10 +342,7 @@ section.content p {
         margin: 0;
     }
     section.content .texts .bot svg {
-        width: 120px;
-    }
-    section.content .texts .icons img {
-        width: 200px;
+        width: 100px;
     }
     .content .go-top img {
         width: 30px;

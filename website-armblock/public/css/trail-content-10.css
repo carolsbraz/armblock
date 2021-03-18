@@ -286,13 +286,27 @@ section.content p {
     }
     section.content .texts .bot {
         flex-direction: column;
-        margin: 0;
+    }
+    section.content .texts .bot p {
+       margin-top: 20px;
+       margin-left: 0;
     }
     section.content .texts .bot svg {
-        width: 130px;
-    }
-    section.content .texts ul{
+        width: 100px;
         margin: 0;
+    }
+    section.content .texts .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+    section.content .texts .icons .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    section.content .texts .icons svg {
+        width: 130px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .content .go-top img {
         width: 30px;

@@ -257,20 +257,6 @@ section.content p {
 
 @media (max-width: 820px) {
     .content .controle {
-<<<<<<< Updated upstream
-=======
-        align-items: center;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        background-color: var(--secundary-blue);
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    section.content .texts .bot {
->>>>>>> Stashed changes
         flex-direction: row;
         margin-top: 15px;
         margin-bottom: 25px;
@@ -311,11 +297,11 @@ section.content p {
         margin: 10px 0 10px 0;
     }
     section.content .texts .bot{
-        margin: 0;
         flex-direction: column;
     }
     section.content .texts .bot svg{
-        width: 120px;
+        width: 100px;
+        margin: 0;
     }
     section.content .texts .legend img{
         width: 200px;

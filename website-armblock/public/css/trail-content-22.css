@@ -174,7 +174,7 @@ section.content .texts .bot {
 }
 
 section.content .texts .bot svg {
-    width: 120px;
+    width: 100px;
     margin-right: 20px;
 }
 
@@ -189,22 +189,15 @@ section.content .texts .bot svg #ball-2 {
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-
-section.content .texts .bot p {
-    margin-left: 20px;
-}
-
 section.content .texts .imagem {
     width: 800px;
 }
-
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
-
 .content .go-top {
     display: flex;
     justify-content: center;
@@ -244,12 +237,6 @@ section.content p {
 @media (max-width: 982px) {
     html {
         font-size: 55%;
-    }
-    section.content .texts .bot svg {
-        width: 160px;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
     }
     section.content .texts .imagem {
         width: 400px;
@@ -303,7 +290,7 @@ section.content p {
     }
 }
 
-@media (max-width: 661px) {
+@media (max-width: 425px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -325,47 +312,29 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .bot svg {
-        width: 220px;
+        width: 100px;
+        margin: 0;
     }
     section.content .texts .bot p {
         margin: 0;
-    }
-    section.content .texts .curiosity {
-        flex-direction: column;
-    }
-    section.content .texts .curiosity svg {
-        width: 220px;
-    }
-    section.content .texts .curiosity .text {
-        margin: 0;
-    }
-    section.content .texts .curiosity .text h2 {
-        text-align: center;
-        margin-top: 20px
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 425px) {
-    html {
-        font-size: 45%;
-    }
-    section.content .texts .bot svg {
-        width: 120px;
-    }
-    div.blue-background {
-        height: 70vh;
-    }
-    section.content {
-        padding: 25px 25px;
     }
     section.content .texts .imagem {
         width: 250px;
     }
     section.content .texts .imagem2 {
         width: 300px;
+    }
+}
+
+@media{
+    html {
+        font-size: 45%;
+    }
+    div.blue-background {
+        height: 70vh;
+    }
+    section.content {
+        padding: 25px 25px;
     }
 }
 
@@ -395,6 +364,13 @@ section.content p {
     }
     section.content .texts .bot {
         flex-direction: column;
+    }
+    section.content .texts .bot svg {
+        width: 100px;
+        margin: 0;
+    }
+    section.content .texts .bot p {
+        margin: 0;
     }
     section.content .texts .imagem2 {
         width: 280px;
