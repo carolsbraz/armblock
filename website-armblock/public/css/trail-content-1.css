@@ -262,38 +262,12 @@ section.content p {
     }
 }
 
-@media (max-width: 661px) {
-    .content .controle {
-        flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle .summary {
-        order: -1;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 20px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .bot {
-        flex-direction: column;
-    }
-    section.content .texts .bot svg {
-        width: 150px;
-    }
-    section.content .texts .bot p {
-        margin: 0;
-    }
+@media (max-width: 1024px) {
     section.content .texts .curiosity {
         flex-direction: column;
     }
     section.content .texts .curiosity svg {
-        width: 100px;
+        width: 90px;
     }
     section.content .texts .curiosity .text {
         margin: 0;
@@ -301,9 +275,6 @@ section.content p {
     section.content .texts .curiosity .text h2 {
         text-align: center;
         margin-top: 20px
-    }
-    .content .go-top img {
-        width: 30px;
     }
 }
 
