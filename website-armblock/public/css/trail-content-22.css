@@ -189,15 +189,18 @@ section.content .texts .bot svg #ball-2 {
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
+
 section.content .texts .imagem {
     width: 800px;
 }
+
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
     line-height: 40px;
     margin: 20px 0 20px 0;
 }
+
 .content .go-top {
     display: flex;
     justify-content: center;
@@ -290,7 +293,7 @@ section.content p {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -323,18 +326,6 @@ section.content p {
     }
     section.content .texts .imagem2 {
         width: 300px;
-    }
-}
-
-@media{
-    html {
-        font-size: 45%;
-    }
-    div.blue-background {
-        height: 70vh;
-    }
-    section.content {
-        padding: 25px 25px;
     }
 }
 
