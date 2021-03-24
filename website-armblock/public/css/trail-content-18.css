@@ -164,7 +164,6 @@ section.content p.sub {
     font-weight: 400px;
     text-align: center;
 }
-
 section.content .texts .bot {
     display: flex;
     align-items: center;
@@ -172,27 +171,10 @@ section.content .texts .bot {
     padding: 30px;
     border-radius: 8px;
 }
-
-section.content .texts .equation {
-    display: flex;
-    align-items: center;
-    background-color: var(--blue-bot);
-    padding: 10px;
-    border-radius: 8px;
-}
-
-section.content .texts .equation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-}
-
 section.content .texts .bot svg {
     width: 120px;
     margin-right: 20px;
 }
-
 section.content .texts .bot svg #ball-1 {
     animation: ball-1 2s ease-in-out infinite;
 }
@@ -200,35 +182,33 @@ section.content .texts .bot svg #ball-1 {
 section.content .texts .bot svg #ball-2 {
     animation: ball-2 2s ease-in-out infinite;
 }
-
-section.content .texts .bot p {
-    margin-left: 20px;
-}
-
 section.content .texts .bot svg #ball-3 {
     animation: ball-3 2s ease-in-out infinite;
 }
-
+section.content .texts .equation {
+    display: flex;
+    align-items: center;
+    background-color: var(--blue-bot);
+    padding: 10px;
+    border-radius: 8px;
+}
+section.content .texts .equation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
 section.content .texts .icons {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-
 section.content .texts .icons img {
-    width: 470px;
+    width: 400px;
 }
-
-section.content .texts ul {
-    margin-left: 35px;
-    font-size: 2.0rem;
-    line-height: 40px;
-}
-
 section.content .texts .equation {
     align-items: center;
 }
-
 section.content p {
     font-size: 2.0rem;
     text-align: justify;
@@ -290,29 +270,6 @@ section.content p {
     }
 }
 
-@media (max-width: 800px) {
-    .content .controle {
-        flex-direction: row;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .icons img {
-        width: 390px;
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -335,11 +292,12 @@ section.content p {
     section.content .texts .bot {
         flex-direction: column;
     }
-    section.content .texts .bot p {
+    section.content .texts .bot svg {
+        width: 100px;
         margin: 0;
     }
-    section.content .texts .bot svg {
-        width: 120px;
+    section.content .texts .icons img{
+        width: 210px;
     }
     section.content .texts {
         margin: 0;

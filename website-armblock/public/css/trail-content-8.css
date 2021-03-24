@@ -282,11 +282,12 @@ section.content .imagens svg {
     .content .controle .next {
         margin: 10px 0 10px 0;
     }
-    section.content .texts ul{
-        margin: 0;
-    }
     section.content .texts .bot {
         flex-direction: column;
+    }
+    section.content .texts .bot svg {
+        width: 100px;
+        margin: 0;
     }
     section.content .texts .bot svg{
         width: 100px;

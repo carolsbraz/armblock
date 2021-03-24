@@ -287,20 +287,6 @@ section.content p {
 }
 
 @media (max-width: 1024px) {
-    .content .controle {
-        flex-direction: row;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
     section.content .texts .icons img {
         width: 400px;
     }
@@ -310,37 +296,8 @@ section.content p {
     section.content .texts .icons2 img {
         width: 650px;
     }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
-@media (max-width: 800px) {
-    .content .controle {
-        flex-direction: row;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .icons img {
-        width: 400px;
-    }
-    section.content .texts .icons1 img {
-        width: 450px;
-    }
-    section.content .texts .icons2 img {
-        width: 550px;
-    }
-    .content .go-top img {
-        width: 30px;
+    section.content .texts .icons3 img {
+        width: 500px;
     }
 }
 
@@ -379,7 +336,7 @@ section.content p {
         width: 290px;
     }
     section.content .texts .bookmarks {
-        margin-left: 25px;
+        margin-left: 20px;
     }
     .content .go-top img {
         width: 30px;

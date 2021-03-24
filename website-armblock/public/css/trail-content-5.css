@@ -472,7 +472,7 @@ section.content p {
         margin: 0;
     }
     section.content .texts .software svg {
-        width: 180px
+        width: 200px
     }
     section.content .texts .icons {
         flex-direction: column;
@@ -485,7 +485,8 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .bot svg {
-        width: 120px;
+        width: 100px;
+        margin: 0;
     }
     section.content .texts .bot p {
         margin: 0;

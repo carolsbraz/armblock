@@ -277,30 +277,6 @@ section.content p {
         margin: 20px 0 0 0;
     }
 }
-
-@media (max-width: 1024px) {
-    .content .controle {
-        flex-direction: row;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-    .content .controle a {
-        justify-content: center;
-    }
-    .content .controle .back {
-        margin: 10px 0 10px 0;
-    }
-    .content .controle .next {
-        margin: 10px 0 10px 0;
-    }
-    section.content .texts .bot svg {
-        width: 350px
-    }
-    .content .go-top img {
-        width: 30px;
-    }
-}
-
 @media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
@@ -324,10 +300,10 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .bot p {
-        margin: 0;
+        margin-left: 0;
     }
     section.content .texts .bot svg {
-        width: 140px
+        width: 100px
     }
     section.content .texts .icons {
         flex-direction: column;

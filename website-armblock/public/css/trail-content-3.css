@@ -335,6 +335,10 @@ section.content p {
     }
     section.content .texts .bot svg {
         width: 80px;
+        margin: 0;
+    }
+    section.content .texts .bot p {
+        margin: 0;
     }
     .content .go-top img {
         width: 30px;

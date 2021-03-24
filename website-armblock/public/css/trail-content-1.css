@@ -262,7 +262,23 @@ section.content p {
     }
 }
 
-@media (max-width: 661px) {
+@media (max-width: 1024px) {
+    section.content .texts .curiosity {
+        flex-direction: column;
+    }
+    section.content .texts .curiosity svg {
+        width: 90px;
+    }
+    section.content .texts .curiosity .text {
+        margin: 0;
+    }
+    section.content .texts .curiosity .text h2 {
+        text-align: center;
+        margin-top: 20px
+    }
+}
+
+@media (max-width: 450px) {
     .content .controle {
         flex-direction: column;
         margin-top: 15px;
@@ -284,7 +300,7 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .bot svg {
-        width: 150px;
+        width: 100px;
     }
     section.content .texts .bot p {
         margin: 0;
@@ -293,7 +309,7 @@ section.content p {
         flex-direction: column;
     }
     section.content .texts .curiosity svg {
-        width: 100px;
+        width: 90px;
     }
     section.content .texts .curiosity .text {
         margin: 0;
@@ -306,7 +322,6 @@ section.content p {
         width: 30px;
     }
 }
-
 @media (max-width: 425px) {
     html {
         font-size: 45%;

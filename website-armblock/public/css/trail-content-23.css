@@ -316,6 +316,9 @@ section.content p {
     section.content .texts .icons img {
         width: 290px;
     }
+    section.content .texts ul {
+        margin-left: 20px;
+    }
     .content .go-top img {
         width: 30px;
     }
