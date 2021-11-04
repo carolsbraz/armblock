@@ -6,7 +6,7 @@
 <h3 align="center"> Educational ArmBlock </h3>
 <p align="center">Sua plataforma de aprendizado de robótica usando programação em blocos</p>
 <p align="center">
-<a href="https://armblock.herokuapp.com/">Ver site</a> • Último deploy: 23/01/2021 22:40
+<a href="https://armblock.herokuapp.com/">Ver site</a> • Último deploy: 04/04/2021 22:40
 </p>
 
 ### Sobre o projeto
@@ -20,17 +20,17 @@
  <b>CSS</b> - para estilização de seus elementos;<br>
  <b>JavaScript</b> - para dinânimica do site;<br>
  <b>SortableJS</b> - para trabalhar com o drag and drop da programação em blocos;<br>
- <b>Johnny-Five</b> - para enviar os comandos, via comunicação serial e usando protocolo Firmata, para o braço robótico;<br>
- <b>NodeJS</b> - para criação do servidor.
+ <b>NodeJS</b> - para criação do servidor.<br>
+ <b>Electron</b> - para a criação doa aplicativo desktop
 </blockquote>
 
 ### Integrantes da equipe
 
 - Prof. Francisco Januário: gerente de projeto <br>
-- Bruno Solimões: desenvolvedor de software <br>
+- Bruno Solimões: desenvolvedor de hardware <br>
 - Caroline Braz: desenvolvedor de software <br>
-- Emerson Paes: desenvolvedor de hardware <br>
-- Kluiwert Victor Tavares: desenvolvedor de hardware
+- Emerson Paes: desenvolvedor de software <br>
+- Kluiwert Victor Tavares: desenvolvedor de software
 
 <p align="center">
  <img src="https://github.com/carolsbraz/educational-armblock/blob/main/src/robotic-arm.png?raw=true" alt="robotic-arm" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
