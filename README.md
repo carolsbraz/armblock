@@ -1,36 +1,35 @@
-
-
 <h1 align="center">
  <img src="https://github.com/carolsbraz/educational-armblock/blob/main/src/logo.png?raw=true" alt="logo" width="400">
 </h1>
-<h3 align="center"> Educational ArmBlock </h3>
-<p align="center">Sua plataforma de aprendizado de robótica usando programação em blocos</p>
+<h3 align="center">Educational ArmBlock</h3>
+<p align="center">Your robotics learning platform using block programming</p>
 <p align="center">
-<a href="https://armblock.herokuapp.com/">Ver site</a> • Último deploy: 04/04/2021 22:40
 </p>
 
-### Sobre o projeto
+### About the project
 
-<p> Projeto desenvolvido por equipe de Iniciação Científica bolsista do SUPER, parceria entre a Samsung e a Universidade Federal do Amazonas (UFAM) que visa estimular a capacitação e a pesquisa. Nele o usuário vai poder conhecer o mundo da programação e da robótica, seguindo <b>trilhas de aprendizado</b> e usando <b>programação em blocos</b> para controlar seu próprio braço robótico. </p>
+<p>Project developed by a team of scholarship students from SUPER, a partnership between Samsung and the Federal University of Amazonas (UFAM), aiming to stimulate training and research. Users can explore the world of programming and robotics, following <b>learning paths</b> and using <b>block programming</b> to control their own robotic arm.</p>
 
-### Construído com
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1-bTVZnsnAeM4ZZw6-yzUVfEY5mUXxyex/preview" frameborder="0" allowfullscreen></iframe>
+
+### Built with
 
 <blockquote>
- <b>HTML</b> - para estruturação do site;<br>
- <b>CSS</b> - para estilização de seus elementos;<br>
- <b>JavaScript</b> - para dinânimica do site;<br>
- <b>SortableJS</b> - para trabalhar com o drag and drop da programação em blocos;<br>
- <b>NodeJS</b> - para criação do servidor.<br>
- <b>Electron</b> - para a criação doa aplicativo desktop
+ <b>HTML</b> - for website structure;<br>
+ <b>CSS</b> - for styling its elements;<br>
+ <b>JavaScript</b> - for site dynamics;<br>
+ <b>SortableJS</b> - for working with block programming drag and drop;<br>
+ <b>NodeJS</b> - for server creation.<br>
+ <b>Electron</b> - for creating the desktop application.
 </blockquote>
 
-### Integrantes da equipe
+### Team members
 
-- Prof. Francisco Januário: gerente de projeto <br>
-- Bruno Solimões: desenvolvedor de hardware <br>
-- Caroline Braz: desenvolvedor de software <br>
-- Emerson Paes: desenvolvedor de software <br>
-- Kluiwert Victor Tavares: desenvolvedor de software
+- Prof. Francisco Januário: project manager <br>
+- Bruno Solimões: hardware developer <br>
+- Caroline Braz: software developer <br>
+- Emerson Paes: software developer <br>
+- Kluiwert Victor Tavares: software developer
 
 <p align="center">
  <img src="https://github.com/carolsbraz/educational-armblock/blob/main/src/robotic-arm.png?raw=true" alt="robotic-arm" height="70">&nbsp&nbsp&nbsp&nbsp&nbsp
