@@ -10,7 +10,9 @@
 
 <p>Project developed by a team of scholarship students from SUPER, a partnership between Samsung and the Federal University of Amazonas (UFAM), aiming to stimulate training and research. Users can explore the world of programming and robotics, following <b>learning paths</b> and using <b>block programming</b> to control their own robotic arm.</p>
 
-https://github.com/carolsbraz/armblock/assets/48094755/e6c7671f-c5e3-4fcb-b2f5-3002d216dfe3
+
+https://github.com/carolsbraz/armblock/assets/48094755/ef430a7f-36c4-48ba-b0cb-b922b70f1b53
+
 
 ### Built with
 
